@@ -64,7 +64,7 @@ sections:
 
   - block: collection
     content:
-      title: Latest Publications
+      title: Publications
       subtitle:
       text:
       count: 5
