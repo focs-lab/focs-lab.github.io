@@ -1,0 +1,11 @@
+# Font style metadata
+name = "focs"
+
+# Optional Google font URL
+google_fonts = "family=Hanken+Grotesk:wght@100;200;300;400;500;600;700&family=Roboto+Mono&family=Source+Sans+3:wght@100;200;300;400;500;600;700"
+
+# Font families
+heading_font = "Source Sans 3"
+body_font = "Source Sans 3"
+nav_font = "Source Sans 3"
+mono_font = "Roboto Mono"

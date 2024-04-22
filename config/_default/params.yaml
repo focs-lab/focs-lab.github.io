@@ -8,32 +8,33 @@
 appearance:
   theme_day: minimal
   theme_night:
-  font: native
+  font: focs
   font_size: L
 
 # SEO
 
-marketing:
-  seo:
-    site_type: Organization
-    local_business_type: ''
-    org_name: ''
-    description: 'A highly-customizable Hugo research group theme powered by Wowchemy website builder.'
-    twitter: 'GetResearchDev'
-  analytics:
-    google_analytics: ''
-    baidu_tongji: ''
-    google_tag_manager: ''
-    microsoft_clarity: ''
-  verification:
-    google: ''
-    baidu: ''
+# marketing:
+#   seo:
+#     site_type: Organization
+#     local_business_type: ''
+#     org_name: ''
+#     description: 'A highly-customizable Hugo research group theme powered by Wowchemy website builder.'
+#     twitter: 'focs-lab'
+#   analytics:
+#     google_analytics: ''
+#     baidu_tongji: ''
+#     google_tag_manager: ''
+#     microsoft_clarity: ''
+#   verification:
+#     google: ''
+#     baidu: ''
 
 # Site header
 
 header:
   navbar:
     enable: true
+    blox: "navbar"
     align: r
     show_logo: true
     show_language: false
@@ -45,7 +46,7 @@ header:
 
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: '© 2024 FOCS Lab. This work is licensed under {license}'
     license:
       enable: true
       allow_derivatives: false
@@ -72,7 +73,7 @@ features:
   privacy_pack:
     enable: false
   repository:
-    url: 'https://github.com/<username>/<repository>'
+    url: 'https://github.com/focs-lab/focs-lab.github.io'
     content_dir: content
     branch: main
   avatar:
