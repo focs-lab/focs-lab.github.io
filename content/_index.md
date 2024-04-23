@@ -41,7 +41,6 @@ sections:
         Our work is/was supported by the following sponsors/grants:
           1. Singapore Ministry of Education (MoE) Academic Research Fund (AcRF) Tier 1 grant.
           2. National Research Foundation, Singapore, and Cyber Security Agency of Singapore under its National Cybersecurity R&D Programme (Fuzz Testing <NRF-NCR25-Fuzz-0001>).
-          3. MoE Tier 1 grant "Tree Data Structures for Causal Orderings in Data Race Detection".
 
 
   # - block: collection
