@@ -5,15 +5,37 @@ date: 2022-10-24
 type: landing
 
 sections:
-  - block: hero
+  # - block: hero
+  #   content:
+  #     title: |
+  #       Foundations of Computer Systems Lab
+  #     # image:
+  #     #   filename: welcome.jpg
+  #     text: |
+  #       <br>
+  #       We are a research group in the <a href="https://nus-plse.github.io/">Programming Languages & Software Engineering lab</a> in the <a href="https://nus.edu.sg">National University of Singapore</a>.
+  #       <br>
+  #       <br>
+  #       **Interests**
+
+  - block: markdown
     content:
       title: |
         Foundations of Computer Systems Lab
       # image:
       #   filename: welcome.jpg
       text: |
-        <br>
-        We are a research group in the <a href="https://nus-plse.github.io/">Programming Languages & Software Engineering lab</a> in the <a href="https://nus.edu.sg">National University of Singapore</a>.
+        We are a research group in the [Programming Languages & Software Engineering lab](https://nus-plse.github.io) in the [National University of Singapore](https://nus.edu.sg).
+
+
+        ### Interests
+        Theorectical foundations of Computer Systems, with a current focus on:
+          1. Dynamic Analysis algorithms for detecting concurrency bugs
+          2. Fuzz Testing for Concurrent Software
+          3. Algorithmic foundations for analysis problems beyond sequential consistency (weak memory and message passing concurrency)
+
+        ### Projects
+        We are currently working on implementing some of our proposed algorithms into ThreadSanitizer. You can follow the progress in our [blog](/blog).
 
   # - block: collection
   #   content:
@@ -80,6 +102,6 @@ sections:
     design:
       view: citation
       columns: '1'
-    text: |
-      {{% cta cta_link="./publication/" cta_text="All publications →" %}}
+    # text: |
+    #   {{% cta cta_link="./publication/" cta_text="All publications →" %}}
 ---

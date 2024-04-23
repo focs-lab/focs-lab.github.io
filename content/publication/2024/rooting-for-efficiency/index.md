@@ -7,7 +7,7 @@ authors:
 - umang
 - Ilya Sergey
 date: "2024-01-09T00:00:00Z"
-doi: ""
+doi: "https://doi.org/10.1145/3636501.3636944"
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
@@ -20,7 +20,7 @@ publication_short: "CPP 2024"
 
 award: 2024 CPP Distinguished Paper Award
 
-abstract: |
+abstract: |-
   Array-based encodings of tree structures are often preferable to linked or abstract data type-based representations for efficiency reasons. Compared to the more traditional encodings, array-based trees do not immediately offer convenient induction principles, and the programs that manipulate them often implement traversals non-recursively, requiring complex loop invariants for their correctness proofs.
   In this work, we provide a set of definitions, lemmas, and reasoning principles that streamline proofs about arraybased trees and programs that work with them. We showcase our proof techniques via a series of small but characteristic examples, culminating with a large case study: verification of a C implementation of a recently published *tree clock* data structure in a Separation Logic embedded into Coq.
 
