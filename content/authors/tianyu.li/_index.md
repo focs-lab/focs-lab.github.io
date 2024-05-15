@@ -12,4 +12,9 @@ user_groups:
   - PhD Students
 
 link: https://tianyuli12.github.io/
+
+social:
+  - icon: orcid
+    icon_pack: fab
+    link: https://orcid.org/0009-0001-6180-9060
 ---

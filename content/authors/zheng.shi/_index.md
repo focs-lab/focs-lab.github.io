@@ -14,4 +14,9 @@ user_groups:
 
 link: https://www.comp.nus.edu.sg/~zs357/
 alumni: MComp, 2023
+
+social:
+  - icon: orcid
+    icon_pack: fab
+    link: https://orcid.org/0000-0001-5021-7134
 ---

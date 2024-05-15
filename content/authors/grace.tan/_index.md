@@ -12,4 +12,9 @@ user_groups:
   - Research Assistants
 
 link: https://blog.grace.moe/
+
+social:
+  - icon: orcid
+    icon_pack: fab
+    link: https://orcid.org/0000-0002-4922-4019
 ---
