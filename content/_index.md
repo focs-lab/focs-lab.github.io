@@ -29,7 +29,7 @@ sections:
 
 
         ### Interests
-        Theorectical foundations of Computer Systems, with a current focus on:
+        Theoretical foundations of Computer Systems, with a current focus on:
           1. Dynamic Analysis algorithms for detecting concurrency bugs
           2. Fuzz Testing for Concurrent Software
           3. Algorithmic foundations for analysis problems beyond sequential consistency (weak memory and message passing concurrency)
