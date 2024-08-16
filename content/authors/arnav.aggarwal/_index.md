@@ -1,20 +1,16 @@
 ---
 # Display name
-title: Grace Tan
+title: Arnav Aggarwal
 
 # Full name (for SEO)
-first_name: Grace
-last_name: Tan
+first_name: Arnav
+last_name: Aggarwal
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - PhD Students
+  - Undergraduate Students
 
-link: https://blog.grace.moe/
+link: https://github.com/arnav-ag
 
-social:
-  - icon: orcid
-    icon_pack: fab
-    link: https://orcid.org/0000-0002-4922-4019
 ---

@@ -12,6 +12,11 @@ last_name: Mathur
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
   - Principal Investigator
+
+social:
+  - icon: orcid
+    icon_pack: fab
+    link: https://orcid.org/0000-0002-7610-0660
 ---
 
 

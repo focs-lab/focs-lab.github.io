@@ -1,20 +1,14 @@
 ---
 # Display name
-title: Grace Tan
+title: Zihan Zhou
 
 # Full name (for SEO)
-first_name: Grace
-last_name: Tan
+first_name: Zihan
+last_name: Zhou
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
   - PhD Students
 
-link: https://blog.grace.moe/
-
-social:
-  - icon: orcid
-    icon_pack: fab
-    link: https://orcid.org/0000-0002-4922-4019
 ---
