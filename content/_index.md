@@ -29,9 +29,9 @@ sections:
 
 
         ### Interests
-        Theoretical foundations of Computer Systems, with a current focus on:
-          1. Dynamic Analysis algorithms for detecting concurrency bugs
-          2. Fuzz Testing for Concurrent Software
+        Theoretical foundations of computer systems, with a current focus on:
+          1. Dynamic analysis algorithms for detecting concurrency bugs
+          2. Fuzz testing for concurrent software
           3. Algorithmic foundations for analysis problems beyond sequential consistency (weak memory and message passing concurrency)
 
         ### Projects
