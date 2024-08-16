@@ -44,8 +44,8 @@ sections:
 
         ### Reading Groups
         We currently run two reading groups. You may contact [Daniel](mailto:dws.lim@nus.edu.sg) if you are interested to join.
-          1. [Automata](https://www.mimuw.edu.pl/~bojan/paper/automata-toolbox-book)
-          2. Logic/Type Theory
+          1. [Automata](https://www.mimuw.edu.pl/~bojan/paper/automata-toolbox-book) (Tuesday 1-2pm @ COM3 MR21)
+          2. Logic/Type Theory (Monday 5-6pm @ COM3 MR25)
 
   # - block: markdown
   #   content:
