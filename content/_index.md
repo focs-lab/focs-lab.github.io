@@ -42,6 +42,11 @@ sections:
           1. Singapore Ministry of Education (MoE) Academic Research Fund (AcRF) Tier 1 grant.
           2. National Research Foundation, Singapore, and Cyber Security Agency of Singapore under its National Cybersecurity R&D Programme (Fuzz Testing \<NRF-NCR25-Fuzz-0001\>).
 
+        ### Reading Groups
+        We currently run two reading groups. You may contact [Daniel](mailto:dws.lim@nus.edu.sg) if you are interested to join.
+          1. [Automata](https://www.mimuw.edu.pl/~bojan/paper/automata-toolbox-book)
+          2. Logic/Type Theory
+
   # - block: markdown
   #   content:
   #     title:
