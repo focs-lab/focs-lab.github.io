@@ -77,7 +77,15 @@
 
 {{ $columns := $block.design.columns | default "2" }}
 
-<div class="{{if eq $archive_page.Type "publication"}}col-8{{ else}}col-12{{end}} {{if eq $columns "2"}}col-lg-8{{end}}">
+<div class="
+  {{if or (eq $archive_page.Type "publication") (eq $archive_page.Type "news") }}
+    col-8
+  {{ else }}
+    col-12
+  {{end}}
+  {{if eq $columns "2"}}
+    col-lg-8
+  {{end}}">
 
   {{ with $block.content.text }}{{ . | emojify | $page.RenderString }}{{ end }}
 

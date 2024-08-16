@@ -42,26 +42,6 @@ sections:
           1. Singapore Ministry of Education (MoE) Academic Research Fund (AcRF) Tier 1 grant.
           2. National Research Foundation, Singapore, and Cyber Security Agency of Singapore under its National Cybersecurity R&D Programme (Fuzz Testing \<NRF-NCR25-Fuzz-0001\>).
 
-
-  # - block: collection
-  #   content:
-  #     title: Latest News
-  #     subtitle:
-  #     text:
-  #     count: 5
-  #     filters:
-  #       author: ''
-  #       category: ''
-  #       exclude_featured: false
-  #       publication_type: ''
-  #       tag: ''
-  #     offset: 0
-  #     order: desc
-  #     page_type: post
-  #   design:
-  #     view: card
-  #     columns: '1'
-
   # - block: markdown
   #   content:
   #     title:
@@ -90,6 +70,25 @@ sections:
       show_interests: false
       show_role: true
       show_social: true
+
+  - block: collection
+    content:
+      title: News
+      subtitle:
+      text:
+      count: 5
+      filters:
+        author: ''
+        category: ''
+        exclude_featured: false
+        publication_type: ''
+        tag: ''
+      offset: 0
+      order: desc
+      page_type: news
+    design:
+      view: news
+      columns: '1'
 
   - block: collection
     content:

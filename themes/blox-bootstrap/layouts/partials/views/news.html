@@ -1,0 +1,7 @@
+{{ $item := .item }}
+{{ $has_attachments := partial "functions/has_attachments" $item }}
+
+<div class="news-list-item view-news">
+  <span class="news-date">{{ partial "functions/get_news_dates" $item }}</span><div class="news-content">{{ $item.Content }}</div>
+
+</div>
