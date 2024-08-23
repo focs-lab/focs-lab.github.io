@@ -11,7 +11,7 @@ last_name: Lim
 user_groups:
   - Research Assistants
 
-link: https://daniao.ws
+link: https://daniellim.ws
 
 social:
   - icon: orcid
