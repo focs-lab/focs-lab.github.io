@@ -11,4 +11,6 @@ last_name: Koh
 user_groups:
   - Undergraduate Students
 
+link: https://www.comp.nus.edu.sg/~jedkjk/
+
 ---
