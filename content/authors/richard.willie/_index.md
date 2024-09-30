@@ -16,4 +16,9 @@ link: mailto:richardw@u.nus.edu
 
 alumni: BComp, 2023
 
+social:
+  - icon: orcid
+    icon_pack: fab
+    link: https://orcid.org/0009-0006-3271-7980
+
 ---
