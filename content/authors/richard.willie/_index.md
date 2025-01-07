@@ -12,7 +12,7 @@ user_groups:
   - Alumni
   - Research Assistants
 
-link: mailto:richardw@u.nus.edu
+link: https://www.richwill.dev/
 
 alumni: BComp, 2023
 
