@@ -4,7 +4,7 @@ authors:
 - zhendong.ang
 - umang
 date: "2024-01-05T00:00:00Z"
-doi: "https://doi.org/10.1145/3632915"
+doi: "10.1145/3632915"
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).

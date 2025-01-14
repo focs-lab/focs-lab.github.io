@@ -10,7 +10,7 @@ authors:
   - umang
 
 date: "2024-04-08T00:00:00Z"
-doi: https://doi.org/10.48550/arXiv.2312.13320
+doi: 10.48550/arXiv.2312.13320
 
 
 # Publication type.

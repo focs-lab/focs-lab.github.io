@@ -7,7 +7,7 @@ authors:
 - umang
 - Abhik Roychoudhury
 date: "2024-04-23T00:00:00Z"
-doi: "https://doi.org/10.1145/3620665.3640389"
+doi: "10.1145/3620665.3640389"
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).

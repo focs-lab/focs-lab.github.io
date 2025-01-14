@@ -7,7 +7,7 @@ authors:
 - umang
 - Ilya Sergey
 date: "2024-01-09T00:00:00Z"
-doi: "https://doi.org/10.1145/3636501.3636944"
+doi: "10.1145/3636501.3636944"
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).

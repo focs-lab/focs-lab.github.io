@@ -5,7 +5,7 @@ authors:
 - umang
 - Andreas Pavlogiannis
 date: "2024-01-11T00:00:00Z"
-doi: "https://doi.org/10.48550/arXiv.2401.05642"
+doi: "10.48550/arXiv.2401.05642"
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
