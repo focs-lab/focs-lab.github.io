@@ -1,48 +1,70 @@
-# [Hugo Research Group Theme](https://github.com/wowchemy/starter-hugo-research-group)
+Below is a guide for updating this site.
+This is a fork of [HugoBlox/theme-research-group](https://github.com/HugoBlox/theme-research-group).
+The documentation there should be referred to for more advanced changes.
 
-[![Screenshot](./preview.png)](https://hugoblox.com/hugo-themes/)
+## Editing locally
 
-The **Research Group Template** empowers your research group to easily create a beautiful website with a stunning homepage, news, academic publications, events, team profiles, and a contact form.
+`hugo` is used to build this site locally. Here is one way to install `hugo`. 
 
-️**Trusted by 250,000+ researchers, educators, and students.** Highly customizable via the integrated **no-code, widget-based Wowchemy page builder**, making every site truly personalized ⭐⭐⭐⭐⭐
+First, [install go](https://go.dev/doc/install). Then, [install the extended edition of `hugo`](https://gohugo.io/installation/linux/).
+(It is important to not install `hugo` via `apt` because the one there is too old and does not work on this repo.)
 
-[![Get Started](https://img.shields.io/badge/-Get%20started-ff4655?style=for-the-badge)](https://hugoblox.com/hugo-themes/)
-[![Discord](https://img.shields.io/discord/722225264733716590?style=for-the-badge)](https://discord.com/channels/722225264733716590/742892432458252370/742895548159492138)  
-[![Twitter Follow](https://img.shields.io/twitter/follow/GetResearchDev?label=Follow%20on%20Twitter)](https://twitter.com/wowchemy)
+After installing `hugo`, simply run `hugo server` to preview the site locally. 
 
-Easily write technical content with plain text Markdown, LaTeX math, diagrams, RMarkdown, or Jupyter, and import publications from BibTeX.
+### News
 
-[Check out the latest demo](https://research-group.netlify.app/) of what you'll get in less than 60 seconds, or [view the showcase](https://hugoblox.com/creators/).
+Copy one of the earlier postings in [content/news](/content/news/) and modify the file name, date and contents accordingly.
 
-The integrated [**Wowchemy**](https://hugoblox.com) website builder and CMS makes it easy to create a beautiful website for free. Edit your site in the CMS (or your favorite editor), generate it with [Hugo](https://github.com/gohugoio/hugo), and deploy with GitHub or Netlify. Customize anything on your site with widgets, light/dark themes, and language packs.
+### People
 
-- 👉 [**Get Started**](https://hugoblox.com/hugo-themes/)
-- 📚 [View the **documentation**](https://docs.hugoblox.com/)
-- 💬 [Chat with the **Wowchemy research community**](https://discord.gg/z8wNYzb) or [**Hugo community**](https://discourse.gohugo.io)
-- ⬇️ **Automatically import citations from BibTeX** with the [Hugo Academic CLI](https://github.com/GetRD/academic-file-converter)
-- 🐦 Share your new site with the community: [@wowchemy](https://twitter.com/wowchemy) [@GeorgeCushen](https://twitter.com/GeorgeCushen) [#MadeWithWowchemy](https://twitter.com/search?q=%23MadeWithWowchemy&src=typed_query)
-- 🗳 [Take the survey and help us improve #OpenSource](https://forms.gle/NioD9VhUg7PNmdCAA)
-- 🚀 [Contribute improvements](https://github.com/HugoBlox/hugo-blox-builder/blob/main/CONTRIBUTING.md) or [suggest improvements](https://github.com/HugoBlox/hugo-blox-builder/issues)
-- ⬆️ **Updating?** View the [Update Guide](https://docs.hugoblox.com/hugo-tutorials/update/) and [Release Notes](https://github.com/HugoBlox/hugo-blox-builder/releases)
+Copy one of the folders in [content/authors](/content/authors/) and modify the name and contents accordingly. Do also remember to update the profile image. The image file should be named `avatar.[jpg|png]`. Either image format works but the name must be `avatar`.
+(The folder is named "authors" just because it was like that when this repo was initially forked from HugoBlox.)
 
-## We ask you, humbly, to support this open source movement
+```yml
+---
+# Display name
+title: Umang Mathur
 
-Today we ask you to defend the open source independence of the Wowchemy website builder and themes 🐧
+link: https://www.comp.nus.edu.sg/~umathur/
 
-We're an open source movement that depends on your support to stay online and thriving, but 99.9% of our creators don't give; they simply look the other way.
+# Full Name (for SEO)
+first_name: Umang
+last_name: Mathur
 
-### [❤️ Click here to become a GitHub Sponsor, unlocking awesome perks such as _exclusive academic templates and widgets_](https://github.com/sponsors/gcushen)
+# Organizational groups that you belong to (for People widget)
+#   Set this to `[]` or comment out if you are not using People widget.
+user_groups:
+  - Principal Investigator
 
-## Demo credits
+social:
+  - icon: orcid
+    icon_pack: fab
+    link: https://orcid.org/0000-0002-7610-0660
+---
+```
 
-Please replace the demo images with your own.
+The possible labels for `user_groups` are as follows. Multiple labels can be included in the list.
+- Principal Investigators
+- Researchers
+- Grad Students
+- Administration
+- Visitors
+- Alumni
 
-- [Female scientist](https://unsplash.com/photos/uVnRa6mOLOM)
-- [2 Coders](https://unsplash.com/photos/kwzWjTnDPLk)
-- [Cafe](https://unsplash.com/photos/RnDGGnMEOao)
-- Blog posts
-  - https://unsplash.com/photos/AndE50aaHn4
-  - https://unsplash.com/photos/OYzbqk2y26c
-- Avatars
-  - https://unsplash.com/photos/5yENNRbbat4
-  - https://unsplash.com/photos/WNoLnJo7tS8
+### Publications
+
+Copy one of the folders in [content/publication](/content/publication/), such as [2024/Coarser Equivalences for Causal Concurrency](/content/publication/2024/Coarser%20Equivalences%20for%20Causal%20Concurrency/). There are two files, `cite.bib` and `index.md`. First, update `cite.bib` with the coresponding BibTeX. Then, update the fields in `index.md`.
+
+Most fields are self-explanatory, but the `authors` and `publication_types` fields would benefit from some elaboration.
+
+In the `authors` list, if a name matches a folder name under `content/authors` (e.g. [`umang`](/content/authors/umang/), [`zhendong.ang`](/content/authors/zhendong.ang/), [`huan.zhao`](/content/authors/huan.zhao/)), the rendered website will show the author's full name and have a hyperlink to the author's personal website.
+
+The `publication_types` field expects a list of labels. So far we only use `publication_types: ["paper-conference"]`. Below is a reference containing the other labels in case we might want them some day:
+- `paper_conference`: Conference paper
+- `article_journal`: Journal article
+- `article`: Preprint
+- `report`: Report
+- `book`: Book
+- `chapter`: Book section
+- `thesis`: Thesis
+- `patent`: Patent
