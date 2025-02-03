@@ -43,9 +43,7 @@ sections:
           2. National Research Foundation, Singapore, and Cyber Security Agency of Singapore under its National Cybersecurity R&D Programme (Fuzz Testing \<NRF-NCR25-Fuzz-0001\>).
 
         ### Reading Groups
-        We currently run two reading groups on alternate weeks. We meet on Wednesday 1-2pm at COM3 MR21. You may contact [Daniel](mailto:dws.lim@nus.edu.sg) if you are interested to join.
-          1. [Advanced Automata Theory](https://www.mimuw.edu.pl/~bojan/paper/automata-toolbox-book)
-          2. Logic/Type Theory
+        We currently run an [Advanced Automata Theory](https://www.mimuw.edu.pl/~bojan/paper/automata-toolbox-book) reading group once every 2 weeks. We meet on Wednesday 1-2pm at COM3 MR21. You may contact [Daniel](mailto:dws.lim@nus.edu.sg) if you are interested to join.
 
   # - block: markdown
   #   content:

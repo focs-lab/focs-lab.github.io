@@ -25,7 +25,12 @@
 }
 
 .news-list-item .news-content p {
-  margin-bottom: 0;
+  margin-bottom: 0.2rem;
+}
+
+.news-list-item .news-content :is(ul,ol,dl) {
+  margin-top: 0;
+  font-size: 0.95rem;
 }
 
 .pub-list-item {
