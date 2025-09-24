@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Ivan
+title: Ivan Tan
 
 # Full name (for SEO)
 first_name: Ivan

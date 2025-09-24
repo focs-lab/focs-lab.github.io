@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Dick
+title: Dick Ong
 
 # Full name (for SEO)
 first_name: Dick
