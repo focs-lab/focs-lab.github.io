@@ -11,6 +11,6 @@ last_name: Huang
 user_groups:
   - Alumni
 
-alumni: BComp, 2024
+alumni: BComp, 2025
 
 ---

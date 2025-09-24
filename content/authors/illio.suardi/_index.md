@@ -12,6 +12,7 @@ user_groups:
   - Alumni
 
 link: https://www.linkedin.com/in/illio-suardi-537b56210/
+
 alumni: BComp, 2023
 
 ---

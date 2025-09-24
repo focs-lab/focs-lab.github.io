@@ -11,4 +11,11 @@ last_name: Zhao
 user_groups:
   - PhD Students
 
+link: https://zhaohuanqdcn.github.io/
+
+social:
+  - icon: orcid
+    icon_pack: fab
+    link: https://orcid.org/0009-0004-6412-0666
+
 ---

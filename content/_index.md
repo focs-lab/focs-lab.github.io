@@ -25,8 +25,7 @@ sections:
       # image:
       #   filename: welcome.jpg
       text: |
-        We are a research group in the [Programming Languages & Software Engineering lab](https://nus-plse.github.io) in the [National University of Singapore](https://nus.edu.sg).
-
+        We are a research group in the [Programming Languages & Software Engineering lab](https://nus-plse.github.io) at the [National University of Singapore](https://nus.edu.sg).
 
         ### Interests
         Theoretical foundations of computer systems, with a current focus on:
@@ -34,16 +33,13 @@ sections:
           2. Fuzz testing for concurrent software
           3. Algorithmic foundations for analysis problems beyond sequential consistency (weak memory and message passing concurrency)
 
-        ### Projects
-        We are currently working on implementing some of our proposed algorithms into ThreadSanitizer. You can follow the progress in our [blog](/blog).
+        ### Reading Groups
+        We currently run a reading group on the [Lean theorem prover](https://lean-lang.org/), which is held once every week on Wednesday 1-2pm. You may contact [Richard](mailto:richardw@u.nus.edu) if you are interested to join.
 
         ### Sponsors/Grants
         Our work is/was supported by the following sponsors/grants:
           1. Singapore Ministry of Education (MoE) Academic Research Fund (AcRF) Tier 1 grant.
           2. National Research Foundation, Singapore, and Cyber Security Agency of Singapore under its National Cybersecurity R&D Programme (Fuzz Testing \<NRF-NCR25-Fuzz-0001\>).
-
-        ### Reading Groups
-        We currently run an [Advanced Automata Theory](https://www.mimuw.edu.pl/~bojan/paper/automata-toolbox-book) reading group once every 2 weeks. We meet on Wednesday 1-2pm at COM3 MR21. You may contact [Daniel](mailto:dws.lim@nus.edu.sg) if you are interested to join.
 
   # - block: markdown
   #   content:

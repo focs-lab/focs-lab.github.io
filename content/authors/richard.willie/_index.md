@@ -14,7 +14,7 @@ user_groups:
 
 link: https://www.richwill.dev/
 
-alumni: BComp, 2023
+alumni: BComp, 2024
 
 social:
   - icon: orcid

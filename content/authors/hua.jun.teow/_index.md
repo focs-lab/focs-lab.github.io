@@ -1,17 +1,15 @@
 ---
 # Display name
-title: Jed Koh Jin Keat
+title: Hua Jun Teow
 
 # Full name (for SEO)
-first_name: Jed Jin Keat
-last_name: Koh
+first_name: Hua Jun
+last_name: Teow
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Alumni
-
-link: https://www.comp.nus.edu.sg/~jedkjk/
+  - Undergraduate Students
 
 alumni: BComp, 2026
 

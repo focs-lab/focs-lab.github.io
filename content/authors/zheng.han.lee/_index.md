@@ -11,6 +11,6 @@ last_name: Lee
 user_groups:
   - Alumni
 
-alumni: BComp, 2023
+alumni: BComp, 2024
 
 ---
