@@ -7,7 +7,7 @@
   ],
   "date": "2018-01-01T00:00:00Z",
   "publication_types": [
-    "article-journal"
+    "paper-conference"
   ],
   "publication": "OOPSLA 2018",
   "publication_short": "OOPSLA 2018",

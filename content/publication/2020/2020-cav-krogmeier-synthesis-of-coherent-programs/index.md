@@ -9,7 +9,7 @@
   ],
   "date": "2020-01-01T00:00:00Z",
   "publication_types": [
-    "thesis"
+    "paper-conference"
   ],
   "publication": "CAV 2020",
   "publication_short": "CAV 2020",

@@ -8,7 +8,7 @@
   ],
   "date": "2026-01-08T00:00:00+00:00",
   "publication_types": [
-    "article-journal"
+    "paper-conference"
   ],
   "publication": "POPL 2026",
   "publication_short": "POPL 2026",

@@ -8,7 +8,7 @@
   ],
   "date": "2018-01-01T00:00:00Z",
   "publication_types": [
-    "thesis"
+    "paper-conference"
   ],
   "publication": "CAV 2018",
   "publication_short": "CAV 2018",

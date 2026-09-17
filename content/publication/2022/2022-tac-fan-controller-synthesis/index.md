@@ -10,7 +10,7 @@
   ],
   "date": "2022-01-01T00:00:00Z",
   "publication_types": [
-    "thesis"
+    "article-journal"
   ],
   "publication": "TAC 2022",
   "publication_short": "TAC 2022",
