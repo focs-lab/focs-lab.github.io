@@ -1,0 +1,18 @@
+@article{10.1145/3821579,
+author = {Zhang, Minjian and Al Thokair, Mosaad and Mathur, Umang and Viswanathan, Mahesh},
+title = {Dynamic Race Detection with O(1) Samples},
+year = {2026},
+issue_date = {September 2026},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {69},
+number = {9},
+issn = {0001-0782},
+url = {https://doi.org/10.1145/3821579},
+doi = {10.1145/3821579},
+abstract = {Happens before-based dynamic analysis is the go-to technique for detecting data races in large-scale software projects due to the absence of false positive reports. However, such analyses are expensive, since they employ expensive vector clock updates at each event, rendering them usable only for in-house testing. In this paper, we present a sampling-based, randomized race detector that in the worst case, processes only a constant number of events from the execution trace being analyzed. This is the first sub-linear time (i.e., running in o(n) time where n is the length of the execution trace) dynamic race-detection algorithm; previous sampling-based approaches like Pacer run in linear time (i.e., O(n)). Our algorithm is a property tester for HB-race detection—it is sound in that it never reports any false positives, and on traces that are far (with respect to Hamming distance) from any race-free trace, the algorithm detects an HB-race with high probability. Our experimental evaluation of the algorithm and its comparison with state-of-the-art deterministic and sampling-based race detectors shows that the algorithm does indeed have significantly low running time and detects races quite often.},
+journal = {Commun. ACM},
+month = sep,
+pages = {97--106},
+numpages = {10}
+}
