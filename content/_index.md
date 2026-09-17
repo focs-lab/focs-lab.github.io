@@ -41,43 +41,6 @@ sections:
           1. Singapore Ministry of Education (MoE) Academic Research Fund (AcRF) Tier 1 grant.
           2. National Research Foundation, Singapore, and Cyber Security Agency of Singapore under its National Cybersecurity R&D Programme (Fuzz Testing \<NRF-NCR25-Fuzz-0001\>).
 
-  # - block: markdown
-  #   content:
-  #     title:
-  #     subtitle:
-  #     text: |
-  #       {{% cta cta_link="./people/" cta_text="Meet the team →" %}}
-  #   design:
-  #     columns: '1'
-
-  - block: people
-    content:
-      title: Members
-      # Choose which groups/teams of users to display.
-      #   Edit `user_groups` in each user's profile to add them to one or more of these groups.
-      user_groups:
-          - Principal Investigator
-          - Research Fellows
-          - PhD Students
-          - Research Assistants
-          - Masters Students
-          - Undergraduate Students
-          - Alumni
-          - Interns
-      sort_by: Params.last_name
-      sort_ascending: true
-    design:
-      show_interests: false
-      show_role: true
-      show_social: true
-
-  - block: markdown
-    content:
-      text: |
-        † Grace Tan passed away in 2025. Remembered for her passion for education and enthusiasm for research.
-    design:
-      columns: '1'
-
   - block: collection
     content:
       title: News
