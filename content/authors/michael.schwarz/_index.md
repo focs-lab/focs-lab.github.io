@@ -13,9 +13,5 @@ user_groups:
 
 link: https://michael-schwarz.github.io/
 
-social:
-  - icon: orcid
-    icon_pack: fab
-    link: https://orcid.org/0000-0002-9828-0308
 
 ---

@@ -15,8 +15,4 @@ link: https://daniao.ws
 
 alumni: Research Assistant, 2024-25
 
-social:
-  - icon: orcid
-    icon_pack: fab
-    link: https://orcid.org/0009-0007-5184-6339
 ---

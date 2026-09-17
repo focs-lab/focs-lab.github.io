@@ -13,9 +13,5 @@ user_groups:
 
 link: https://apaznikov.github.io/
 
-social:
-  - icon: orcid
-    icon_pack: fab
-    link: https://orcid.org/0000-0002-3735-6882
 
 ---

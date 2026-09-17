@@ -15,9 +15,5 @@ link: https://zhaohuanqdcn.github.io/
 
 role: "Co-advised with [Abhik Roychoudhury](https://abhikrc.com/)"
 
-social:
-  - icon: orcid
-    icon_pack: fab
-    link: https://orcid.org/0009-0004-6412-0666
 
 ---

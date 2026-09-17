@@ -13,9 +13,5 @@ user_groups:
 
 link: https://ang9876.github.io/
 
-social:
-  - icon: orcid
-    icon_pack: fab
-    link: https://orcid.org/0009-0002-0214-3462
 ---
 

@@ -15,8 +15,4 @@ link: https://gracetan.neocities.org/
 
 role: "In memory († 2025)"
 
-social:
-  - icon: orcid
-    icon_pack: fab
-    link: https://orcid.org/0000-0002-4922-4019
 ---

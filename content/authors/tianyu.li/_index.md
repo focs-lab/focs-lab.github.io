@@ -15,8 +15,4 @@ link: https://tianyuli12.github.io/
 
 role: "Co-advised with [Prateek Saxena](https://www.comp.nus.edu.sg/~prateeks/)"
 
-social:
-  - icon: orcid
-    icon_pack: fab
-    link: https://orcid.org/0009-0001-6180-9060
 ---
