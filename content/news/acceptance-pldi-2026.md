@@ -1,7 +1,7 @@
 ---
 title: "2 papers by FOCS lab at PLDI 2026"
-draft: true
-date_pending: true
+date: "2026-03-01"
+date_precision: "month"
 ---
 
 **2 papers by FOCS lab** accepted to appear at [PLDI 2026](https://pldi26.sigplan.org/track/pldi-2026-papers):
