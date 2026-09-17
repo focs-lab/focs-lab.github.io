@@ -1,4 +1,8 @@
-{{/* Function to get event start and end dates/times. */}}
-{{ $t1 := time .Date }}{{/* Start datetime. */}}
-{{ $str := slice (time.Format site.Params.locale.date_format (time $t1)) }}{{/* Init return string with start date. */}}
-{{ return ((delimit $str " ") | safeHTML) }}
+{{/* Preserve the precision of the source; Date still controls sorting. */}}
+{{ $format := site.Params.locale.date_format }}
+{{ if eq .Params.date_precision "month" }}
+  {{ $format = "Jan 2006" }}
+{{ else if eq .Params.date_precision "year" }}
+  {{ $format = "2006" }}
+{{ end }}
+{{ return (.Params.date_label | default (time.Format $format .Date)) }}
