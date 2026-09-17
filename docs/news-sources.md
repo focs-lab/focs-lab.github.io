@@ -65,3 +65,11 @@ Searched NUS News and NUS Computing for Umang Mathur, student award recipients, 
 ## User-supplied NUS coverage
 
 All five supplied URLs are linked in news. The newly supplied NUS Computing article “NUS Computing student receives first prize for undergraduate final-year project” (17 July 2024) reports Zheng Han Lee's PLDI SRC win in June 2024. Added a distinct SRC award entry dated June 2024 at month precision; this is separate from his OURP award. The other four URLs were already incorporated.
+
+## Paper announcement months approved by Umang
+
+Enabled the remaining four draft announcements using month precision: PLDI 2025 in March 2025, PLDI 2026 in March 2026, OOPSLA 2025 in August 2025, and ASPLOS 2026 in November 2025. These user-selected months supersede the pending-date notes above; they are not claims of a particular notification day.
+
+Rechecked the official ASPLOS 2025 CFP: spring notification 6 June 2024, summer notification 2 October 2024, fall notification 27 January 2025. The existing November 2024 news establishes that Selectively Uniform was accepted before the fall notification, but does not distinguish spring from summer. Preserve its existing date until the cycle is confirmed.
+
+Umang confirmed the ASPLOS 2025 summer submission cycle via https://asplos25summer.hotcrp.com/u/0/. Set Selectively Uniform Concurrency Testing’s announcement to 2 October 2024, the summer notification date in the official CFP. Kept its existing filename to preserve the published URL. This supersedes the pending-cycle note above.
