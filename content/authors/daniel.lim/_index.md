@@ -11,7 +11,7 @@ last_name: Lim
 user_groups:
   - Alumni
 
-link: https://daniellim.ws
+link: https://daniao.ws
 
 alumni: Research Assistant, 2024-25
 

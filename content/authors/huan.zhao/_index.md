@@ -13,6 +13,8 @@ user_groups:
 
 link: https://zhaohuanqdcn.github.io/
 
+role: "Co-advised with [Abhik Roychoudhury](https://abhikrc.com/)"
+
 social:
   - icon: orcid
     icon_pack: fab

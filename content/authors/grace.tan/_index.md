@@ -9,9 +9,11 @@ last_name: Tan
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - PhD Students
+  - Alumni
 
-link: https://blog.grace.moe/
+link: https://gracetan.neocities.org/
+
+role: "In memory († 2025)"
 
 social:
   - icon: orcid

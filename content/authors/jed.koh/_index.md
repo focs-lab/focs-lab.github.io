@@ -13,6 +13,6 @@ user_groups:
 
 link: https://www.comp.nus.edu.sg/~jedkjk/
 
-alumni: BComp, 2026
+alumni: BComp, 2025
 
 ---

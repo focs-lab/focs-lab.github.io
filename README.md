@@ -44,12 +44,16 @@ social:
 ```
 
 The possible labels for `user_groups` are as follows. Multiple labels can be included in the list.
-- Principal Investigators
-- Researchers
-- Grad Students
-- Administration
-- Visitors
+- Principal Investigator
+- Research Fellows
+- PhD Students
+- Research Assistants
+- Masters Students
+- Undergraduate Students
 - Alumni
+- Interns
+
+Use `user_groups: []` to retain an author record without showing it in the team roster. Keep the group lists in `content/_index.md` and `content/people/index.md` in sync.
 
 ### Publications
 

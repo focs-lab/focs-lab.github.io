@@ -60,15 +60,23 @@ sections:
           - Research Fellows
           - PhD Students
           - Research Assistants
+          - Masters Students
           - Undergraduate Students
           - Alumni
-          - Visitors
+          - Interns
       sort_by: Params.last_name
       sort_ascending: true
     design:
       show_interests: false
       show_role: true
       show_social: true
+
+  - block: markdown
+    content:
+      text: |
+        † Grace Tan passed away in 2025. Remembered for her passion for education and enthusiasm for research.
+    design:
+      columns: '1'
 
   - block: collection
     content:

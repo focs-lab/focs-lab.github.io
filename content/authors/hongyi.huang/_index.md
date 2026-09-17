@@ -9,10 +9,10 @@ last_name: Huang
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Undergraduate Students
+  - Alumni
 
 link: https://www.linkedin.com/in/hongyi-huang-7b103021b/
 
-alumni: BComp, 2026
+alumni: BComp, 2025
 
 ---

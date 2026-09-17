@@ -11,6 +11,6 @@ last_name: Tan
 user_groups:
   - Undergraduate Students
 
-alumni: BComp, 2026
+role: BComp, 2026
 
 ---
