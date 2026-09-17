@@ -13,4 +13,9 @@ user_groups:
 
 alumni: BComp, 2025
 
+link: https://www.linkedin.com/in/kmramanathan
+social:
+  - icon: linkedin
+    icon_pack: fab
+    link: https://www.linkedin.com/in/kmramanathan
 ---

@@ -13,4 +13,9 @@ user_groups:
 
 role: BComp, 2026
 
+link: https://sg.linkedin.com/in/hua-jun-teow-763996213
+social:
+  - icon: linkedin
+    icon_pack: fab
+    link: https://sg.linkedin.com/in/hua-jun-teow-763996213
 ---

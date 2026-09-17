@@ -13,4 +13,9 @@ user_groups:
 
 alumni: BComp, 2024
 
+link: https://sg.linkedin.com/in/zhthlee
+social:
+  - icon: linkedin
+    icon_pack: fab
+    link: https://sg.linkedin.com/in/zhthlee
 ---
