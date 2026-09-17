@@ -27,14 +27,20 @@ LinkedIn matches use public names, university affiliations, study dates, researc
 
 No sufficiently corroborated LinkedIn match was found for these people. No guessed profile URLs were added.
 
-- Ankit Jayant
-- Arhaan Ahmad
 - Bryan Lim
-- Dasco Gabriel
 - David Zhu
-- Hien Huynh
 - Hong Jung Woo
 - Ivan Tan
 - Jeffrey Lee
 - Zengyan Hao
 - Ziyue Jin
+
+## Additional review
+
+Removed all 10 ORCID social entries from author profiles. Added Dasco Gabriel (https://sg.linkedin.com/in/dasco-gabriel): exact name and NUS education 2020–2024 match the alumni record. Added Arhaan Ahmad (https://in.linkedin.com/in/arhaan-ahmad-418191182): exact name, IIT Bombay 2021–2025, and Singapore experience match the 2023 internship.
+
+Re-searched all remaining missing profiles, including full names from the CV. No sufficiently supported matches for Ankit Jayant, Bryan Lim, David Zhu, Hong Jung Woo, Ivan Tan, Jeffrey Lee, Zengyan Hao, or Ziyue Jin. Hien Huynh has a possible candidate at https://sg.linkedin.com/in/vinh-hien-d-huynh (NUS 2025–2026), but the expanded name and identity need confirmation. No link added for this candidate.
+
+Umang confirmed Hien Huynh’s LinkedIn profile (https://sg.linkedin.com/in/vinh-hien-d-huynh); added it to the profile, superseding the pending identity check above.
+
+Umang supplied and confirmed Ankit Jayant’s LinkedIn profile: https://www.linkedin.com/in/ankit-jayant/. Added it, superseding the earlier unresolved match.
