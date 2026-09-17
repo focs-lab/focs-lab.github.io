@@ -36,11 +36,6 @@ sections:
         ### Reading Groups
         We currently run a reading group on the [Lean theorem prover](https://lean-lang.org/), which is held once every week on Wednesday 1-2pm. You may contact [Richard](mailto:richardw@u.nus.edu) if you are interested to join.
 
-        ### Sponsors/Grants
-        Our work is/was supported by the following sponsors/grants:
-          1. Singapore Ministry of Education (MoE) Academic Research Fund (AcRF) Tier 1 grant.
-          2. National Research Foundation, Singapore, and Cyber Security Agency of Singapore under its National Cybersecurity R&D Programme (Fuzz Testing \<NRF-NCR25-Fuzz-0001\>).
-
   - block: collection
     content:
       title: News
