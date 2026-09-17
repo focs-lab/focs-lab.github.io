@@ -41,7 +41,7 @@ sections:
       title: News
       subtitle:
       text:
-      count: 5
+      count: 12
       filters:
         author: ''
         category: ''
