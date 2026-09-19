@@ -44,3 +44,11 @@ Re-searched all remaining missing profiles, including full names from the CV. No
 Umang confirmed Hien Huynh’s LinkedIn profile (https://sg.linkedin.com/in/vinh-hien-d-huynh); added it to the profile, superseding the pending identity check above.
 
 Umang supplied and confirmed Ankit Jayant’s LinkedIn profile: https://www.linkedin.com/in/ankit-jayant/. Added it, superseding the earlier unresolved match.
+
+## Undergraduate roster refresh — 19 September 2026
+
+Matched the undergraduate and alumni sections of the [personal team page](https://www.comp.nus.edu.sg/~umathur/team/), checked on 19 September 2026.
+
+Moved Guk Yi Siong, Wern Lim, Hua Jun Teow, Jeffrey Lee, Dick Ong, Ivan Tan, and Hong Jung Woo from Undergraduate Students to Alumni. Their alumni labels read “BComp, 2026”; existing author identifiers, photos, and personal links are retained.
+
+Added the twelve current undergraduates exactly as named on the source page: San Shao Qian; Wong Yee Hern; Lee Wai Kin; Koh Jun Hong Nicolas; Xu Luoqi; Cheah Gee Nung, Ian; Zwe Zeya; Gabriella; Chittidi Raghavanaidu; Lim Jia Sheng; Zhang Qixiang; and Gabrielle Gianna Tan-Winings. Each has the BComp label, with no project-type distinction, as requested by Umang. The source supplies no profile links, photos, or graduation years for these new students, so none were added.

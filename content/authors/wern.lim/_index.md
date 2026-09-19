@@ -9,9 +9,9 @@ last_name: Lim
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Undergraduate Students
+  - Alumni
 
-role: BComp, 2026
+alumni: BComp, 2026
 
 link: https://sg.linkedin.com/in/wxwern
 social:
