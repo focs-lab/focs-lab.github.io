@@ -73,3 +73,14 @@ Enabled the remaining four draft announcements using month precision: PLDI 2025 
 Rechecked the official ASPLOS 2025 CFP: spring notification 6 June 2024, summer notification 2 October 2024, fall notification 27 January 2025. The existing November 2024 news establishes that Selectively Uniform was accepted before the fall notification, but does not distinguish spring from summer. Preserve its existing date until the cycle is confirmed.
 
 Umang confirmed the ASPLOS 2025 summer submission cycle via https://asplos25summer.hotcrp.com/u/0/. Set Selectively Uniform Concurrency Testing’s announcement to 2 October 2024, the summer notification date in the official CFP. Kept its existing filename to preserve the published URL. This supersedes the pending-cycle note above.
+
+## Six additional paper announcements — 19 September 2026
+
+Added linked acceptance announcements for all six papers supplied by Umang. Dates provisionally follow the official paper-notification schedules, consistent with the earlier conference-notification research; these schedules do not independently confirm the date of each individual decision email. Asked Umang for any paper-specific dates or months that supersede them.
+
+- ATC 2026: **18 September 2026**, author notification in the [official CFP](https://sigops.org/s/conferences/atc/2026/cfp.html).
+- APLAS 2026: **4 August 2026**, acceptance notification on the [official research track](https://conf.researchr.org/track/aplas-atva-2026/aplas-2026). Retained the supplied paper title, which agrees with arXiv; the conference's accepted list has an earlier title with the same four authors.
+- FM 2026: **6 February 2026**, paper notification on the [official research track](https://conf.researchr.org/track/fm-2026/fm-2026-research-paper); this supersedes the January date still present in older CFP copies.
+- TACAS 2026, Same Engine, Multiple Gears: **22 December 2025**, paper notification in the [ETAPS joint CFP](https://etaps.org/2026/cfp/).
+- TACAS 2026, Goblint competition contribution: **20 January 2026**, system-description paper notification in the [SV-COMP dates](https://sv-comp.sosy-lab.org/2026/dates.php). This is a different track from the regular TACAS paper, so the two announcements remain separate to preserve their dates.
+- VMCAI 2026: **6 November 2025**, notification on the [official dates page](https://conf.researchr.org/dates/VMCAI-2026).
