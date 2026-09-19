@@ -84,3 +84,13 @@ Added linked acceptance announcements for all six papers supplied by Umang. Date
 - TACAS 2026, Same Engine, Multiple Gears: **22 December 2025**, paper notification in the [ETAPS joint CFP](https://etaps.org/2026/cfp/).
 - TACAS 2026, Goblint competition contribution: **20 January 2026**, system-description paper notification in the [SV-COMP dates](https://sv-comp.sosy-lab.org/2026/dates.php). This is a different track from the regular TACAS paper, so the two announcements remain separate to preserve their dates.
 - VMCAI 2026: **6 November 2025**, notification on the [official dates page](https://conf.researchr.org/dates/VMCAI-2026).
+
+## C-to-Rust blog coverage — 19 September 2026
+
+Added a news item dated **18 September 2026**, the displayed publication date of Ben Livshits’s [Automating C to Safe Rust Translation](https://www.ben-livshits.org/blog/c-to-rust). Checked the live page directly on 19 September 2026 because the web reader could not retrieve it. The article discusses ACToR and Reboot; its references cite three papers coauthored by Umang:
+
+- [Adversarial Agent Collaboration for Correctness Improvements of C to Safe Rust Translation](https://arxiv.org/abs/2510.03879) (ACToR).
+- [Mostly Automatic Translation of Language Interpreters from C to Safe Rust](https://arxiv.org/abs/2606.27122) (Reboot).
+- [Program Skeletons for Automated Program Translation](https://arxiv.org/abs/2504.07483).
+
+The news links to the blog and these three papers. It describes citation of the work without implying an endorsement or award.
