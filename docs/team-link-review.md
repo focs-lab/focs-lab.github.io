@@ -52,3 +52,7 @@ Matched the undergraduate and alumni sections of the [personal team page](https:
 Moved Guk Yi Siong, Wern Lim, Hua Jun Teow, Jeffrey Lee, Dick Ong, Ivan Tan, and Hong Jung Woo from Undergraduate Students to Alumni. Their alumni labels read “BComp, 2026”; existing author identifiers, photos, and personal links are retained.
 
 Added the twelve current undergraduates exactly as named on the source page: San Shao Qian; Wong Yee Hern; Lee Wai Kin; Koh Jun Hong Nicolas; Xu Luoqi; Cheah Gee Nung, Ian; Zwe Zeya; Gabriella; Chittidi Raghavanaidu; Lim Jia Sheng; Zhang Qixiang; and Gabrielle Gianna Tan-Winings. Each has the BComp label, with no project-type distinction, as requested by Umang. The source supplies no profile links, photos, or graduation years for these new students, so none were added.
+
+## Shao Qian's photo and profile — 20 September 2026
+
+Umang supplied San Shao Qian's photo and confirmed [her LinkedIn profile](https://www.linkedin.com/in/sanshaoqian/). Added the link to her name, portrait, and LinkedIn icon. Preserved the original photo as `avatar.jpeg`; the People page uses her optional `avatar_viewbox` setting to show a circular face-and-shoulders portrait at the same size as the other photos.
