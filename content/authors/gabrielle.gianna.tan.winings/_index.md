@@ -5,4 +5,9 @@ last_name: Tan-Winings
 user_groups:
   - Undergraduate Students
 role: BComp
+link: https://www.linkedin.com/in/gabriellegtw/
+social:
+  - icon: linkedin
+    icon_pack: fab
+    link: https://www.linkedin.com/in/gabriellegtw/
 ---
