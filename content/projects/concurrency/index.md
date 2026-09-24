@@ -13,10 +13,9 @@ Our work connects the mathematical foundations of concurrency with practical pro
 
 ## Research directions
 
-- **Race detection and predictive analysis.** Detecting data races and other concurrency errors efficiently, including bugs that can be inferred from an execution even when they do not occur in that execution.
-- **Concurrency testing and fuzzing.** Guiding the exploration of thread schedules toward new behaviors and hard-to-find bugs.
-- **Memory models and language semantics.** Understanding weak memory and message-passing concurrency, and developing foundations for testing and verifying concurrent programs in Go.
-- **Runtime verification.** Monitoring whether concurrent executions satisfy correctness conditions such as linearizability.
+- **Memory models and language semantics.** Understanding weak memory and message-passing concurrency, and developing rigorous semantics for concurrent programming languages such as Go.
+- **Testing, runtime verification, and predictive analysis.** Finding concurrency bugs through fuzzing and schedule exploration, monitoring correctness conditions such as linearizability, and predicting errors from observed executions.
+- **Formal verification.** Developing proof techniques and automated methods for establishing the correctness of concurrent programs and distributed protocols.
 
 ## Selected publications
 
