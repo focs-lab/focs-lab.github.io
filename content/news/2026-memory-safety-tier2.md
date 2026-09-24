@@ -1,7 +1,7 @@
 ---
-title: "Memory safety research funded"
-date: "2026-01-01"
-date_precision: "year"
+title: "MOE Tier 2 grant for memory safety with Prateek Saxena"
+date: "2026-02-01"
+date_precision: "month"
 ---
 
-Awarded funding through the **Ministry of Education Tier 2 grant** “Memory Safety Through Abstracted Program Translation”. [Research support]({{< relref "support/index.md" >}}).
+Prateek Saxena (PI) and Umang Mathur (co-PI) have been awarded a **Ministry of Education Tier 2 grant** for “Memory Safety Through Abstracted Program Translation”. The project investigates automatic translation from C to Rust to improve memory safety. [Research support]({{< relref "support/index.md" >}}).
