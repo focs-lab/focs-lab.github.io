@@ -26,7 +26,7 @@
     },
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2026-pldi-balasubramanian-dpor-estimation/"
+      "url": "https://umangmathur.org/publications/2026-pldi-balasubramanian-dpor-estimation/"
     }
   ],
   "doi": "10.1145/3808291"

@@ -31,7 +31,7 @@ featured: false
 # links:
 # - name: ""
 #   url: ""
-url_pdf: https://www.comp.nus.edu.sg/~umathur/papers/patterntrack-popl24.pdf
+url_pdf: https://umangmathur.org/papers/patterntrack-popl24.pdf
 url_code: https://zenodo.org/records/8424626
 url_dataset: ''
 url_poster: ''

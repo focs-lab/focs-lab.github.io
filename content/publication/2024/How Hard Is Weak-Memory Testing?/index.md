@@ -29,7 +29,7 @@ featured: false
 # links:
 # - name: ""
 #   url: ""
-url_pdf: https://www.comp.nus.edu.sg/~umathur/papers/rc20-rv-consistency-popl24.pdf
+url_pdf: https://umangmathur.org/papers/rc20-rv-consistency-popl24.pdf
 url_code:
 url_dataset: ''
 url_poster: ''

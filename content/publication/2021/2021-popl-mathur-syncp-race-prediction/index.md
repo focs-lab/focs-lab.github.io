@@ -24,7 +24,7 @@
     },
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2021-popl-mathur-syncp-race-prediction/"
+      "url": "https://umangmathur.org/publications/2021-popl-mathur-syncp-race-prediction/"
     }
   ],
   "doi": "10.1145/3434317"

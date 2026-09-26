@@ -19,9 +19,9 @@
   "links": [
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2022-tac-fan-controller-synthesis/"
+      "url": "https://umangmathur.org/publications/2022-tac-fan-controller-synthesis/"
     }
   ],
-  "url_pdf": "https://www.comp.nus.edu.sg/~umathur/papers/realsyn-tac.pdf",
+  "url_pdf": "https://umangmathur.org/papers/realsyn-tac.pdf",
   "doi": "10.1109/TAC.2021.3069723"
 }

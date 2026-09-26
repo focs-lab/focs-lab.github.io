@@ -18,9 +18,9 @@
   "links": [
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2020-fmsd-mathur-rationalsearch/"
+      "url": "https://umangmathur.org/publications/2020-fmsd-mathur-rationalsearch/"
     }
   ],
   "doi": "10.1007/s10703-020-00348-y",
-  "url_pdf": "https://www.comp.nus.edu.sg/~umathur/papers/rationalsearch-fmsd2020.pdf"
+  "url_pdf": "https://umangmathur.org/papers/rationalsearch-fmsd2020.pdf"
 }

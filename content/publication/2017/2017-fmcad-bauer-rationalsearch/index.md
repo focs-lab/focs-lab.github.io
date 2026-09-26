@@ -18,10 +18,10 @@
   "links": [
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2017-fmcad-bauer-rationalsearch/"
+      "url": "https://umangmathur.org/publications/2017-fmcad-bauer-rationalsearch/"
     }
   ],
-  "url_pdf": "https://www.comp.nus.edu.sg/~umathur/papers/rationalsearch-fmcad2017.pdf",
+  "url_pdf": "https://umangmathur.org/papers/rationalsearch-fmcad2017.pdf",
   "doi": "10.23919/FMCAD.2017.8102246",
   "award": "Journal version: FMSD 2020"
 }

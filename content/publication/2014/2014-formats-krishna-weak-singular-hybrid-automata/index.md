@@ -20,7 +20,7 @@
     },
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2014-formats-krishna-weak-singular-hybrid-automata/"
+      "url": "https://umangmathur.org/publications/2014-formats-krishna-weak-singular-hybrid-automata/"
     }
   ],
   "doi": "10.1007/978-3-319-10512-3_12"

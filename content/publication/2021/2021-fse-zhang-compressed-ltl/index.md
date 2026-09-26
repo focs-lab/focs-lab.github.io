@@ -16,9 +16,9 @@
   "links": [
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2021-fse-zhang-compressed-ltl/"
+      "url": "https://umangmathur.org/publications/2021-fse-zhang-compressed-ltl/"
     }
   ],
-  "url_pdf": "https://www.comp.nus.edu.sg/~umathur/papers/compressed-ltl-fse2021.pdf",
+  "url_pdf": "https://umangmathur.org/papers/compressed-ltl-fse2021.pdf",
   "doi": "10.1145/3468264.3468557"
 }

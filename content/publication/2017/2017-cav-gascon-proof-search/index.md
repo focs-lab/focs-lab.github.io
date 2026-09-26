@@ -25,9 +25,9 @@
     },
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2017-cav-gascon-proof-search/"
+      "url": "https://umangmathur.org/publications/2017-cav-gascon-proof-search/"
     }
   ],
-  "url_pdf": "https://www.comp.nus.edu.sg/~umathur/papers/synudic-cav2017.pdf",
+  "url_pdf": "https://umangmathur.org/papers/synudic-cav2017.pdf",
   "doi": "10.1007/978-3-319-63390-9_5"
 }

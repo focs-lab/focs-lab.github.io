@@ -25,7 +25,7 @@
     },
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2026-popl-shi-message-passing-consistency/"
+      "url": "https://umangmathur.org/publications/2026-popl-shi-message-passing-consistency/"
     }
   ],
   "doi": "10.1145/3776643"

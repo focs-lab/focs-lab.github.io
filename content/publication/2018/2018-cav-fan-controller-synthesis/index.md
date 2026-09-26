@@ -21,9 +21,9 @@
     },
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2018-cav-fan-controller-synthesis/"
+      "url": "https://umangmathur.org/publications/2018-cav-fan-controller-synthesis/"
     }
   ],
-  "url_pdf": "https://www.comp.nus.edu.sg/~umathur/papers/realsyn-cav2018.pdf",
+  "url_pdf": "https://umangmathur.org/papers/realsyn-cav2018.pdf",
   "doi": "10.1007/978-3-319-96145-3_19"
 }

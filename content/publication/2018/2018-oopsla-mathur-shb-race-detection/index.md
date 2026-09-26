@@ -28,7 +28,7 @@
     },
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2018-oopsla-mathur-shb-race-detection/"
+      "url": "https://umangmathur.org/publications/2018-oopsla-mathur-shb-race-detection/"
     }
   ],
   "doi": "10.1145/3276515"

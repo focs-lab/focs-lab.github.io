@@ -29,7 +29,7 @@
     },
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2022-asplos-mathur-tree-clocks/"
+      "url": "https://umangmathur.org/publications/2022-asplos-mathur-tree-clocks/"
     }
   ],
   "doi": "10.1145/3503222.3507734",
