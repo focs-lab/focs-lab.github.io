@@ -22,3 +22,6 @@ main:
   - name: Research Support
     url: support
     weight: 60
+  - name: IndiCS 2026
+    url: indics-2026
+    weight: 70
