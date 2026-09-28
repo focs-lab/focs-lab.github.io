@@ -26,8 +26,8 @@
   <main id="main-content" class="seminar-content">
     {{ if not $participants }}
     <aside class="form-callout" aria-labelledby="form-callout-title">
-      <div><p class="eyebrow">For invited participants</p><h2 id="form-callout-title">Please respond by 5 October</h2><p>Confirm your plans and tell us about letter requests and practical needs. Travel bookings are not required.</p></div>
-      <a class="button" href="https://tinyurl.com/indics-concurrency-2026">Participant form <span aria-hidden="true">↗</span></a>
+      <div><p class="eyebrow">Participation by invitation only</p><h2 id="form-callout-title">Invitees: please respond by 5 October</h2><p>Invitees have been sent the participant-information form. Please complete it by Monday, 5 October 2026. Travel bookings are not required.</p></div>
+      <p>If you would like to participate, please email the organizers: <a href="mailto:krishnas@cse.iitb.ac.in">Krishna S.</a> and <a href="mailto:umathur@nus.edu.sg">Umang Mathur</a>.</p>
     </aside>
     {{ end }}
     <div class="prose">{{ .Content }}</div>
@@ -36,7 +36,7 @@
       <table class="participant-table">
         <caption>{{ len site.Data.seminar2026.participants }} participants · list subject to change</caption>
         <thead><tr><th scope="col">Name</th><th scope="col">Affiliation</th></tr></thead>
-        <tbody>{{ range site.Data.seminar2026.participants }}<tr><th scope="row">{{ .name }}</th><td>{{ .affiliation }}</td></tr>{{ end }}</tbody>
+        <tbody>{{ range site.Data.seminar2026.participants }}<tr><th scope="row"><a href="{{ .website }}">{{ .name }}</a></th><td>{{ .affiliation }}</td></tr>{{ end }}</tbody>
       </table>
     </div>
     <p class="participant-note">Please <a href="{{ $base }}#organizers">contact the organizers</a> with corrections or changes to your participation plans.</p>

@@ -1,102 +1,127 @@
 [
   {
     "name": "Anca Muscholl",
-    "affiliation": "LaBRI"
+    "affiliation": "LaBRI",
+    "website": "https://www.labri.fr/perso/anca/"
   },
   {
     "name": "Ankush Das",
-    "affiliation": "Boston University"
+    "affiliation": "Boston University",
+    "website": "https://ankushdas.github.io/"
   },
   {
     "name": "Ankush Desai",
-    "affiliation": "Snowflake"
+    "affiliation": "Snowflake",
+    "website": "https://ankushdesai.github.io/"
+  },
+  {
+    "name": "B. Srivathsan",
+    "affiliation": "CMI",
+    "website": "https://www.cmi.ac.in/~sri/"
   },
   {
     "name": "Gowtham Kaki",
-    "affiliation": "UC Boulder"
+    "affiliation": "UC Boulder",
+    "website": "https://gowthamk.github.io/"
   },
   {
     "name": "Igor Walukiewicz",
-    "affiliation": "LaBRI"
+    "affiliation": "LaBRI",
+    "website": "https://www.labri.fr/perso/igw/"
   },
   {
     "name": "Kartik Nagar",
-    "affiliation": "IIT Madras"
+    "affiliation": "IIT Madras",
+    "website": "https://kartiknagar.github.io/"
   },
   {
     "name": "KC Sivaramakrishnan",
-    "affiliation": "IIT Madras"
+    "affiliation": "IIT Madras",
+    "website": "https://kcsrk.info/"
   },
   {
     "name": "Konstantinos Sagonas",
-    "affiliation": "Uppsala University"
+    "affiliation": "Uppsala University",
+    "website": "https://user.it.uu.se/~kostis/"
   },
   {
     "name": "Krishna S.",
-    "affiliation": "IIT Bombay"
+    "affiliation": "IIT Bombay",
+    "website": "https://www.cse.iitb.ac.in/~krishnas/"
   },
   {
     "name": "Mahesh Viswanathan",
-    "affiliation": "UIUC"
+    "affiliation": "UIUC",
+    "website": "https://vmahesh.cs.illinois.edu/"
   },
   {
     "name": "Manas Thakur",
-    "affiliation": "IIT Bombay"
+    "affiliation": "IIT Bombay",
+    "website": "https://www.cse.iitb.ac.in/~manas/"
   },
   {
     "name": "Michael Schwarz",
-    "affiliation": "NUS"
+    "affiliation": "NUS",
+    "website": "https://michael-schwarz.github.io/"
   },
   {
     "name": "Minjian Zhang",
-    "affiliation": "UIUC"
+    "affiliation": "UIUC",
+    "website": "https://minjian333.github.io/"
   },
   {
     "name": "Narayan Kumar",
-    "affiliation": "CMI"
+    "affiliation": "CMI",
+    "website": "https://www.cmi.ac.in/~kumar/"
   },
   {
     "name": "Omkar Tuppe",
-    "affiliation": "IIT Bombay"
+    "affiliation": "IIT Bombay",
+    "website": "https://homepages.iitb.ac.in/~194050003/"
   },
   {
     "name": "P. Madhusudan",
-    "affiliation": "UIUC"
+    "affiliation": "UIUC",
+    "website": "https://madhu.cs.illinois.edu/"
   },
   {
     "name": "Prakash Saivasan",
-    "affiliation": "IMSc"
+    "affiliation": "IMSc",
+    "website": "https://www.imsc.res.in/prakash_saivasan"
   },
   {
     "name": "R. Govind",
-    "affiliation": "IMSc"
+    "affiliation": "IMSc",
+    "website": "https://rdnivog.github.io/"
   },
   {
     "name": "Roland Meyer",
-    "affiliation": "TU Braunschweig"
+    "affiliation": "TU Braunschweig",
+    "website": "https://www.tu-braunschweig.de/tcs/team/meyer"
   },
   {
     "name": "Rupak Majumdar",
-    "affiliation": "MPI-SWS"
+    "affiliation": "MPI-SWS",
+    "website": "https://people.mpi-sws.org/~rupak/"
   },
   {
-    "name": "Sanchari",
-    "affiliation": "CMI"
-  },
-  {
-    "name": "Srivatsan Balaguru",
-    "affiliation": "CMI"
+    "name": "Sanchari Sil",
+    "affiliation": "CMI",
+    "website": "https://www.cmi.ac.in/people/academic.php"
   },
   {
     "name": "Suresh Jagannathan",
-    "affiliation": "Purdue University"
+    "affiliation": "Purdue University",
+    "website": "https://www.cs.purdue.edu/homes/suresh/"
   },
   {
-    "name": "Thomas Weis",
-    "affiliation": "NYU"
+    "name": "Thomas Wies",
+    "affiliation": "NYU",
+    "website": "https://cs.nyu.edu/~wies/"
   },
   {
     "name": "Umang Mathur",
-    "affiliation": "NUS"
+    "affiliation": "NUS",
+    "website": "https://umangmathur.org/"
   }
 ]

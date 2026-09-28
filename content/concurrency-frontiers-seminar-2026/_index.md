@@ -21,9 +21,11 @@ The seminar is part of the [ACM India IndiCS seminar series](https://india.acm.o
 - Weak memory, GPU concurrency, and persistent memory.
 - Shared benchmarks, tool infrastructure, and evaluation methods.
 
-## Participant information form {#participant-form}
+## Participation and participant information {#participant-form}
 
-Invited participants should complete the [participant-information form](https://tinyurl.com/indics-concurrency-2026) by **Monday, 5 October 2026**.
+**Participation is by invitation only.** Invitees have been sent the participant-information form and should complete it by **Monday, 5 October 2026**.
+
+If you would like to participate, please email the organizers: [Krishna S.](mailto:krishnas@cse.iitb.ac.in) and [Umang Mathur](mailto:umathur@nus.edu.sg).
 
 The form collects attendance plans, invitation-letter requests, dietary restrictions, food allergies, and accessibility needs. **You do not need to have booked your travel.** If your plans are uncertain, or you can no longer attend the full seminar, please indicate this in the form.
 
@@ -61,7 +63,7 @@ For participants who require a visa, ACM India has suggested combining the visit
 
 We will follow up separately with more detailed visa application guidance and contact details for use in the application. In the meantime, please allow sufficient time for your visa arrangements.
 
-If you need an invitation letter for university travel approval or reimbursement, please indicate this in the [participant-information form](https://tinyurl.com/indics-concurrency-2026).
+If you need an invitation letter for university travel approval or reimbursement, please indicate this in the participant-information form sent to invitees.
 
 ### Campus access and individual requirements {#campus-access}
 
