@@ -30,7 +30,7 @@
     },
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2020-popl-mathur-decidable-memory-safety/"
+      "url": "https://umangmathur.org/publications/2020-popl-mathur-decidable-memory-safety/"
     }
   ],
   "doi": "10.1145/3371103"

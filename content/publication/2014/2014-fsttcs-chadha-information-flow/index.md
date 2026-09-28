@@ -20,7 +20,7 @@
     },
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2014-fsttcs-chadha-information-flow/"
+      "url": "https://umangmathur.org/publications/2014-fsttcs-chadha-information-flow/"
     }
   ],
   "doi": "10.4230/LIPIcs.FSTTCS.2014.505"

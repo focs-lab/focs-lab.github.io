@@ -25,7 +25,7 @@
     },
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2023-pldi-tunc-syncp-deadlock-prediction/"
+      "url": "https://umangmathur.org/publications/2023-pldi-tunc-syncp-deadlock-prediction/"
     }
   ],
   "doi": "10.1145/3591291"

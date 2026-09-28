@@ -28,7 +28,7 @@
     },
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2017-pldi-kini-wcp-race-prediction/"
+      "url": "https://umangmathur.org/publications/2017-pldi-kini-wcp-race-prediction/"
     }
   ],
   "doi": "10.1145/3062341.3062374"

@@ -18,7 +18,7 @@
   "links": [
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2026-asplos-yu-anvil-hdl/"
+      "url": "https://umangmathur.org/publications/2026-asplos-yu-anvil-hdl/"
     }
   ],
   "doi": "10.1145/3779212.3790125",

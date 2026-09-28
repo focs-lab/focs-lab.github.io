@@ -1,6 +1,6 @@
 # Publication import
 
-Source: https://www.comp.nus.edu.sg/~umathur/publications/ (fetched 17 September 2026). The live publication page contains 44 entries; its sitemap independently lists the same 44 publication detail pages.
+Source: https://umangmathur.org/publications/ (fetched 17 September 2026). The live publication page contains 44 entries; its sitemap independently lists the same 44 publication detail pages.
 
 Added the 31 missing entries using their detail pages and BibTeX, including available abstracts, DOI, paper links and awards. Retained the 13 existing publication bundles and their URLs. The publication listing retains its text, year and publication-type filters. Publication detail links in the imported entries record their sources.
 

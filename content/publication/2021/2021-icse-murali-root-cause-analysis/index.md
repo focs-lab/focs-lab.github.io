@@ -29,7 +29,7 @@
     },
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2021-icse-murali-root-cause-analysis/"
+      "url": "https://umangmathur.org/publications/2021-icse-murali-root-cause-analysis/"
     }
   ],
   "doi": "10.1109/ICSE-SEIP52600.2021.00038"

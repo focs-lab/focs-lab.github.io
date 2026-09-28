@@ -20,7 +20,7 @@
     },
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2020-tacas-mathur-decidable-verification-modulo-axioms/"
+      "url": "https://umangmathur.org/publications/2020-tacas-mathur-decidable-verification-modulo-axioms/"
     }
   ],
   "doi": "10.1007/978-3-030-45237-7_10"

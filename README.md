@@ -25,7 +25,7 @@ Copy one of the folders in [content/authors](/content/authors/) and modify the n
 # Display name
 title: Umang Mathur
 
-link: https://www.comp.nus.edu.sg/~umathur/
+link: https://umangmathur.org/
 
 # Full Name (for SEO)
 first_name: Umang

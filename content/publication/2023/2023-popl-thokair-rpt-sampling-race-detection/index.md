@@ -17,7 +17,7 @@
   "links": [
     {
       "name": "CACM 2026 article",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2026-cacm-zhang-dynamic-race-detection/"
+      "url": "https://umangmathur.org/publications/2026-cacm-zhang-dynamic-race-detection/"
     },
     {
       "name": "ArXiv",
@@ -33,7 +33,7 @@
     },
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2023-popl-thokair-rpt-sampling-race-detection/"
+      "url": "https://umangmathur.org/publications/2023-popl-thokair-rpt-sampling-race-detection/"
     }
   ],
   "doi": "10.1145/3571238",

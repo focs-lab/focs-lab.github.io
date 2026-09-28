@@ -39,6 +39,7 @@
       <div class="portrait-title">
 
         <h2>
+          {{- with $person.link -}}<a href="{{ . }}">{{- end -}}
           {{- if $person.name_pronunciation -}}
             <ruby>
               <rb>{{ $person_page.Title }}</rb>
@@ -47,6 +48,7 @@
           {{- else -}}
             {{- $person_page.Title -}}
           {{- end -}}
+          {{- if $person.link -}}</a>{{- end -}}
         </h2>
 
         {{ with $person.role }}<h3>{{ . | markdownify | emojify }}</h3>{{ end }}
@@ -60,8 +62,10 @@
         {{ end }}
       </div>
 
+      {{ $social := where ($person.social | default slice) "icon" "not in" (slice "linkedin" "linkedin-in") }}
+      {{ with $social }}
       <ul class="network-icon" aria-hidden="true">
-        {{ range $person.social }}
+        {{ range . }}
         {{ $pack := or .icon_pack "fas" }}
         {{ $pack_prefix := $pack }}
         {{ if in (slice "fab" "fas" "far" "fal") $pack }}
@@ -82,6 +86,7 @@
         </li>
         {{ end }}
       </ul>
+      {{ end }}
 
     </div>
   </div>

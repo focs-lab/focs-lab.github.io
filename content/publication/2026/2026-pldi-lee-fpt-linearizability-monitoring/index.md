@@ -27,7 +27,7 @@
     },
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2026-pldi-lee-fpt-linearizability-monitoring/"
+      "url": "https://umangmathur.org/publications/2026-pldi-lee-fpt-linearizability-monitoring/"
     }
   ],
   "doi": "10.1145/3808315"

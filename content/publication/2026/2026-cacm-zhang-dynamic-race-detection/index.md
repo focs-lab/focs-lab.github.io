@@ -21,11 +21,11 @@
     },
     {
       "name": "Original POPL 2023 paper",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2023-popl-thokair-rpt-sampling-race-detection/"
+      "url": "https://umangmathur.org/publications/2023-popl-thokair-rpt-sampling-race-detection/"
     },
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2026-cacm-zhang-dynamic-race-detection/"
+      "url": "https://umangmathur.org/publications/2026-cacm-zhang-dynamic-race-detection/"
     }
   ],
   "doi": "10.1145/3821579",

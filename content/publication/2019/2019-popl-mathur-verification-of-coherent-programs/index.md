@@ -28,11 +28,11 @@
     },
     {
       "name": "Slides",
-      "url": "https://www.comp.nus.edu.sg/~umathur/talks/owls-uninterpreted-programs.pdf"
+      "url": "https://umangmathur.org/talks/owls-uninterpreted-programs.pdf"
     },
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2019-popl-mathur-verification-of-coherent-programs/"
+      "url": "https://umangmathur.org/publications/2019-popl-mathur-verification-of-coherent-programs/"
     }
   ],
   "doi": "10.1145/3290359"

@@ -10,9 +10,9 @@ main:
   - name: People
     url: people
     weight: 30
-  # - name: Events
-  #   url: event
-  #   weight: 40
+  - name: Projects
+    url: projects
+    weight: 40
   - name: Publications
     url: publication
     weight: 50
@@ -23,5 +23,5 @@ main:
     url: support
     weight: 60
   - name: IndiCS 2026
-    url: indics-2026
+    url: concurrency-frontiers-seminar-2026
     weight: 70

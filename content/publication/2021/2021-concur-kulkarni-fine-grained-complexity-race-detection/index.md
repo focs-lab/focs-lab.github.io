@@ -20,7 +20,7 @@
     },
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2021-concur-kulkarni-fine-grained-complexity-race-detection/"
+      "url": "https://umangmathur.org/publications/2021-concur-kulkarni-fine-grained-complexity-race-detection/"
     }
   ],
   "doi": "10.4230/LIPIcs.CONCUR.2021.16"

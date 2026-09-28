@@ -1,6 +1,6 @@
 # Team link review
 
-Reviewed 17 September 2026. Roster source: [live personal team page](https://www.comp.nus.edu.sg/~umathur/team/), fetched directly because the search index returned an older version.
+Reviewed 17 September 2026. Roster source: [live personal team page](https://umangmathur.org/team/), fetched directly because the search index returned an older version.
 
 Moved Zihan Zhou to Masters Students; added Ankit Jayant and interns Aniket Mishra, Ziyue Jin, and Omar Islam Laskar. Existing personal websites are preserved.
 
@@ -47,7 +47,7 @@ Umang supplied and confirmed Ankit Jayant’s LinkedIn profile: https://www.link
 
 ## Undergraduate roster refresh — 19 September 2026
 
-Matched the undergraduate and alumni sections of the [personal team page](https://www.comp.nus.edu.sg/~umathur/team/), checked on 19 September 2026.
+Matched the undergraduate and alumni sections of the [personal team page](https://umangmathur.org/team/), checked on 19 September 2026.
 
 Moved Guk Yi Siong, Wern Lim, Hua Jun Teow, Jeffrey Lee, Dick Ong, Ivan Tan, and Hong Jung Woo from Undergraduate Students to Alumni. Their alumni labels read “BComp, 2026”; existing author identifiers, photos, and personal links are retained.
 

@@ -31,7 +31,7 @@ featured: false
 # links:
 # - name: ""
 #   url: ""
-url_pdf: https://www.comp.nus.edu.sg/~umathur/papers/arboreta-cpp24.pdf
+url_pdf: https://umangmathur.org/papers/arboreta-cpp24.pdf
 url_code: 'https://github.com/verse-lab/arboreta'
 url_dataset: ''
 url_poster: ''

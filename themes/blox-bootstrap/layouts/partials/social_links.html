@@ -1,5 +1,8 @@
+{{/* LinkedIn profiles are accessed through the person's name. */}}
+{{ $social := where (.Params.social | default slice) "icon" "not in" (slice "linkedin" "linkedin-in") }}
+{{ with $social }}
 <ul class="network-icon" aria-hidden="true">
-  {{ range .Params.social }}
+  {{ range . }}
     {{ $pack := or .icon_pack "fas" }}
     {{ $pack_prefix := $pack }}
     {{ if in (slice "fab" "fas" "far" "fal") $pack }}
@@ -20,3 +23,4 @@
     </li>
   {{end}}
 </ul>
+{{ end }}

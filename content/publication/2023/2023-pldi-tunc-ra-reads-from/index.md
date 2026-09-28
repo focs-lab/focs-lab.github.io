@@ -27,7 +27,7 @@
     },
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2023-pldi-tunc-ra-reads-from/"
+      "url": "https://umangmathur.org/publications/2023-pldi-tunc-ra-reads-from/"
     }
   ],
   "doi": "10.1145/3591251"

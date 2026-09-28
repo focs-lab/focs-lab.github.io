@@ -25,7 +25,7 @@
     },
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2026-popl-decolnet-counting-sampling-traces/"
+      "url": "https://umangmathur.org/publications/2026-popl-decolnet-counting-sampling-traces/"
     }
   ],
   "doi": "10.1145/3776723"

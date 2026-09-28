@@ -1,0 +1,72 @@
+{{ $base := "/concurrency-frontiers-seminar-2026/" | relURL }}
+{{ $participants := eq .Params.seminar_page "participants" }}
+<section class="hero {{ if $participants }}hero-compact{{ end }}" aria-labelledby="seminar-title">
+  <div class="shell hero-grid">
+    <div>
+      <p class="eyebrow">IndiCS seminar · Mysore, India</p>
+      <h1 id="seminar-title">Frontiers in Verification and Analysis for Concurrency</h1>
+      <p class="hero-description">A week of research, open problems, and discussion on concurrent systems.</p>
+    </div>
+    <dl class="event-facts">
+      <div><dt>Seminar</dt><dd>30 November-4 December 2026</dd></div>
+      <div><dt>Venue</dt><dd>Infosys Mysore campus, India</dd></div>
+      <div><dt>Participation</dt><dd>By invitation</dd></div>
+    </dl>
+  </div>
+</section>
+<div class="seminar-navigation">
+  <nav class="shell tabs" aria-label="Seminar pages">
+    <a href="{{ $base }}" {{ if not $participants }}aria-current="page"{{ end }}>Overview</a>
+    <a href="{{ $base }}participants/" {{ if $participants }}aria-current="page"{{ end }}>Participants</a>
+    <a href="{{ $base }}#programme">Programme</a>
+    <a href="{{ $base }}#organizers">Organizers</a>
+  </nav>
+</div>
+<div class="shell main-grid {{ if $participants }}participants-grid{{ end }}">
+  <main id="main-content" class="seminar-content">
+    {{ if not $participants }}
+    <aside class="form-callout" aria-labelledby="form-callout-title">
+      <div><p class="eyebrow">For invited participants</p><h2 id="form-callout-title">Please respond by 5 October</h2><p>Confirm your plans and tell us about letter requests and practical needs. Travel bookings are not required.</p></div>
+      <a class="button" href="https://tinyurl.com/indics-concurrency-2026">Participant form <span aria-hidden="true">↗</span></a>
+    </aside>
+    {{ end }}
+    <div class="prose">{{ .Content }}</div>
+    {{ if $participants }}
+    <div class="participant-table-wrap">
+      <table class="participant-table">
+        <caption>{{ len site.Data.seminar2026.participants }} participants · list subject to change</caption>
+        <thead><tr><th scope="col">Name</th><th scope="col">Affiliation</th></tr></thead>
+        <tbody>{{ range site.Data.seminar2026.participants }}<tr><th scope="row">{{ .name }}</th><td>{{ .affiliation }}</td></tr>{{ end }}</tbody>
+      </table>
+    </div>
+    <p class="participant-note">Please <a href="{{ $base }}#organizers">contact the organizers</a> with corrections or changes to your participation plans.</p>
+    {{ end }}
+  </main>
+  <aside class="sidebar" aria-label="Seminar quick reference">
+    <div class="sidebar-inner">
+      <p class="eyebrow">Plan your visit</p>
+      <dl class="quick-facts">
+        <div><dt>Arrive</dt><dd>Sunday, 29 November<br>Afternoon</dd></div>
+        <div><dt>Depart</dt><dd>Friday, 4 December<br>Afternoon</dd></div>
+        <div><dt>Expected registration fee</dt><dd>INR 9,000 <small>approximately</small></dd></div>
+      </dl>
+      {{ if not $participants }}
+      <nav class="on-this-page" aria-label="On this page">
+        <p class="eyebrow">On this page</p>
+        <a href="#about">About the seminar</a>
+        <a href="#practical-information">Practical information</a>
+        <a href="#registration-and-accommodation">Registration & accommodation</a>
+        <a href="#travel-to-mysore">Travel to Mysore</a>
+        <a href="#visas-and-invitation-letters">Visas & invitation letters</a>
+        <a href="#campus-access">Campus access</a>
+        <a href="#dates">Key dates</a>
+        <a href="#programme">Programme</a>
+        <a href="#organizers">Organizers</a>
+      </nav>
+      {{ else }}
+      <a class="sidebar-return" href="{{ $base }}">Travel and practical information →</a>
+      {{ end }}
+      <p class="updated">Updated {{ .Lastmod.Format "2 January 2006" }}</p>
+    </div>
+  </aside>
+</div>

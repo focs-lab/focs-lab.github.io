@@ -21,9 +21,9 @@
     },
     {
       "name": "Publication page",
-      "url": "https://www.comp.nus.edu.sg/~umathur/publications/2018-csl-madhusudan-eqsmt/"
+      "url": "https://umangmathur.org/publications/2018-csl-madhusudan-eqsmt/"
     }
   ],
-  "url_pdf": "https://www.comp.nus.edu.sg/~umathur/papers/eqsmt-csl2018.pdf",
+  "url_pdf": "https://umangmathur.org/papers/eqsmt-csl2018.pdf",
   "doi": "10.4230/LIPIcs.CSL.2018.31"
 }
