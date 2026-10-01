@@ -1,5 +1,5 @@
 ---
-title: Concurrency
+title: Formal verification and testing for concurrent software
 type: project
 weight: 10
 summary: Algorithms and tools for testing and verifying concurrent software, with a focus on race detection, predictive analysis, fuzzing, and weak memory.
@@ -7,9 +7,9 @@ show_date: false
 share: false
 ---
 
-Concurrent programs must behave correctly across many possible interactions between threads and processes. Bugs can depend on rare schedules, subtle synchronization patterns, or the memory model of the underlying language and hardware. We develop algorithms and tools that make these behaviors easier to explore, understand, and verify.
+A concurrent program can pass thousands of tests and still fail under a thread schedule that nobody anticipated. Weak memory and subtle synchronization make these failures difficult to reproduce—and even harder to rule out.
 
-Our work connects the mathematical foundations of concurrency with practical program analysis. We study both the complexity of verification problems and techniques that scale to real executions.
+We develop algorithms for detecting races, predicting bugs from observed executions, and directing testing toward unexplored behaviors. Alongside these tools, we study verification methods and the semantics of concurrent languages, connecting practical bug discovery with rigorous guarantees of correctness.
 
 ## Research directions
 

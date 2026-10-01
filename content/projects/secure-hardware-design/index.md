@@ -1,5 +1,5 @@
 ---
-title: Formal Methods for Secure Hardware Design
+title: Design of reliable and secure hardware systems
 type: project
 weight: 20
 summary: Languages, type systems, and verification techniques for building safe and secure hardware, including Anvil and its guarantees against timing hazards.
@@ -7,9 +7,9 @@ show_date: false
 share: false
 ---
 
-Hardware designs combine concurrent components whose correctness depends on precise timing and communication. Subtle mistakes in these interactions can undermine both functional correctness and security. We investigate how programming languages and formal methods can make hardware easier to design, compose, and verify.
+Hardware design is slow, and mistakes are expensive. Errors in timing, communication, or security can survive simulation and surface only after fabrication, forcing costly respins. As designs grow more complex, checking correctness late in the design cycle becomes an increasingly fragile strategy.
 
-A central part of this work is **Anvil**, a hardware description language that uses a type system to prevent timing hazards. Anvil makes timing relationships explicit and checks contracts between communicating modules, while retaining control over cycle-level timing and supporting dynamic timing behavior.
+We design programming languages and verification frameworks that help engineers build efficient, correct, and secure hardware, with correctness checks built into the design process. Our language **Anvil** makes timing contracts explicit and uses a type system to rule out timing hazards, while preserving control over cycle-level behavior. Our broader goal is to make strong guarantees compatible with the performance and flexibility that hardware design demands.
 
 ## Research directions
 
