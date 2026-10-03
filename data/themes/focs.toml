@@ -1,0 +1,38 @@
+# Theme metadata
+# Palette taken from the lab logo: ink (graph), slate (middle plane), burnt orange (highlighted edge).
+name = "FOCS"
+
+[light]
+  # Primary
+  primary = "#2f4a62"
+
+  link = "#2f4a62"
+  link_hover = "#b4521c"
+
+  # Menu
+  menu_primary = "#fff"
+  menu_text = "#3c4a58"
+  menu_text_active = "#15191e"
+  menu_title = "#15191e"
+
+  # Home sections
+  home_section_odd = "rgb(255, 255, 255)"
+  home_section_even = "rgb(246, 248, 250)"
+
+[dark]
+  # Primary
+  primary = "#a9c3db"
+
+  link = "#a9c3db"
+  link_hover = "#f0a374"
+
+  # Menu
+  menu_primary = "#15191e"
+  menu_text = "rgba(255, 255, 255, 0.7)"
+  menu_text_active = "#fff"
+  menu_title = "#fff"
+
+  # Home sections
+  background = "#121519"
+  home_section_odd = "#121519"
+  home_section_even = "#171b20"
