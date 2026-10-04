@@ -1,12 +1,32 @@
 <div class="col-12 focs-home">
-  <h1>{{ .wcBlock.content.title }}</h1>
-  <div class="focs-home-intro">{{ .wcPage.RenderString .wcBlock.content.text }}</div>
+  <div class="focs-hero">
+    <div class="focs-hero-text">
+      <div class="focs-affiliations">
+        <a class="focs-aff" href="https://www.comp.nus.edu.sg/" target="_blank" rel="noopener">
+          <img class="focs-aff-nus focs-aff-light" src="{{ (resources.Get "media/affiliations/nus-computing-logo.png").RelPermalink }}" alt="NUS Computing" width="621" height="122">
+          <img class="focs-aff-nus focs-aff-dark" src="{{ (resources.Get "media/affiliations/nus-computing-logo-white.svg").RelPermalink }}" alt="NUS Computing" width="268" height="48">
+        </a>
+        <span class="focs-aff-sep" aria-hidden="true"></span>
+        <a class="focs-aff focs-eyebrow" href="https://nus-plse.github.io" target="_blank" rel="noopener">
+          <img class="focs-aff-plse" src="{{ (resources.Get "media/affiliations/plse-mascot.png").RelPermalink }}" alt="" width="160" height="160">
+          PLSE
+        </a>
+      </div>
+      <h1>{{ .wcBlock.content.title }}</h1>
+      <div class="focs-home-intro">{{ .wcPage.RenderString .wcBlock.content.text }}</div>
+    </div>
+    <div class="focs-hero-art" aria-hidden="true">
+      {{ partial "focs/logo" (dict "class" "focs-hero-logo" "decorative" true) }}
+      <span class="focs-hero-shadow"></span>
+    </div>
+  </div>
   <h2>Research directions</h2>
   <div class="focs-directions">
-    {{ range (where site.RegularPages "Section" "projects").ByWeight }}
-      <a class="focs-direction" href="{{ .RelPermalink }}">
-        <h3>{{ .Title }}</h3>
-        <p>{{ .Params.summary }}</p>
+    {{ range $i, $p := (where site.RegularPages "Section" "projects").ByWeight }}
+      <a class="focs-direction" href="{{ $p.RelPermalink }}">
+        <span class="focs-direction-index">{{ printf "%02d" (add $i 1) }}</span>
+        <h3>{{ $p.Title }}</h3>
+        <p>{{ $p.Params.summary }}</p>
         <span class="focs-direction-more">Explore this direction <span aria-hidden="true">→</span></span>
       </a>
     {{ end }}
