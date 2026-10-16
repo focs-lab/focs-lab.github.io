@@ -1,5 +1,5 @@
 {
-  "title": "Controller Synthesis Made Real: Reach-avoid Specifications and Linear Dynamics",
+  "title": "Controller Synthesis Made Real: Reach-Avoid Specifications and Linear Dynamics",
   "authors": [
     "Chuchu Fan",
     "umang",

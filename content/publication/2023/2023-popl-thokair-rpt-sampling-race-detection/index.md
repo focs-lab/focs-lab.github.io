@@ -1,5 +1,5 @@
 {
-  "title": "Dynamic Race Detection With O(1) Samples",
+  "title": "Dynamic Race Detection with O(1) Samples",
   "authors": [
     "Mosaad Al Thokair",
     "Minjian Zhang",

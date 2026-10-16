@@ -1,7 +1,7 @@
 {
   "title": "Look for the Proof to Find the Program: Decorated-Component-Based Program Synthesis",
   "authors": [
-    "Adria Gascon",
+    "Adrià Gascón",
     "Ashish Tiwari",
     "Brent Carmer",
     "umang"

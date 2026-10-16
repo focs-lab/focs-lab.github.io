@@ -1,5 +1,5 @@
 {
-  "title": "The Complexity of Data Race Prediction",
+  "title": "The Complexity of Dynamic Data Race Prediction",
   "authors": [
     "umang",
     "Andreas Pavlogiannis",

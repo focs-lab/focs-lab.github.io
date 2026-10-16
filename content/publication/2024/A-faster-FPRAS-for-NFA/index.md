@@ -9,8 +9,10 @@ authors:
   - Sourav Chakraborty
   - umang
 
+random_author_order: true
+
 date: "2024-04-08T00:00:00Z"
-doi: 10.48550/arXiv.2312.13320
+doi: 10.1145/3651613
 
 
 # Publication type.
@@ -23,8 +25,8 @@ publication: 2024 Symposium on Principles of Database Systems
 publication_short: PODS 2024
 
 abstract: |-
-  Given a non-deterministic finite automaton (NFA) A with m states, and a natural number n (presented in unary), the #NFA problem asks to determine the size of the set {{< math >}}$L(A_n)${{< /math >}} of words of length n accepted by A. While the corresponding decision problem of checking the emptiness of {{< math >}}$L(A_n)${{< /math >}} is solvable in polynomial time, the #NFA problem is known to be #P-hard. Recently, the long-standing open question -- whether there is an FPRAS (fully polynomial time randomized approximation scheme) for #NFA -- was resolved in \cite{ACJR19}. The FPRAS due to \cite{ACJR19} relies on the interreducibility of counting and sampling, and computes, for each pair of state q and natural number {{< math >}}$i <= n${{< /math >}}, a set of {{< math >}}$O(\frac{m^7 n^7}{\epsilon^7})${{< /math >}} many uniformly chosen samples from the set of words of length i that have a run ending at q ({{< math >}}$\epsilon${{< /math >}} is the error tolerance parameter of the FPRAS). This informative measure -- the number of samples maintained per state and length -- also affects the overall time complexity with a quadratic dependence.
-  Given the prohibitively high time complexity, in terms of each of the input parameters, of the FPRAS due to \cite{ACJR19}, and considering the widespread application of approximate counting (and sampling) in various tasks in Computer Science, a natural question arises: Is there a faster FPRAS for #NFA that can pave the way for the practical implementation of approximate #NFA tools? In this work, we demonstrate that significant improvements in time complexity are achievable. Specifically, we have reduced the number of samples required for each state to be independent of m, with significantly less dependence on n and ϵ, maintaining only {{< math >}}$\widetilde{O}(\frac{n^4}{epsilon^2})${{< /math >}} samples per state.
+  Given a non-deterministic finite automaton (NFA) A with m states, and a natural number n (presented in unary), the #NFA problem asks to determine the size of the set {{< math >}}$L(A_n)${{< /math >}} of words of length n accepted by A. While the corresponding decision problem of checking the emptiness of {{< math >}}$L(A_n)${{< /math >}} is solvable in polynomial time, the #NFA problem is known to be #P-hard. Recently, the long-standing open question -- whether there is an FPRAS (fully polynomial time randomized approximation scheme) for #NFA -- was resolved in [ACJR19]. The FPRAS due to [ACJR19] relies on the interreducibility of counting and sampling, and computes, for each pair of state q and natural number {{< math >}}$i <= n${{< /math >}}, a set of {{< math >}}$O(\frac{m^7 n^7}{\epsilon^7})${{< /math >}} many uniformly chosen samples from the set of words of length i that have a run ending at q ({{< math >}}$\epsilon${{< /math >}} is the error tolerance parameter of the FPRAS). This informative measure -- the number of samples maintained per state and length -- also affects the overall time complexity with a quadratic dependence.
+  Given the prohibitively high time complexity, in terms of each of the input parameters, of the FPRAS due to [ACJR19], and considering the widespread application of approximate counting (and sampling) in various tasks in Computer Science, a natural question arises: Is there a faster FPRAS for #NFA that can pave the way for the practical implementation of approximate #NFA tools? In this work, we demonstrate that significant improvements in time complexity are achievable. Specifically, we have reduced the number of samples required for each state to be independent of m, with significantly less dependence on n and ϵ, maintaining only {{< math >}}$\widetilde{O}(\frac{n^4}{\epsilon^2})${{< /math >}} samples per state.
 
 tags: []
 

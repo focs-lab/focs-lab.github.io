@@ -1,0 +1,30 @@
+{{/* Display author list. */}}
+
+{{- $taxonomy := "authors" }}
+{{ if .Param $taxonomy }}
+  {{ range $index, $value := (.GetTerms $taxonomy) }}
+    {{- /* Highlight the author's name? */ -}}
+    {{- $highlight_name := .Page.Params.highlight_name | default false -}}
+    {{- $display_name := index $.Params.authors $index -}}
+    {{- if $value.File -}}
+      {{- $display_name = $value.LinkTitle -}}
+    {{- end -}}
+
+    {{- if gt $index 0 -}}
+      {{- if $.Params.random_author_order }} <span class="author-sep" title="Random author order">ⓡ</span> {{ else }}, {{ end -}}
+    {{- end -}}
+    <span {{ if $value.Params.link }}class="author-highlighted"{{end}}>
+      {{/* Effectively check the page's `_build` option as `_build` is not exposed in Hugo's Page object. */}}
+      {{- if $value.Params.link -}}
+        <a href="{{$value.Params.link}}">{{ $display_name }}</a>
+      {{- else -}}
+        {{ $display_name }}
+      {{- end -}}
+    </span>
+    {{- if isset $.Params "author_notes" -}}
+      {{- with (index $.Params.author_notes $index) -}}
+        <i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="{{.}}"></i>
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

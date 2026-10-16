@@ -18,7 +18,7 @@ sections:
         Ministry of Education, Singapore  
 
         ### Advancing the Foundations and Ecosystem for Safe and Secure Hardware Design
-        Temasek Presidential Young Professorship, Ministry of Defense, Singapore  
+        Temasek-Presidential Young Professorship, Ministry of Defence, Singapore\
         **Role:** Principal Investigator
 
         ### Memory Safety Through Abstracted Program Translation

@@ -1,5 +1,5 @@
 {
-  "title": "Decidable Fragment of Second Order Logic With Applications to Program Synthesis",
+  "title": "A Decidable Fragment of Second Order Logic With Applications to Synthesis",
   "authors": [
     "P. Madhusudan",
     "umang",

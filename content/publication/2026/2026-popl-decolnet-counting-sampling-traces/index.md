@@ -3,9 +3,9 @@
   "authors": [
     "Alexis de Colnet",
     "Kuldeep S. Meel",
-    "umang",
-    "Random author order"
+    "umang"
   ],
+  "random_author_order": true,
   "date": "2026-01-08T00:00:00+00:00",
   "publication_types": [
     "paper-conference"
