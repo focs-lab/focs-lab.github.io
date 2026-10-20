@@ -1,5 +1,5 @@
 {
-  "title": "A Type System for Communication Safe Hardware Design",
+  "title": "A Type System for Communication-Safe Hardware Design",
   "authors": [
     "aditya.ranjan.jha",
     "Jason Zhijingcheng Yu",
@@ -13,7 +13,14 @@
   ],
   "publication": "Proceedings of the ACM on Programming Languages (POPL 2027)",
   "publication_short": "POPL 2027",
-  "featured": false
+  "featured": false,
+  "url_pdf": "https://arxiv.org/pdf/2610.26599",
+  "links": [
+    {
+      "name": "ArXiv",
+      "url": "https://arxiv.org/abs/2610.26599"
+    }
+  ]
 }
 
 Accepted to appear at [POPL 2027](https://popl27.sigplan.org/).
