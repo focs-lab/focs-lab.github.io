@@ -14,7 +14,14 @@
   ],
   "publication": "ATC 2026",
   "publication_short": "ATC 2026",
-  "featured": false
+  "featured": false,
+  "url_pdf": "https://arxiv.org/pdf/2512.05555",
+  "links": [
+    {
+      "name": "ArXiv",
+      "url": "https://arxiv.org/abs/2512.05555"
+    }
+  ]
 }
 
 To appear at ATC 2026.
