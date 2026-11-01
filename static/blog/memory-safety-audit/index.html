@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What does “verified memory safe” mean?</title>
+  <meta name="author" content="Umang Mathur, Prateek Saxena, Tianyu Li, Bo Wang, Diego Meyer, Ruishi Li">
+  <meta name="description" content="We examine the specifications behind Anthropic and Theorem’s verification results and explain the memory-safety requirements that their guarantees can leave out.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What does “verified memory safe” mean?">
+  <meta property="og:description" content="Our investigation of the specifications behind Anthropic and Theorem’s verification results.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f3f4f5'/%3E%3Cpath d='M5 8h22M5 16h12M5 24h22' stroke='%232b3138' stroke-width='3'/%3E%3Cpath d='M20 16h7' stroke='%239e4a78' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="article.css">
+  <script src="article.js" defer></script>
+</head>
+<body class="public-post">
+<a class="skip" href="#article">Skip to article</a>
+<div class="site-line"><span>Notes on software verification</span><span>1 November 2026</span></div>
+<header class="article-header">
+  <h1>What does “verified memory safe” mean?</h1>
+  <p class="subtitle">Our investigation of the specifications behind Anthropic and Theorem’s verification results.</p>
+  <div class="authors" aria-label="Authors">
+    <p class="author-row"><a href="mailto:umathur@nus.edu.sg">Umang Mathur</a><a href="mailto:dcsprs@nus.edu.sg">Prateek Saxena</a></p>
+    <p class="author-row"><a href="https://tianyuli12.github.io/">Tianyu Li</a><a href="https://halocore.github.io/">Bo Wang</a><a href="https://www.linkedin.com/in/dimeyer/">Diego Meyer</a><a href="https://zero0one1.github.io/">Ruishi Li</a></p>
+    <p class="affiliation">National University of Singapore</p>
+    <p class="collaboration">A collaboration between <a href="https://focs-lab.comp.nus.edu.sg/">FOCS Lab</a> and <a href="https://kisp.comp.nus.edu.sg/">KISP Lab</a>.</p>
+  </div>
+  <p class="byline">7 minute read</p>
+  <nav class="article-links" aria-label="Paper and evidence">
+    <a class="paper-link" href="https://github.com/focs-lab/memory-safety-proof-audit/raw/refs/heads/main/paper/main.pdf" type="application/pdf">Read the paper <span>PDF ↗</span></a>
+    <a href="#evidence">Technical evidence</a>
+  </nav>
+  <div class="trace-rule" aria-hidden="true"></div>
+</header>
+<main id="article">
+  <section id="finding" aria-label="The announcement and our investigation">
+    <p class="lede">On 22 October 2026, <a href="https://www.anthropic.com/research/formal-verification">Anthropic and Theorem announced</a> that they had used AI to generate mathematical proofs for programs built from 123 open-source libraries. This is an encouraging development for automated verification, and the release of proofs allows others to examine what has been established.</p>
+    <p>After this announcement, we began examining the released proofs to understand what had actually been proved about memory safety. Memory-safety bugs can allow attackers to steal data or take control of a system. Eliminating such bugs is therefore an important goal for cybersecurity and national security. We think it is important to be careful with such announcements. Overstating the guarantees can lead people to rely on protections that have not been established.</p>
+    <p>When we say that a program has been proved correct, it is important to understand what this means. The proof establishes that the program satisfies a precisely stated requirement, called a <strong>specification</strong>, under certain assumptions. The specification has a crucial role: it must precisely encode what we want the software to do, or what we want it not to do.</p>
+    <p>In this investigation, we focus on memory safety. Intuitively, this requires that a program access only memory it is entitled to use, and only while it is entitled to use it. We observe that the published specification does not fully capture this intended requirement. A program can therefore satisfy that specification and still contain a memory-safety bug.</p>
+    <p>Specifications become especially important when we ask AI to carry out verification. An AI rewarded for getting a proof accepted may exploit omissions in the specification to achieve that goal. This is a form of reward hacking: the formal objective is satisfied, but our actual intent is not. Note that the proof itself can still be mathematically valid. If the specification fails to rule out a bug, the AI may leave that bug in place and still succeed at the task we gave it.</p>
+    <p>The team adds checks to a program to detect certain memory errors. The published proofs establish, in particular, that these checks never report an error for any input covered by the stated assumptions. However, the checks do not detect every memory-safety bug. Note that an individual proof may establish additional properties, such as ensuring that a particular write stays within its intended array. We therefore examined the individual proofs to see whether these additional properties rule out the errors that the checks would miss.</p>
+  </section>
+
+  <section id="example">
+    <h2>The memory-safety guarantee</h2>
+    <p>The verification approach uses AddressSanitizer, or ASan, a tool that detects memory errors while a program runs. The guarantee includes proving that ASan reports no error for the executions covered by the proof. To interpret this as memory safety, however, we need to understand which errors ASan detects.</p>
+    <p>Consider a program that stores two objects, A and B, in a 100-byte block of memory, with 50 bytes reserved for each object.</p>
+    <figure id="pool-example" aria-labelledby="pool-caption">
+      <span class="figure-label">A 100-byte block shared by two objects</span>
+      <div class="backing-title"><span>ASan sees an accessible block</span><span>100 bytes</span></div>
+      <div class="pool" data-offset="60" role="img" aria-label="One 100-byte allocation contains object A at bytes 0 through 49 and object B at bytes 50 through 99. A write through A at offset 60 lands inside B.">
+        <div class="object object-a">Object A<small>bytes 0–49</small></div>
+        <div class="object object-b">Object B<small>bytes 50–99</small></div>
+        <div class="access-marker" aria-hidden="true"></div>
+      </div>
+      <div id="access-result" aria-live="polite" aria-atomic="true">
+        <p class="access-line" id="offset-label">Write through A at offset 60 → lands in B</p>
+        <div class="observations">
+          <p><span>Does ASan report an error?</span><strong>No.</strong> <span class="observation-detail" id="asan-detail">Byte 60 is inside the allocated block.</span></p>
+          <p><span>Does the write stay within A?</span><strong id="object-verdict">No.</strong> <span class="observation-detail" id="object-detail">Byte 60 belongs to B.</span></p>
+        </div>
+      </div>
+      <div class="controls" role="group" aria-label="Compare two writes through A’s pointer">
+        <button type="button" data-offset-button="25" aria-pressed="false" aria-controls="access-result">Within A · offset 25</button>
+        <button type="button" data-offset-button="60" aria-pressed="true" aria-controls="access-result">Beyond A · offset 60</button>
+      </div>
+      <noscript><p class="endnote">At offset 25, the write stays within A and the ASan check also passes. Enable JavaScript to switch between the two illustrated cases.</p></noscript>
+      <figcaption id="pool-caption">This is a hypothetical illustration. The library has not told ASan about the boundary between A and B. The controls compare two writes; they do not run a program.</figcaption>
+    </figure>
+    <p>When writing to A, we want the program to modify only the memory reserved for A. Suppose, however, that a bug causes the write to extend beyond A’s boundary and overwrite some of B’s data. This violates the intended memory-safety requirement. Note that the write still falls within the larger 100-byte block. If the library has not informed ASan of the boundary between A and B, ASan may treat the entire block as accessible and report no error.</p>
+    <p>We constructed a small program to check whether such a bug could coexist with the full published guarantee. The program copies an input and allows one extra byte to overwrite an adjacent action code. We then proved that the program satisfies the guarantee, and the project’s checker accepted our proof. Thus, <strong>the program contains a memory-safety bug even though the verification succeeds</strong>. Our <a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/dossiers/checked-example/README.md">source, proof, and checker logs</a> document this construction. The example demonstrates a gap in the specification without implementing an exploit.</p>
+  </section>
+
+  <section id="findings">
+    <h2>Examining the individual proofs</h2>
+    <p>The published proofs concern programs written to test selected library functions. For example, a test program might compress some input data and then decompress the result. The proof covers every input permitted by its assumptions for that particular program.</p>
+    <p>However, another program might use the same library differently. It might decompress data received from elsewhere, without first producing that data through compression. It might also call other library functions, or call the same functions in a different order. Proving the first program safe does not automatically establish safety for these other uses. We therefore examined which uses of each library the published proofs cover.</p>
+
+    <h3>Buffer boundaries in coturn</h3>
+    <p><a href="https://github.com/coturn/coturn">Coturn</a> is open-source server software that supports voice and video calls. We found that the proof conditions we examined can hold even when a write’s destination is one byte before the intended message buffer. These conditions therefore leave an important memory-safety requirement unproved. We argue that this illustrates the danger of an incomplete specification: a proof can meet its formal requirements without establishing the intended buffer boundary. Our <a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/dossiers/coturn-field-bounds/README.txt">technical evidence</a> documents this omission.</p>
+
+    <h3>Temporary storage in OpenSSL</h3>
+    <p>For OpenSSL, we examined a different requirement. OpenSSL gives callers temporary storage for calculations, together with references that identify where that storage is. Once a group of calculations ends, those temporaries must no longer be used, even if OpenSSL keeps the memory for later reuse.</p>
+    <p>We found that the conditions for writing through a reference can still hold after the temporary’s permitted lifetime has ended. The old reference should no longer be used, since OpenSSL may reuse the storage for another calculation. The specification therefore needs to capture an important requirement: ending a temporary’s lifetime must also end permission to use its old references. The proof conditions we examined do not enforce this requirement. Our <a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/dossiers/openssl-lifetime/README.txt">technical evidence</a> documents this omission.</p>
+
+    <p>We discuss additional libraries and the limits of their proofs in <a href="https://github.com/focs-lab/memory-safety-proof-audit/raw/refs/heads/main/paper/main.pdf">our paper</a>, which also provides the detailed evidence for our findings.</p>
+    <details id="guarantee">
+      <summary>Technical statement and scope of our checks</summary>
+      <div><p>The published agreement statement compares ordinary and sanitizer-instrumented executables. Under its execution-model and memory-budget assumptions, neither reaches a modeled error, and they have the same observable behaviours. Our constructed example satisfies this statement for its fixed plain and ASan binaries.</p><p>The initial four-project allocator review examined source and specifications. Separate Rocq checks support the coturn constructions and the focused OpenSSL lifetime result; the latter does not replay the full binary agreement proofs. The <a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/README.md">evidence guide</a> records each investigation’s method, revision, and limits.</p></div>
+    </details>
+  </section>
+
+  <section id="stakes">
+    <h2>Interpreting the security claims</h2>
+    <p>In our example, the input can overwrite the value that determines which function the program calls. The call still goes to an existing function, but it may no longer be the function the programmer intended. We argue that it is not sufficient to check that the chosen function exists; we also need to ensure that a memory error cannot change this choice. Whether an attacker can exploit such an error depends on what the functions do and how the program is used.</p>
+    <p>When communicating a verification result, we should explain which errors the specification excludes and which uses the proof covers. A reader should not have to inspect thousands of lines of proof to determine whether the claimed protection applies to their use of the software.</p>
+  </section>
+
+  <section id="specifications">
+    <h2>Specifications and intent</h2>
+    <p>There is an additional concern when AI performs this work. Research on <a href="https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/">specification gaming</a> and <a href="https://www.anthropic.com/research/reward-tampering">reward hacking</a> documents how AI systems can satisfy a measured objective without fulfilling its intended purpose. In verification, obtaining an accepted proof may satisfy the assigned task even when a real bug remains outside the specification. We have not established that reward hacking occurred in this project. We do argue that the possibility makes independent scrutiny of the specification especially necessary.</p>
+    <p>Writing an adequate specification requires understanding the software and how people intend to use it. Some requirements may be poorly documented, or become apparent only after an unexpected use exposes an omission. AI may help us identify these requirements, but producing a proof does not establish that we have identified them correctly.</p>
+    <p>Our investigation concerns memory safety, but this obligation applies to any claim that software is “bug-free”. As AI makes proof generation more accessible, we need to devote corresponding effort to understanding and validating what we ask it to prove. We should judge progress by how well the resulting guarantees address the bugs we want to eliminate.</p>
+  </section>
+
+  <section id="evidence" aria-labelledby="evidence-title">
+    <h2 id="evidence-title">Paper and supporting evidence</h2>
+    <a class="paper-download" href="https://github.com/focs-lab/memory-safety-proof-audit/raw/refs/heads/main/paper/main.pdf" type="application/pdf"><span><strong>AI Proved the Code Memory Safe. Or Did It?</strong><small>The full argument, findings, references, and technical appendices.</small></span><span class="pdf-label">PDF ↗</span></a>
+    <ul class="evidence-links">
+      <li><a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/VALIDATION.md">Reproduction status</a> · completed checks and the incomplete fresh-clone interpreter proof replay.</li>
+      <li><a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/dossiers/checked-example/README.md">Constructed example</a> · source, proof, binaries, and checker logs.</li>
+      <li><a href="https://github.com/focs-lab/memory-safety-proof-audit/raw/refs/heads/main/evidence/dossiers/coturn-field-bounds/output/pdf/coturn-field-bound-findings.pdf">Coturn findings</a> · checked constructions and <a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/dossiers/coturn-field-bounds/README.txt">reproduction instructions</a>.</li>
+      <li><a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/dossiers/openssl-lifetime/README.txt">OpenSSL lifetime check</a> · proof sources, replay results, and limitations.</li>
+      <li><a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/README.md">Evidence guide</a> · all project reports, methods, and <a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/context-and-properties.md">theorem assumptions</a>.</li>
+    </ul>
+    <p class="endnote">The allocator and bzip2 reviews concern revision <code>98e995d4</code>; the coturn constructions and synthetic example use <code>a6839bb9</code>. These findings concern the recorded versions, not an exhaustive audit of all projects or later changes.</p>
+  </section>
+</main>
+<footer><a href="#article">Back to article ↑</a></footer>
+</body>
+</html>
