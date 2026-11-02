@@ -27,7 +27,7 @@
   </div>
   <p class="byline">7 minute read</p>
   <nav class="article-links" aria-label="Paper and evidence">
-    <a class="paper-link" href="https://github.com/focs-lab/memory-safety-proof-audit/raw/refs/heads/main/paper/main.pdf" type="application/pdf">Read the paper <span>PDF ↗</span></a>
+    <a class="paper-link" href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/paper/main.pdf">Read the paper <span>PDF ↗</span></a>
     <a href="#evidence">Technical evidence</a>
   </nav>
   <div class="trace-rule" aria-hidden="true"></div>
@@ -84,7 +84,7 @@
     <p>For OpenSSL, we examined a different requirement. OpenSSL gives callers temporary storage for calculations, together with references that identify where that storage is. Once a group of calculations ends, those temporaries must no longer be used, even if OpenSSL keeps the memory for later reuse.</p>
     <p>We found that the conditions for writing through a reference can still hold after the temporary’s permitted lifetime has ended. The old reference should no longer be used, since OpenSSL may reuse the storage for another calculation. The specification therefore needs to capture an important requirement: ending a temporary’s lifetime must also end permission to use its old references. The proof conditions we examined do not enforce this requirement. Our <a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/dossiers/openssl-lifetime/README.txt">technical evidence</a> documents this omission.</p>
 
-    <p>We discuss additional libraries and the limits of their proofs in <a href="https://github.com/focs-lab/memory-safety-proof-audit/raw/refs/heads/main/paper/main.pdf">our paper</a>, which also provides the detailed evidence for our findings.</p>
+    <p>We discuss additional libraries and the limits of their proofs in <a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/paper/main.pdf">our paper</a>, which also provides the detailed evidence for our findings.</p>
     <details id="guarantee">
       <summary>Technical statement and scope of our checks</summary>
       <div><p>The published agreement statement compares ordinary and sanitizer-instrumented executables. Under its execution-model and memory-budget assumptions, neither reaches a modeled error, and they have the same observable behaviours. Our constructed example satisfies this statement for its fixed plain and ASan binaries.</p><p>The initial four-project allocator review examined source and specifications. Separate Rocq checks support the coturn constructions and the focused OpenSSL lifetime result; the latter does not replay the full binary agreement proofs. The <a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/README.md">evidence guide</a> records each investigation’s method, revision, and limits.</p></div>
@@ -106,11 +106,11 @@
 
   <section id="evidence" aria-labelledby="evidence-title">
     <h2 id="evidence-title">Paper and supporting evidence</h2>
-    <a class="paper-download" href="https://github.com/focs-lab/memory-safety-proof-audit/raw/refs/heads/main/paper/main.pdf" type="application/pdf"><span><strong>AI Proved the Code Memory Safe. Or Did It?</strong><small>The full argument, findings, references, and technical appendices.</small></span><span class="pdf-label">PDF ↗</span></a>
+    <a class="paper-download" href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/paper/main.pdf"><span><strong>AI Proved the Code Memory Safe. Or Did It?</strong><small>The full argument, findings, references, and technical appendices.</small></span><span class="pdf-label">PDF ↗</span></a>
     <ul class="evidence-links">
       <li><a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/VALIDATION.md">Reproduction status</a> · completed checks and the incomplete fresh-clone interpreter proof replay.</li>
       <li><a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/dossiers/checked-example/README.md">Constructed example</a> · source, proof, binaries, and checker logs.</li>
-      <li><a href="https://github.com/focs-lab/memory-safety-proof-audit/raw/refs/heads/main/evidence/dossiers/coturn-field-bounds/output/pdf/coturn-field-bound-findings.pdf">Coturn findings</a> · checked constructions and <a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/dossiers/coturn-field-bounds/README.txt">reproduction instructions</a>.</li>
+      <li><a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/dossiers/coturn-field-bounds/output/pdf/coturn-field-bound-findings.pdf">Coturn findings</a> · checked constructions and <a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/dossiers/coturn-field-bounds/README.txt">reproduction instructions</a>.</li>
       <li><a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/dossiers/openssl-lifetime/README.txt">OpenSSL lifetime check</a> · proof sources, replay results, and limitations.</li>
       <li><a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/README.md">Evidence guide</a> · all project reports, methods, and <a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/context-and-properties.md">theorem assumptions</a>.</li>
     </ul>
