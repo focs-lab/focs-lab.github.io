@@ -15,4 +15,4 @@ user_groups:
 
 ---
 
-
+Read our [audit of AI-generated memory-safety proofs](/blog/memory-safety-audit/), which examines the guarantees behind Anthropic and Theorem’s verification results.

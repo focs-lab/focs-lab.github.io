@@ -5,27 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>What does “verified memory safe” mean?</title>
   <meta name="author" content="Umang Mathur, Prateek Saxena, Tianyu Li, Bo Wang, Diego Meyer, Ruishi Li">
-  <meta name="description" content="We examine the specifications behind Anthropic and Theorem’s verification results and explain the memory-safety requirements that their guarantees can leave out.">
+  <meta name="description" content="An independent audit of Anthropic and Theorem’s memory-safety proofs: what they establish, what ASan misses, and why specifications matter.">
+  <link rel="canonical" href="https://focs-lab.comp.nus.edu.sg/blog/memory-safety-audit/">
+  <meta property="og:url" content="https://focs-lab.comp.nus.edu.sg/blog/memory-safety-audit/">
+  <meta property="article:published_time" content="2026-11-01">
+  <meta property="article:modified_time" content="2026-11-02T19:22:47+08:00">
   <meta property="og:type" content="article">
   <meta property="og:title" content="What does “verified memory safe” mean?">
-  <meta property="og:description" content="Our investigation of the specifications behind Anthropic and Theorem’s verification results.">
+  <meta property="og:description" content="An independent audit of Anthropic and Theorem’s memory-safety proofs: what they establish, what ASan misses, and why specifications matter.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f3f4f5'/%3E%3Cpath d='M5 8h22M5 16h12M5 24h22' stroke='%232b3138' stroke-width='3'/%3E%3Cpath d='M20 16h7' stroke='%239e4a78' stroke-width='3'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="article.css">
   <script src="article.js" defer></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https://focs-lab.comp.nus.edu.sg/blog/memory-safety-audit/#article",
+  "url": "https://focs-lab.comp.nus.edu.sg/blog/memory-safety-audit/",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://focs-lab.comp.nus.edu.sg/blog/memory-safety-audit/"
+  },
+  "headline": "What does “verified memory safe” mean?",
+  "description": "An independent audit of Anthropic and Theorem’s memory-safety proofs: what they establish, what ASan misses, and why specifications matter.",
+  "inLanguage": "en",
+  "datePublished": "2026-11-01",
+  "dateModified": "2026-11-02T19:22:47+08:00",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Umang Mathur",
+      "url": "https://umangmathur.org/"
+    },
+    {
+      "@type": "Person",
+      "name": "Prateek Saxena",
+      "url": "https://www.comp.nus.edu.sg/~prateeks/"
+    },
+    {
+      "@type": "Person",
+      "name": "Tianyu Li",
+      "url": "https://tianyuli12.github.io/"
+    },
+    {
+      "@type": "Person",
+      "name": "Bo Wang",
+      "url": "https://halocore.github.io/"
+    },
+    {
+      "@type": "Person",
+      "name": "Diego Meyer",
+      "url": "https://www.linkedin.com/in/dimeyer/"
+    },
+    {
+      "@type": "Person",
+      "name": "Ruishi Li",
+      "url": "https://zero0one1.github.io/"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "FOCS Lab, National University of Singapore",
+    "url": "https://focs-lab.comp.nus.edu.sg/"
+  }
+}
+  </script>
 </head>
 <body class="public-post">
 <a class="skip" href="#article">Skip to article</a>
-<div class="site-line"><nav aria-label="Breadcrumb"><a href="/">FOCS Lab</a> / <a href="/blog/">Blog</a></nav><span>1 November 2026</span></div>
+<div class="site-line"><nav aria-label="Breadcrumb"><a href="/">FOCS Lab</a> / <a href="/blog/">Blog</a></nav><span><time datetime="2026-11-01">1 November 2026</time></span></div>
 <header class="article-header">
   <h1>What does “verified memory safe” mean?</h1>
   <p class="subtitle">Our investigation of the specifications behind Anthropic and Theorem’s verification results.</p>
   <div class="authors" aria-label="Authors">
-    <p class="author-row"><a href="mailto:umathur@nus.edu.sg">Umang Mathur</a><a href="mailto:dcsprs@nus.edu.sg">Prateek Saxena</a></p>
+    <p class="author-row"><a href="https://umangmathur.org/">Umang Mathur</a><a href="https://www.comp.nus.edu.sg/~prateeks/">Prateek Saxena</a></p>
     <p class="author-row"><a href="https://tianyuli12.github.io/">Tianyu Li</a><a href="https://halocore.github.io/">Bo Wang</a><a href="https://www.linkedin.com/in/dimeyer/">Diego Meyer</a><a href="https://zero0one1.github.io/">Ruishi Li</a></p>
     <p class="affiliation">National University of Singapore</p>
     <p class="collaboration">A collaboration between <a href="https://focs-lab.comp.nus.edu.sg/">FOCS Lab</a> and <a href="https://kisp.comp.nus.edu.sg/">KISP Lab</a>.</p>
   </div>
-  <p class="byline">7 minute read</p>
+  <p class="byline">7 minute read · Updated <time datetime="2026-11-02T19:22:47+08:00">2 November 2026</time></p>
   <nav class="article-links" aria-label="Paper and evidence">
     <a class="paper-link" href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/paper/main.pdf">Read the paper <span>PDF ↗</span></a>
     <a href="#evidence">Technical evidence</a>

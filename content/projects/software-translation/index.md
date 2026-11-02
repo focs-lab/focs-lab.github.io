@@ -11,6 +11,8 @@ Moving a software repository to a new language means much more than translating 
 
 We develop methods for breaking this task into manageable pieces while retaining the structure and intent of the original program. Our work on **program skeletons** separates high-level program structure from implementation details, allowing individual fragments to be translated and checked within a common framework. We are extending this approach toward repository-scale migration, where preserving behavior across module boundaries is central.
 
+Our [audit of AI-generated memory-safety proofs](/blog/memory-safety-audit/) examines a related question: do the properties we prove capture the safety guarantees we need?
+
 ## Selected publication
 
 [Program Skeletons for Automated Program Translation]({{< relref "/publication/2025/Program Skeletons for Automated Program Translation" >}}).

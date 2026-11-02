@@ -16,3 +16,5 @@ link: https://tianyuli12.github.io/
 role: "Co-advised with [Prateek Saxena](https://www.comp.nus.edu.sg/~prateeks/)"
 
 ---
+
+Read our [audit of AI-generated memory-safety proofs](/blog/memory-safety-audit/), which examines the guarantees behind Anthropic and Theorem’s verification results.
