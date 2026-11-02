@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>What does “verified memory safe” mean?</title>
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="An independent audit of Anthropic and Theorem’s memory-safety proofs.">
   <meta name="author" content="Umang Mathur, Prateek Saxena, Tianyu Li, Bo Wang, Diego Meyer, Ruishi Li">
-  <meta name="description" content="An independent audit of Anthropic and Theorem’s memory-safety proofs: what they establish, what ASan misses, and why specifications matter.">
-  <link rel="canonical" href="https://focs-lab.comp.nus.edu.sg/blog/memory-safety-audit/">
-  <meta property="og:url" content="https://focs-lab.comp.nus.edu.sg/blog/memory-safety-audit/">
-  <meta property="article:published_time" content="2026-11-01">
-  <meta property="article:modified_time" content="2026-11-02T19:22:47+08:00">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="What does “verified memory safe” mean?">
-  <meta property="og:description" content="An independent audit of Anthropic and Theorem’s memory-safety proofs: what they establish, what ASan misses, and why specifications matter.">
+  <title>What does “verified memory safe” even mean?</title>
   <link rel="icon" type="image/png" href="https://focs-lab.comp.nus.edu.sg/media/icon_hub157ec64a3b6061493b9a93478af82fa_37450_32x32_fill_lanczos_center_3.png">
   <link rel="stylesheet" href="article.css">
-  <script src="article.js" defer></script>
+  <link rel="canonical" href="https://focs-lab.comp.nus.edu.sg/blog/memory-safety-audit/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://focs-lab.comp.nus.edu.sg/blog/memory-safety-audit/">
+  <meta property="og:title" content="What does “verified memory safe” even mean?">
+  <meta property="og:description" content="An independent audit of Anthropic and Theorem’s memory-safety proofs.">
+  <meta property="article:published_time" content="2026-11-01">
+  <meta property="article:modified_time" content="2026-11-02T20:02:29+08:00">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -26,11 +26,11 @@
     "@type": "WebPage",
     "@id": "https://focs-lab.comp.nus.edu.sg/blog/memory-safety-audit/"
   },
-  "headline": "What does “verified memory safe” mean?",
-  "description": "An independent audit of Anthropic and Theorem’s memory-safety proofs: what they establish, what ASan misses, and why specifications matter.",
+  "headline": "What does “verified memory safe” even mean?",
+  "description": "An independent audit of Anthropic and Theorem’s memory-safety proofs.",
   "inLanguage": "en",
   "datePublished": "2026-11-01",
-  "dateModified": "2026-11-02T19:22:47+08:00",
+  "dateModified": "2026-11-02T20:02:29+08:00",
   "author": [
     {
       "@type": "Person",
@@ -71,11 +71,11 @@
 }
   </script>
 </head>
-<body class="public-post">
+<body class="public-post research-post">
 <a class="skip" href="#article">Skip to article</a>
 <div class="site-line"><nav aria-label="Breadcrumb"><a href="/">FOCS Lab</a> / <a href="/blog/">Blog</a></nav><span><time datetime="2026-11-01">1 November 2026</time></span></div>
 <header class="article-header">
-  <h1>What does “verified memory safe” mean?</h1>
+  <h1>What does “verified memory safe” even mean?</h1>
   <p class="subtitle">Our investigation of the specifications behind Anthropic and Theorem’s verification results.</p>
   <div class="authors" aria-label="Authors">
     <p class="author-row"><a href="https://umangmathur.org/">Umang Mathur</a><a href="https://www.comp.nus.edu.sg/~prateeks/">Prateek Saxena</a></p>
@@ -83,98 +83,177 @@
     <p class="affiliation">National University of Singapore</p>
     <p class="collaboration">A collaboration between <a href="https://focs-lab.comp.nus.edu.sg/">FOCS Lab</a> and <a href="https://kisp.comp.nus.edu.sg/">KISP Lab</a>.</p>
   </div>
-  <p class="byline">7 minute read · Updated <time datetime="2026-11-02T19:22:47+08:00">2 November 2026</time></p>
-  <nav class="article-links" aria-label="Paper and evidence">
+  <nav id="evidence" class="article-links" aria-label="Paper and evidence">
     <a class="paper-link" href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/paper/main.pdf">Read the paper <span>PDF ↗</span></a>
-    <a href="#evidence">Technical evidence</a>
+    <a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/README.md">Technical evidence</a>
   </nav>
   <div class="trace-rule" aria-hidden="true"></div>
 </header>
 <main id="article">
-  <section id="finding" aria-label="The announcement and our investigation">
-    <p class="lede">On 22 October 2026, <a href="https://www.anthropic.com/research/formal-verification">Anthropic and Theorem announced</a> that they had used AI to generate mathematical proofs for programs built from 123 open-source libraries. This is an encouraging development for automated verification, and the release of proofs allows others to examine what has been established.</p>
-    <p>After this announcement, we began examining the released proofs to understand what had actually been proved about memory safety. Memory-safety bugs can allow attackers to steal data or take control of a system. Eliminating such bugs is therefore an important goal for cybersecurity and national security. We think it is important to be careful with such announcements. Overstating the guarantees can lead people to rely on protections that have not been established.</p>
-    <p>When we say that a program has been proved correct, it is important to understand what this means. The proof establishes that the program satisfies a precisely stated requirement, called a <strong>specification</strong>, under certain assumptions. The specification has a crucial role: it must precisely encode what we want the software to do, or what we want it not to do.</p>
-    <p>In this investigation, we focus on memory safety. Intuitively, this requires that a program access only memory it is entitled to use, and only while it is entitled to use it. We observe that the published specification does not fully capture this intended requirement. A program can therefore satisfy that specification and still contain a memory-safety bug.</p>
-    <p>Specifications become especially important when we ask AI to carry out verification. An AI rewarded for getting a proof accepted may exploit omissions in the specification to achieve that goal. This is a form of reward hacking: the formal objective is satisfied, but our actual intent is not. Note that the proof itself can still be mathematically valid. If the specification fails to rule out a bug, the AI may leave that bug in place and still succeed at the task we gave it.</p>
-    <p>The team adds checks to a program to detect certain memory errors. The published proofs establish, in particular, that these checks never report an error for any input covered by the stated assumptions. However, the checks do not detect every memory-safety bug. Note that an individual proof may establish additional properties, such as ensuring that a particular write stays within its intended array. We therefore examined the individual proofs to see whether these additional properties rule out the errors that the checks would miss.</p>
-  </section>
+      <article aria-label="Blog article">
+        <section class="audience" aria-labelledby="audience-title">
+          <h2 id="audience-title">Audience</h2>
+          <p>This post is intended for a general audience. Many of the issues we discuss will be familiar to researchers in security and formal methods. We explain them here to help readers assess what Anthropic and Theorem’s announcement means for cybersecurity. Our technical findings are in <a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/paper/main.pdf">the paper</a>.</p>
+        </section>
 
-  <section id="example">
-    <h2>The memory-safety guarantee</h2>
-    <p>The verification approach uses AddressSanitizer, or ASan, a tool that detects memory errors while a program runs. The guarantee includes proving that ASan reports no error for the executions covered by the proof. To interpret this as memory safety, however, we need to understand which errors ASan detects.</p>
-    <p>Consider a program that stores two objects, A and B, in a 100-byte block of memory, with 50 bytes reserved for each object.</p>
-    <figure id="pool-example" aria-labelledby="pool-caption">
-      <span class="figure-label">A 100-byte block shared by two objects</span>
-      <div class="backing-title"><span>ASan sees an accessible block</span><span>100 bytes</span></div>
-      <div class="pool" data-offset="60" role="img" aria-label="One 100-byte allocation contains object A at bytes 0 through 49 and object B at bytes 50 through 99. A write through A at offset 60 lands inside B.">
-        <div class="object object-a">Object A<small>bytes 0–49</small></div>
-        <div class="object object-b">Object B<small>bytes 50–99</small></div>
-        <div class="access-marker" aria-hidden="true"></div>
-      </div>
-      <div id="access-result" aria-live="polite" aria-atomic="true">
-        <p class="access-line" id="offset-label">Write through A at offset 60 → lands in B</p>
-        <div class="observations">
-          <p><span>Does ASan report an error?</span><strong>No.</strong> <span class="observation-detail" id="asan-detail">Byte 60 is inside the allocated block.</span></p>
-          <p><span>Does the write stay within A?</span><strong id="object-verdict">No.</strong> <span class="observation-detail" id="object-detail">Byte 60 belongs to B.</span></p>
-        </div>
-      </div>
-      <div class="controls" role="group" aria-label="Compare two writes through A’s pointer">
-        <button type="button" data-offset-button="25" aria-pressed="false" aria-controls="access-result">Within A · offset 25</button>
-        <button type="button" data-offset-button="60" aria-pressed="true" aria-controls="access-result">Beyond A · offset 60</button>
-      </div>
-      <noscript><p class="endnote">At offset 25, the write stays within A and the ASan check also passes. Enable JavaScript to switch between the two illustrated cases.</p></noscript>
-      <figcaption id="pool-caption">This is a hypothetical illustration. The library has not told ASan about the boundary between A and B. The controls compare two writes; they do not run a program.</figcaption>
-    </figure>
-    <p>When writing to A, we want the program to modify only the memory reserved for A. Suppose, however, that a bug causes the write to extend beyond A’s boundary and overwrite some of B’s data. This violates the intended memory-safety requirement. Note that the write still falls within the larger 100-byte block. If the library has not informed ASan of the boundary between A and B, ASan may treat the entire block as accessible and report no error.</p>
-    <p>We constructed a small program to check whether such a bug could coexist with the full published guarantee. The program copies an input and allows one extra byte to overwrite an adjacent action code. We then proved that the program satisfies the guarantee, and the project’s checker accepted our proof. Thus, <strong>the program contains a memory-safety bug even though the verification succeeds</strong>. Our <a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/dossiers/checked-example/README.md">source, proof, and checker logs</a> document this construction. The example demonstrates a gap in the specification without implementing an exploit.</p>
-  </section>
+        <section id="finding" aria-labelledby="breakthrough-title">
+          <h2 id="breakthrough-title">Large-scale verification breakthrough</h2>
+          <p>On 22 October 2026, Anthropic and Theorem <a href="https://www.anthropic.com/research/formal-verification">announced</a> that they had used AI to generate proofs for programs built from many open-source libraries.</p>
+          <p>For readers unfamiliar with the background, there are two reasons this announcement deserves attention.</p>
+          <p>First, AI is making it easier to <a href="https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/">find security bugs</a>. This makes the search for ways to secure our software more urgent. Formal methods have long offered a promising approach. They use mathematics to reason about software. Formal verification is one part of this field: we state requirements precisely and prove that a program meets them. Such proofs can establish that entire classes of bugs are absent.</p>
+          <p>Second, making formal verification scale has long been difficult. There are fundamental limits to what can be automated, and real software is complex. Researchers have spent decades developing techniques to tackle these difficulties, and successful projects have required years of expert effort. The <a href="https://xavierleroy.org/publi/erts2016_compcert.pdf">CompCert compiler’s correctness proof</a>, for example, required about six person-years of work. The <a href="https://pdos.csail.mit.edu/6.5840/papers/ironfleet.pdf">IronFleet project</a> reported roughly four person-years to develop its methods and build and verify two distributed systems.</p>
+          <p>This helps explain why producing proofs for much more software, much faster, would be a major advance.</p>
+        </section>
 
-  <section id="findings">
-    <h2>Examining the individual proofs</h2>
-    <p>The published proofs concern programs written to test selected library functions. For example, a test program might compress some input data and then decompress the result. The proof covers every input permitted by its assumptions for that particular program.</p>
-    <p>However, another program might use the same library differently. It might decompress data received from elsewhere, without first producing that data through compression. It might also call other library functions, or call the same functions in a different order. Proving the first program safe does not automatically establish safety for these other uses. We therefore examined which uses of each library the published proofs cover.</p>
+        <section aria-labelledby="methodology-title">
+          <h2 id="methodology-title">Methodology used in the breakthrough</h2>
+          <p>Let us now look more closely at what Anthropic and Theorem actually proved. This will make our concerns easier to understand.</p>
+          <p>The team wanted to address memory-safety bugs, a major source of security vulnerabilities.<sup><a id="ref-1" href="#note-1" role="doc-noteref" aria-label="Footnote 1: vulnerability statistics">1</a></sup> For this, they turned to AddressSanitizer (ASan), a widely used tool for detecting memory-safety bugs.</p>
+          <div class="guarantee">
+            <p>In essence, when the proof effort succeeds for a program, <strong>that program does not have bugs that ASan can expose</strong>.<sup><a id="ref-2" href="#note-2" role="doc-noteref" aria-label="Footnote 2: scope and assumptions">2</a></sup></p>
+          </div>
+          <details id="proof-explanation">
+            <summary>How did they prove this?</summary>
+            <div class="explanation">
+              <p>Their approach made good use of <a href="https://google.github.io/oss-fuzz/">OSS-Fuzz</a>, Google’s service for finding bugs in open-source software.</p>
+              <p>OSS-Fuzz uses tools such as ASan to add checks to a program. When ASan detects a memory error, it makes the program stop and report it. A bug that might otherwise go unnoticed becomes an explicit failure. The fuzzer then runs this modified program on many different inputs, looking for one that triggers a failure.</p>
+              <p>Anthropic and Theorem turned this into a verification problem. They proved two things:</p>
+              <ol>
+                <li>The original program and the version with ASan checks behave the same.</li>
+                <li>The version with ASan checks does not crash.</li>
+              </ol>
+              <p>Together, these give the guarantee stated above.</p>
+            </div>
+          </details>
+        </section>
 
-    <h3>Buffer boundaries in coturn</h3>
-    <p><a href="https://github.com/coturn/coturn">Coturn</a> is open-source server software that supports voice and video calls. We found that the proof conditions we examined can hold even when a write’s destination is one byte before the intended message buffer. These conditions therefore leave an important memory-safety requirement unproved. We argue that this illustrates the danger of an incomplete specification: a proof can meet its formal requirements without establishing the intended buffer boundary. Our <a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/dossiers/coturn-field-bounds/README.txt">technical evidence</a> documents this omission.</p>
+        <section id="security" aria-labelledby="security-title">
+          <h2 id="security-title">What does this mean for security?</h2>
+          <p>At this point, it is imperative to ask: how should we understand what they have achieved? Have Anthropic and Theorem solved cybersecurity? Have they solved memory safety? We don’t think so.</p>
+          <div class="guarantee">
+            <p><strong>Memory safety ≠ freedom from bugs that ASan can expose.</strong></p>
+          </div>
+          <p>This distinction will be familiar to many Computer Science researchers, especially those working in software security, formal verification and programming languages. Researchers have long discussed what memory safety means and clarified the guarantees that different tools provide.<sup><a id="ref-3" href="#note-3" role="doc-noteref" aria-label="Footnote 3: memory safety and sanitizer guarantees">3</a></sup> We explain the distinction here for readers who may not have considered it carefully.</p>
+          <p>ASan is an effective bug finder. Its original paper already reported hundreds of previously unknown bugs found in Chromium and other software.<sup><a id="ref-4" href="#note-4" role="doc-noteref" aria-label="Footnote 4: AddressSanitizer paper">4</a></sup> But ASan also misses memory-safety bugs—even when the faulty memory access actually happens.<sup><a id="ref-5" href="#note-5" role="doc-noteref" aria-label="Footnote 5: bugs sanitizers can miss">5</a></sup> Proving that a program never triggers an ASan error therefore does not establish that it is memory safe.</p>
+          <p>The examples below explain this gap, including how it arises in OpenSSL. In our <a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/paper/main.pdf">paper</a>, we discuss the technical details in depth.</p>
+          <details id="memory-safety-examples">
+            <summary>Examples: memory-safety bugs that ASan can miss</summary>
+            <div class="explanation">
+              <p id="buffer-example"><strong>Writing past the end of a buffer.</strong> Imagine a structure containing two buffers, one after the other. A write intended for the first buffer spills into the second. This violates the first buffer’s bounds, but stays within the surrounding structure. ASan can miss this error because it does not ordinarily place checks between fields within a structure.<sup><a id="ref-5-example" href="#note-5" role="doc-noteref" aria-label="Footnote 5: bugs sanitizers can miss">5</a></sup></p>
+              <figure class="blog-diagram" id="figure-buffer-boundary">
+                <div role="img" aria-label="Two buffers sit inside one allocated structure. A write intended for buffer A crosses A’s boundary and lands inside buffer B, without leaving the allocation.">
+                  <div aria-hidden="true">
+                    <div class="diagram-heading">One allocated structure</div>
+                    <div class="allocation-drawing">
+                      <div class="buffer-cell">Buffer A</div>
+                      <div class="buffer-cell">Buffer B</div>
+                      <div class="write-arrow"><span>Write intended for A</span></div>
+                    </div>
+                    <div class="boundary-caption">A ends here; B begins.</div>
+                  </div>
+                </div>
+                <figcaption><strong>Figure 1. Inside the allocation, outside the buffer.</strong> The write crosses A’s boundary but stays inside the surrounding structure. ASan can miss this error.</figcaption>
+              </figure>
+              <p id="openssl-example"><strong>Using a temporary after its lifetime ends.</strong> A program may keep a pool of temporary objects so it can reuse their storage. A computation obtains an object, uses it and then releases it back to the pool. After release, the old reference must no longer be used. But the pool keeps the underlying memory allocated.</p>
+              <p>ASan does not automatically know when the program releases an object back to its own pool. Using the old reference can therefore violate the object’s lifetime without triggering an ASan error.</p>
+              <p>OpenSSL uses such a pool for temporary numbers in cryptographic computations. Its <a href="https://docs.openssl.org/3.0/man3/BN_CTX_start/">documentation</a> explicitly says that references to these temporaries become invalid when they are released. Our paper examines how this lifetime rule is reflected in the specifications used in the proofs.</p>
+              <figure class="blog-diagram" id="figure-temporary-lifetime">
+                <div role="img" aria-label="A temporary is obtained, then released, and the pool storage is freed later. Use through the old reference is allowed only until release. The underlying storage remains allocated until the pool is freed.">
+                  <div aria-hidden="true">
+                    <div class="diagram-heading">One temporary from a reusable pool</div>
+                    <div class="timeline-events">
+                      <span>Obtain<br>temporary</span>
+                      <span>Release<br>temporary</span>
+                      <span>Free pool<br>storage</span>
+                    </div>
+                    <div class="timeline-track">
+                      <span class="timeline-label">Use through the old reference</span>
+                      <div class="reference-bar">
+                        <span class="reference-allowed">Allowed</span>
+                        <span class="reference-forbidden">Forbidden</span>
+                      </div>
+                    </div>
+                    <div class="timeline-track">
+                      <span class="timeline-label">Underlying storage</span>
+                      <div class="storage-bar">Still allocated</div>
+                    </div>
+                    <div class="time-axis">Time <span></span></div>
+                  </div>
+                </div>
+                <figcaption><strong>Figure 2. The storage outlives the temporary.</strong> After release, the old reference must no longer be used, even though its storage remains allocated. ASan does not automatically know the pool’s lifetime rule.</figcaption>
+              </figure>
+            </div>
+          </details>
+          <p>So here is the takeaway in one line:</p>
+          <div class="guarantee">
+            <p><strong>A proof of freedom from bugs that ASan can expose does not imply memory safety.</strong></p>
+          </div>
+          <p>The <a href="https://www.anthropic.com/research/formal-verification">blog post</a> does acknowledge this issue as part of its broader discussion of limitations. It says:</p>
+          <blockquote class="source-quote" cite="https://www.anthropic.com/research/formal-verification">
+            <p>However, ASan doesn’t detect all memory safety bugs…</p>
+          </blockquote>
+          <p>But this message may get lost when different limitations are clubbed together as gaps that will be easily closed in the near future. <strong>Not all disclaimers are equal.</strong> The proofs could be extended to other processors. But that would not solve memory safety. We first need to acknowledge that memory safety is a larger problem. It requires careful thinking about <em>specifications</em>. Producing proofs faster, or for more programs, does not by itself solve a problem on which the security of today’s infrastructure depends.</p>
+        </section>
 
-    <h3>Temporary storage in OpenSSL</h3>
-    <p>For OpenSSL, we examined a different requirement. OpenSSL gives callers temporary storage for calculations, together with references that identify where that storage is. Once a group of calculations ends, those temporaries must no longer be used, even if OpenSSL keeps the memory for later reuse.</p>
-    <p>We found that the conditions for writing through a reference can still hold after the temporary’s permitted lifetime has ended. The old reference should no longer be used, since OpenSSL may reuse the storage for another calculation. The specification therefore needs to capture an important requirement: ending a temporary’s lifetime must also end permission to use its old references. The proof conditions we examined do not enforce this requirement. Our <a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/dossiers/openssl-lifetime/README.txt">technical evidence</a> documents this omission.</p>
+        <section id="specifications" aria-labelledby="specifications-title">
+          <h2 id="specifications-title">The harder problem: getting the specification right</h2>
+          <p>At a high level, the message is simple: if you do not know what you are proving, you may end up proving something useless. For experts in formal verification, this has always been clear. The specification you check your program against must capture your actual intent.</p>
+          <p>As an example, we already know stronger specifications for memory safety than “ASan safety.” These account for individual objects, their boundaries and their lifetimes. (<a href="https://oaklandsok.github.io/papers/song2019.pdf"><em>SoK: Sanitizing for Security</em></a>) Our <a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/paper/main.pdf">technical report</a> examines these distinctions in the specifications used in this project.</p>
+          <p>Faster proofs do not tell us whether we chose the right requirement. Specifications deserve extra scrutiny. This is especially so when an AI is rewarded for producing an accepted proof. If the specification is too weak, the AI may find a shortcut that earns the reward while defeating the original intent. This is the risk of <em>reward hacking</em>: satisfying the formal target without achieving what we actually wanted.</p>
+        </section>
 
-    <p>We discuss additional libraries and the limits of their proofs in <a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/paper/main.pdf">our paper</a>, which also provides the detailed evidence for our findings.</p>
-    <details id="guarantee">
-      <summary>Technical statement and scope of our checks</summary>
-      <div><p>The published agreement statement compares ordinary and sanitizer-instrumented executables. Under its execution-model and memory-budget assumptions, neither reaches a modeled error, and they have the same observable behaviours. Our constructed example satisfies this statement for its fixed plain and ASan binaries.</p><p>The initial four-project allocator review examined source and specifications. Separate Rocq checks support the coturn constructions and the focused OpenSSL lifetime result; the latter does not replay the full binary agreement proofs. The <a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/README.md">evidence guide</a> records each investigation’s method, revision, and limits.</p></div>
-    </details>
-  </section>
+        <section id="why-specifications-are-hard" aria-labelledby="specifications-hard-title">
+          <h2 id="specifications-hard-title">Why getting the specification right is hard</h2>
+          <p>Why is getting the specification right so hard? What even makes a good specification? At the very minimum, it must be understandable to people. A user should be able to tell what “I proved this program correct against this specification” actually guarantees. It must also be precise enough for a mathematical proof. But above all, it must capture what we actually intend. That is the hard part.</p>
+          <p>Sometimes, programming language features and types help express that intent. For example, an array type can make a buffer’s bounds explicit. Rust’s lifetime annotations let programmers express relationships between how long references remain valid.<sup><a id="ref-6" href="#note-6" role="doc-noteref" aria-label="Footnote 6: Rust lifetime annotations">6</a></sup> These and other features make Rust an attractive choice for writing memory-safe software. Many researchers are now developing ways to translate existing C software to safe Rust automatically.<sup><a id="ref-7" href="#note-7" role="doc-noteref" aria-label="Footnote 7: automated translation to Rust">7</a></sup> But programs can also manage their own logical objects, as in <a href="#openssl-example">OpenSSL’s pool of temporary numbers</a>. The memory can stay allocated even after a temporary should no longer be used. To specify that rule, we need to understand how the programmer intended the pool to work.</p>
+          <p>Sometimes, though, we do not yet know what the specification should say. We may discover new requirements years after the software has been deployed. Worse still, we may discover them only after the software fails in production or an attacker exploits a vulnerability. This also makes automatic specification inference hard. Inferring what the code does is different from deciding what it should do.</p>
+          <p>One thing is clear: with the technology we have right now, it is imperative to involve human judgement in choosing and reviewing specifications. Automating this task would require reliable ways to discover the right requirements and assess whether they capture the intended guarantees. Producing proofs at greater speed and scale is a substantial advance. But its value for security still depends on whether we are proving the right thing.</p>
+        </section>
 
-  <section id="stakes">
-    <h2>Interpreting the security claims</h2>
-    <p>In our example, the input can overwrite the value that determines which function the program calls. The call still goes to an existing function, but it may no longer be the function the programmer intended. We argue that it is not sufficient to check that the chosen function exists; we also need to ensure that a memory error cannot change this choice. Whether an attacker can exploit such an error depends on what the functions do and how the program is used.</p>
-    <p>When communicating a verification result, we should explain which errors the specification excludes and which uses the proof covers. A reader should not have to inspect thousands of lines of proof to determine whether the claimed protection applies to their use of the software.</p>
-  </section>
-
-  <section id="specifications">
-    <h2>Specifications and intent</h2>
-    <p>There is an additional concern when AI performs this work. Research on <a href="https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/">specification gaming</a> and <a href="https://www.anthropic.com/research/reward-tampering">reward hacking</a> documents how AI systems can satisfy a measured objective without fulfilling its intended purpose. In verification, obtaining an accepted proof may satisfy the assigned task even when a real bug remains outside the specification. We have not established that reward hacking occurred in this project. We do argue that the possibility makes independent scrutiny of the specification especially necessary.</p>
-    <p>Writing an adequate specification requires understanding the software and how people intend to use it. Some requirements may be poorly documented, or become apparent only after an unexpected use exposes an omission. AI may help us identify these requirements, but producing a proof does not establish that we have identified them correctly.</p>
-    <p>Our investigation concerns memory safety, but this obligation applies to any claim that software is “bug-free”. As AI makes proof generation more accessible, we need to devote corresponding effort to understanding and validating what we ask it to prove. We should judge progress by how well the resulting guarantees address the bugs we want to eliminate.</p>
-  </section>
-
-  <section id="evidence" aria-labelledby="evidence-title">
-    <h2 id="evidence-title">Paper and supporting evidence</h2>
-    <a class="paper-download" href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/paper/main.pdf"><span><strong>AI Proved the Code Memory Safe. Or Did It?</strong><small>The full argument, findings, references, and technical appendices.</small></span><span class="pdf-label">PDF ↗</span></a>
-    <ul class="evidence-links">
-      <li><a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/VALIDATION.md">Reproduction status</a> · completed checks and the incomplete fresh-clone interpreter proof replay.</li>
-      <li><a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/dossiers/checked-example/README.md">Constructed example</a> · source, proof, binaries, and checker logs.</li>
-      <li><a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/dossiers/coturn-field-bounds/output/pdf/coturn-field-bound-findings.pdf">Coturn findings</a> · checked constructions and <a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/dossiers/coturn-field-bounds/README.txt">reproduction instructions</a>.</li>
-      <li><a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/dossiers/openssl-lifetime/README.txt">OpenSSL lifetime check</a> · proof sources, replay results, and limitations.</li>
-      <li><a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/README.md">Evidence guide</a> · all project reports, methods, and <a href="https://github.com/focs-lab/memory-safety-proof-audit/blob/main/evidence/context-and-properties.md">theorem assumptions</a>.</li>
-    </ul>
-    <p class="endnote">The allocator and bzip2 reviews concern revision <code>98e995d4</code>; the coturn constructions and synthetic example use <code>a6839bb9</code>. These findings concern the recorded versions, not an exhaustive audit of all projects or later changes.</p>
-  </section>
-</main>
-<footer><a href="#article">Back to article ↑</a></footer>
+        <section class="notes" role="doc-endnotes" aria-labelledby="notes-title">
+          <h2 id="notes-title">Footnotes</h2>
+          <ol class="notes-list">
+            <li id="note-1">
+              <p><a href="https://www.microsoft.com/en-us/msrc/blog/2019/07/we-need-a-safer-systems-programming-language">Microsoft</a> reported in 2019 that memory-safety issues caused roughly 70% of the vulnerabilities it fixed and assigned CVEs. <a href="https://www.chromium.org/Home/chromium-security/memory-safety/">Chromium</a> reported a similar proportion for its serious security bugs. More broadly, <a href="https://github.blog/security/supply-chain-security/a-year-of-open-source-vulnerability-trends-cves-advisories-and-malware/">GitHub reports</a> a 21% increase in published CVE records across the CVE Project in 2025.</p>
+              <a class="backlink" href="#ref-1" role="doc-backlink" aria-label="Return to footnote 1 reference">↑ Back to text</a>
+            </li>
+            <li id="note-2">
+              <p>OSS-Fuzz tests programs that use code from open-source projects. Many of these projects provide libraries that other software uses. The proofs cover the tested programs. Other software may use the same libraries differently, and those uses are not automatically covered.</p>
+              <p>The guarantees also depend on several technical details:</p>
+              <ul>
+                <li>The programs run one thread at a time.</li>
+                <li>They are compiled for RISC-V, a particular processor architecture.</li>
+                <li>Their library code is included in the executable. This is called static linking.</li>
+                <li>The proofs use a particular model of the operating system.</li>
+                <li>There are limits on input size and memory use.</li>
+                <li>“Behave the same” refers to observable behaviour. This includes input, output and exit status.</li>
+              </ul>
+              <a class="backlink" href="#ref-2" role="doc-backlink" aria-label="Return to footnote 2 reference">↑ Back to text</a>
+            </li>
+            <li id="note-3">
+              <p>See <a href="https://arxiv.org/abs/1705.07354"><em>The Meaning of Memory Safety</em></a> for a formal treatment, and <a href="https://oaklandsok.github.io/papers/song2019.pdf"><em>SoK: Sanitizing for Security</em></a> for an analysis of bug-finding tools and their limitations.</p>
+              <a class="backlink" href="#ref-3" role="doc-backlink" aria-label="Return to footnote 3 reference">↑ Back to text</a>
+            </li>
+            <li id="note-4">
+              <p><a href="https://research.google/pubs/addresssanitizer-a-fast-address-sanity-checker/"><em>AddressSanitizer: A Fast Address Sanity Checker</em></a>.</p>
+              <a class="backlink" href="#ref-4" role="doc-backlink" aria-label="Return to footnote 4 reference">↑ Back to text</a>
+            </li>
+            <li id="note-5">
+              <p><a href="https://oaklandsok.github.io/papers/song2019.pdf"><em>SoK: Sanitizing for Security</em>, Sections IV-A and VIII-B</a>, discusses missed errors, including overflows between fields within an object and accesses through stale pointers after memory reuse.</p>
+              <a class="backlink" href="#ref-5" role="doc-backlink" aria-label="Return to footnote 5 reference">↑ Back to text</a> · <a class="backlink" href="#ref-5-example" role="doc-backlink" aria-label="Return to buffer example">↑ Back to example</a>
+            </li>
+            <li id="note-6">
+              <p><a href="https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html"><em>The Rust Programming Language: Validating References with Lifetimes</em></a>.</p>
+              <a class="backlink" href="#ref-6" role="doc-backlink" aria-label="Return to footnote 6 reference">↑ Back to text</a>
+            </li>
+            <li id="note-7">
+              <p>See <a href="https://arxiv.org/abs/2510.03879">ACToR</a>, <a href="https://arxiv.org/abs/2606.27122">Reboot</a>, and <a href="https://www.ben-livshits.org/blog/zero-to-one-defense">Ben Livshits’s discussion of automated rewrites for software security</a>.</p>
+              <a class="backlink" href="#ref-7" role="doc-backlink" aria-label="Return to footnote 7 reference">↑ Back to text</a>
+            </li>
+          </ol>
+        </section>
+      </article>
+    </main>
+<footer><p><time datetime="2026-11-01">1 November 2026</time> · <a href="#article">Back to article ↑</a></p></footer>
 </body>
 </html>
