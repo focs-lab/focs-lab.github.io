@@ -74,6 +74,55 @@ Rechecked the official ASPLOS 2025 CFP: spring notification 6 June 2024, summer 
 
 Umang confirmed the ASPLOS 2025 summer submission cycle via https://asplos25summer.hotcrp.com/u/0/. Set Selectively Uniform Concurrency Testing’s announcement to 2 October 2024, the summer notification date in the official CFP. Kept its existing filename to preserve the published URL. This supersedes the pending-cycle note above.
 
+## CV talk refresh — 17 September 2026
+
+Downloaded the current CV directly on 17 September 2026 (PDF creation timestamp 22:53 Singapore time), and checked its final page. Search-engine PDF extracts were stale. Added 22 talk/tutorial announcements to News; retained the five existing announcements to avoid duplicates.
+
+Exact dates and public event links:
+
+- UW–Madison: 20 April 2026, https://today.wisc.edu/events/view/221007 .
+- Purdue: 23 April 2026, https://purduepl.github.io/seminars/2026/2026-4-23-seminar .
+- UIUC: 28 April 2025, https://calendars.illinois.edu/detail/7097?eventId=33517422 ; recording https://mediaspace.illinois.edu/media/t/1_oy25ybu0/ .
+- RHPL 2023: 18 December 2023, https://fmindia.cmi.ac.in/rhpl/schedule.html .
+- SOSP tutorial: 23 October 2023, https://sosp2023.mpi-sws.org/workshops.html .
+- HKUST timestamping seminar: 14 April 2023, https://cse.hkust.edu.hk/pg/seminars/S23/special.html .
+- IARCS: 3 January 2023, https://fmindia.cmi.ac.in/vss/past.html .
+- ESEC/FSE tutorial: 17 November 2022, official tutorial program linked in the entry.
+- NUS CS Colloquium: 12 October 2022, https://nuscstalks.github.io/2022/10/12/The-Tree-Clock-Data-Structure.html . The archive calls it “The Tree Clock Data Structure”; use this published title rather than the broader CV wording.
+- HKUST race prediction seminar: 4 April 2022, https://cse.hkust.edu.hk/pg/seminars/S22/mathur.html .
+- Simons Fellows Talk: 4 March 2021, https://simons.berkeley.edu/events/fellows-talk-2 . Use the event's published title, “Decidable Verification of Uninterpreted Programs”.
+- POPL tutorial: 18 January 2021, official TutorialFest program linked in the entry.
+
+The CV says May 2026 for Wisconsin, Purdue, and Chicago. Umang initially selected the CV month, then explicitly superseded that instruction: use the more accurate university calendar dates and link them. Wisconsin and Purdue therefore use April dates. No Chicago event page was located; its entry retains May 2026 at month precision and links the host department, not a purported calendar record.
+
+Year-only CV entries are included for ASPLOS 2021, Commute 2022, Phuket 2022, LaBRI 2023, four Huawei events in 2023, and Simons timestamping in 2024. First-of-year dates are sorting anchors, never asserted event dates. ASPLOS links the tutorial's past-versions list. The Simons 2024 program link supports the visit; the CV supplies the talk title and year. LaBRI and Phuket links identify their hosts, not individual calendar entries. No reliable public event links were located for Commute or the four Huawei talks, so those entries have no invented or unrelated links.
+
+### Still awaiting dates / event links
+
+These undated CV visits are not assigned invented years or published as dated news:
+
+- Equivalences for Causal Concurrency: Aarhus, Uppsala, Georgia Tech.
+- Dynamic Data Race Prediction: Fundamentals and Advances: Uppsala (listed twice in the CV; unclear whether distinct visits), George Mason, IISc Bangalore, IST Austria, IIT Delhi, ETH Zurich, NUS, Microsoft Research India, MPI-SWS.
+- Decidable Verification of Uninterpreted and Partially Interpreted Programs: Aarhus and Online Worldwide Logic Seminar.
+- Exposing Concurrency Bugs from their Hiding Places: CMI and MPI-SWS Kaiserslautern.
+
+The IISc archive has listings on both 27 and 28 October without a year in the accessible text, and the individual page returned 403; do not infer the year from adjacent results. Exact dates for Chicago and the year-only entries can be refined when a calendar entry or user confirmation is available.
+
+## Further talk archive research and user years
+
+Added eight more announcements after checking the hosts' archives:
+
+- OWLS-YR: Cambridge's relocated archive, https://www.cl.cam.ac.uk/events/owls/ , explicitly records **5 August 2020**, with title “Verification of Uninterpreted and Partially Interpreted Programs” and recording https://youtu.be/UP5dp1thzj4 . This differs from Umang's recollection of 2021; used the university's exact date under his instruction to prefer university records. The old Birmingham OWLS URL now redirects to a generic department page. The Simons talk on 4 March 2021 is a separate event and remains separately listed.
+- IIT Delhi: the university's 2021–22 annual report, https://rti.iitd.ac.in/sites/default/files/inst_manuals/AR-2021-22-E.pdf , records “Advances in Dynamic Data Race Prediction”, 2 February 2022, hosted by Subodh Sharma. Link is an annual report, not a calendar entry.
+- CMI: https://www.cmi.ac.in/activities/seminars/2023/ explicitly lists 10 October 2023 at 15:45 for “Exposing Concurrency Bugs from their Hiding Places”.
+- MPI-SWS: https://www.mpi-sws.org/events/2023/ explicitly lists the same title on 26 October 2023 at 10:30 in Kaiserslautern. Linked the record's HTML anchor. These two exact dates supersede the user's tentative 2023 recollection.
+- Georgia Tech causal concurrency: user supplied 2024; year precision. User also reported a distinct 2026 talk, included as a separate year-only announcement without inventing a title. Need its title and, if available, date/calendar link.
+- Uppsala and Aarhus causal concurrency: user supplied 2025; year precision. Applied these years to the causal-concurrency visits being discussed, not to every differently titled talk at these institutions. Host links identify the research group/department, not a claimed event record.
+
+Searched university domains and relevant seminar titles for Georgia Tech (including its PL/SE page and Foundations of AI archive), Uppsala, Aarhus, George Mason, IST Austria, ETH Zurich, NUS, and Microsoft Research India. No matching dated record was found for their remaining undated CV talks. Checked MPI-SWS 2021 and 2022 archives directly; neither contains Umang. IISc's two event pages remain inaccessible (403), and search snippets still omit the year. Do not infer additional dates. The earlier pending-date list is superseded for OWLS, IIT Delhi, CMI, MPI-SWS's exposing-bugs talk, and the causal-concurrency visits at Georgia Tech/Uppsala/Aarhus.
+
+Umang subsequently supplied the 2026 Georgia Tech talk title: “Regular Theories and How to Decide Them”. Updated that announcement; its date remains at year precision pending an exact date or calendar record.
+
 ## Six additional paper announcements — 19 September 2026
 
 Added linked acceptance announcements for all six papers supplied by Umang. Dates provisionally follow the official paper-notification schedules, consistent with the earlier conference-notification research; these schedules do not independently confirm the date of each individual decision email. Asked Umang for any paper-specific dates or months that supersede them.
