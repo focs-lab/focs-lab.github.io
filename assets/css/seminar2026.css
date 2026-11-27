@@ -5,6 +5,12 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Noto Sans Kannada";
+  src: url("/concurrency-frontiers-seminar-2026/type/mysuru-kannada.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
 :root {
   --paper: #fff;
   --ink: #191919;
@@ -17,7 +23,27 @@
 }
 *, *::before, *::after { box-sizing: border-box; }
 html { color-scheme: light; }
-body { margin: 0; color: var(--body); background: var(--paper); font: 1rem/1.6 var(--sans); }
+body {
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
+  display: flow-root;
+  padding-block: 20px;
+  color: var(--body);
+  background: var(--paper);
+  font: 1rem/1.6 var(--sans);
+}
+/* The image has four embroidered corners and transparent edges. */
+body::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  inset-block: 2px;
+  inset-inline: max(2px, calc((100% - 1288px) / 2));
+  opacity: .83;
+  border: 63px solid transparent;
+  border-image: url("/concurrency-frontiers-seminar-2026/kasuti-corners.png") 288 stretch;
+}
 :where(h1, h2, h3, p, figure, ol, ul, dl, dd) { margin: 0; }
 a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: .18em; }
 a:hover { color: var(--link); }
@@ -32,14 +58,14 @@ a:hover { color: var(--link); }
 h1, h2 { color: var(--ink); font-weight: 650; }
 [id] { scroll-margin-block-start: 24px; }
 
-/* The three staggered traces form the seminar mark and the edge of the campus print. */
-.trace-mark, .plate-traces { display: grid; align-content: center; }
+/* The three staggered traces form the seminar mark. */
+.trace-mark { display: grid; align-content: center; }
 .trace-mark { width: 39px; height: 35px; gap: 7px; color: var(--ink); }
-.trace-mark i, .plate-traces i { display: block; position: relative; border-block-start: 1.5px solid currentColor; }
+.trace-mark i { display: block; position: relative; border-block-start: 1.5px solid currentColor; }
 .trace-mark i:nth-child(1) { margin-right: 7px; }
 .trace-mark i:nth-child(2) { margin-left: 4px; margin-right: 4px; }
 .trace-mark i:nth-child(3) { margin-left: 9px; }
-.trace-mark i::after, .plate-traces i::after {
+.trace-mark i::after {
   content: ""; position: absolute; top: -.5px; left: 66%; width: 6px; height: 6px;
   border-radius: 50%; background: currentColor; transform: translateY(-50%);
 }
@@ -60,26 +86,39 @@ h1, h2 { color: var(--ink); font-weight: 650; }
 .kicker a { text-decoration: none; }
 .kicker a:hover { text-decoration: underline; }
 .cover { display: grid; grid-template-columns: 1fr 1.02fr; gap: clamp(28px, 5.4vw, 88px); align-items: center; padding-block: clamp(40px, 4.6vw, 68px); }
-.cover h1 { font-size: clamp(2.6rem, 5.35vw, 4.9rem); line-height: .99; letter-spacing: -.032em; margin: 24px 0 28px; }
+.cover h1 { font-size: clamp(2.6rem, 5.35vw, 4.9rem); line-height: .99; letter-spacing: -.032em; margin: 24px 0 36px; }
 .cover h1 span { display: block; }
+/* Anchor the stitch to the final letter, including when a heading wraps. */
+.title-stitch {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+  vertical-align: baseline;
+}
+.title-stitch::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: .25em;
+  width: clamp(52px, 5vw, 68px);
+  aspect-ratio: 72 / 16;
+  background: url("/concurrency-frontiers-seminar-2026/kasuti-title-stitch.png") center / contain no-repeat;
+}
 .programme-link { display: inline-flex; align-items: center; justify-content: space-between; gap: 26px; padding: 11px 17px; color: var(--paper); background: var(--ink); font-weight: 600; font-size: 1rem; text-decoration: none; }
 .programme-link span { font: 1.25rem/1 var(--sans); }
 .programme-link:hover { background: var(--link); color: white; }
 .venue-plate { min-width: 0; }
 .plate-print { padding: 12px 12px 0; border: 1px solid var(--rule); }
+.place-kannada {
+  font: 500 1.13rem/1.5 "Noto Sans Kannada", sans-serif;
+  color: var(--ink);
+}
 .plate-image { overflow: hidden; aspect-ratio: 1.53; position: relative; background: #eee; }
 .plate-image img {
   width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 53%;
 }
 .plate-imprint { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 0 5px; min-height: 48px; color: var(--ink); }
-.plate-traces { width: min(35%, 140px); gap: 5px; color: #777; }
-.plate-traces i { border-top-width: 1px; }
-.plate-traces i:nth-child(1) { margin-right: 15px; }
-.plate-traces i:nth-child(2) { margin-inline: 7px; }
-.plate-traces i:nth-child(3) { margin-left: 15px; }
-.plate-traces i::after { width: 4px; height: 4px; left: 80%; }
-.plate-traces i:nth-child(2)::after { left: 28%; }
-.plate-traces i:nth-child(3)::after { left: 62%; }
 .venue-plate figcaption { margin-top: 7px; font-size: .78rem; line-height: 1.4; color: var(--muted); }
 .venue-plate figcaption a { text-decoration-color: var(--rule); }
 .meeting-strip { display: grid; grid-template-columns: 1.15fr 1fr .55fr; padding-block: 20px; border-block: 1px solid var(--ink); }
@@ -107,7 +146,7 @@ h1, h2 { color: var(--ink); font-weight: 650; }
 .arrival-links li:last-child a span { transform: rotate(135deg); }
 
 .section-mast { display: flex; align-items: end; justify-content: space-between; gap: 24px; padding: clamp(38px, 4.8vw, 72px) 0 28px; border-bottom: 1px solid var(--ink); }
-.section-mast h1 { font-size: clamp(3.1rem, 5.8vw, 4.9rem); line-height: 1; letter-spacing: -.032em; margin-top: 15px; }
+.section-mast h1 { font-size: clamp(3.1rem, 5.8vw, 4.9rem); line-height: 1; letter-spacing: -.032em; margin-top: 15px; padding-bottom: .33em; }
 .section-imprint { display: grid; text-align: right; gap: 2px; padding-bottom: 4px; color: var(--muted); }
 .inside-grid { display: grid; grid-template-columns: minmax(160px, .43fr) minmax(0, 1.57fr); gap: clamp(36px, 6.2vw, 100px); align-items: start; margin-block: 34px 80px; }
 .margin-nav { position: sticky; top: 24px; }
@@ -136,13 +175,13 @@ tbody td, tbody th { padding: 9px 14px 9px 0; vertical-align: baseline; }
 .practical { max-width: 53rem; }
 .practical h2 { font-size: clamp(1.65rem, 2.4vw, 2.2rem); }
 .practical strong { color: var(--ink); }
-.site-footer { border-top: 1px solid var(--ink); }
-.footer-inner { display: flex; gap: 12px 30px; align-items: center; justify-content: space-between; padding-block: 23px; font-size: .82rem; }
+.footer-inner { border-top: 1px solid var(--ink); display: flex; gap: 12px 30px; align-items: center; justify-content: space-between; padding-block: 23px; font-size: .82rem; }
 .footer-inner a { text-decoration: none; }
 .footer-inner a:hover { text-decoration: underline; }
 .footer-separator { margin-inline: 12px; color: var(--link); }
 
 @media (max-width: 850px) {
+  body::before { border-width: 49px; }
   .shell { width: calc(100% - 60px); }
   .cover { gap: 24px; }
   .cover h1 { font-size: clamp(2.6rem, 5.35vw, 3.1rem); }
@@ -152,6 +191,8 @@ tbody td, tbody th { padding: 9px 14px 9px 0; vertical-align: baseline; }
   .meeting-strip { grid-template-columns: 1.15fr 1fr .52fr; }
 }
 @media (max-width: 680px) {
+  body { padding-block: 12px; }
+  body::before { inset: 1px; border-width: 35px; }
   .shell { width: calc(100% - 36px); }
   .masthead { min-height: 0; flex-direction: column; align-items: stretch; gap: 0; padding-top: 13px; }
   .signature { align-self: start; }
@@ -160,7 +201,7 @@ tbody td, tbody th { padding: 9px 14px 9px 0; vertical-align: baseline; }
   .tabs { align-self: stretch; justify-content: space-between; gap: 7px; }
   .tabs a { min-height: 41px; font-size: clamp(.78rem, 3.4vw, .94rem); }
   .cover { grid-template-columns: 1fr; padding: 32px 0 26px; gap: 25px; }
-  .cover h1 { font-size: clamp(2.55rem, 11.8vw, 3.7rem); line-height: 1.01; margin: 15px 0 21px; }
+  .cover h1 { font-size: clamp(2.55rem, 11.8vw, 3.7rem); line-height: 1.01; margin: 15px 0 27px; }
   .programme-link { padding: 10px 15px; }
   .plate-print { padding: 9px 9px 0; }
   .plate-image { aspect-ratio: 1.94; }
@@ -176,7 +217,7 @@ tbody td, tbody th { padding: 9px 14px 9px 0; vertical-align: baseline; }
   .arrival-links { width: 100%; }
   .section-mast { display: block; padding-block: 30px 19px; }
   .section-mast h1 { font-size: clamp(2.6rem, 10.8vw, 3.6rem); margin-top: 9px; }
-  .section-imprint { display: flex; flex-wrap: wrap; gap: 4px 12px; padding: 0; margin-top: 12px; font-size: .78rem; }
+  .section-imprint { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 12px; padding: 0; margin-top: 12px; font-size: .78rem; }
   .inside-grid { display: block; margin-block: 22px 48px; }
   .margin-nav { position: static; margin-bottom: 24px; }
   .margin-label { margin-bottom: 9px; }
@@ -196,6 +237,8 @@ tbody td, tbody th { padding: 9px 14px 9px 0; vertical-align: baseline; }
 }
 @media print {
   :root { --paper: white; --ink: black; --body: black; --muted: #333; --link: #222; }
+  body { padding: 0; }
+  body::before, .title-stitch { display: none; }
   .shell { width: 100%; }
   .tabs, .margin-nav, .site-footer, .skip-link, .programme-link { display: none; }
   .masthead { min-height: 0; padding-bottom: 8px; }
