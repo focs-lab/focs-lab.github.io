@@ -1,75 +1,110 @@
 {{ $base := "/concurrency-frontiers-seminar-2026/" | relURL }}
-{{ $participants := eq .Params.seminar_page "participants" }}
-<section class="hero {{ if $participants }}hero-compact{{ end }}" aria-labelledby="seminar-title">
+{{ $page := .Params.seminar_page | default "overview" }}
+{{ $tabs := slice
+  (dict "id" "overview" "label" "Overview" "path" "")
+  (dict "id" "programme" "label" "Programme" "path" "programme/")
+  (dict "id" "participants" "label" "Participants" "path" "participants/")
+  (dict "id" "practical-information" "label" "Practical information" "path" "practical-information/")
+}}
+{{ if eq $page "overview" }}
+<section class="hero" aria-labelledby="seminar-title">
   <div class="shell hero-grid">
     <div>
-      <p class="eyebrow">IndiCS seminar · Mysore, India</p>
-      <h1 id="seminar-title">Frontiers in Verification and Analysis for Concurrency</h1>
-      <p class="hero-description">A week of research, open problems, and discussion on concurrent systems.</p>
+      <p class="eyebrow">ACM India · IndiCS seminar</p>
+      <h1 id="seminar-title">{{ .Title }}</h1>
+      <a class="programme-button" id="programme" href="{{ $base }}programme/">View the programme</a>
     </div>
     <dl class="event-facts">
-      <div><dt>Seminar</dt><dd>30 November-4 December 2026</dd></div>
-      <div><dt>Venue</dt><dd>Infosys Mysore campus, India</dd></div>
+      <div><dt>Dates</dt><dd>30 November–4 December 2026</dd></div>
+      <div><dt>Venue</dt><dd>Infosys Mysore campus<br>ILI Akbar Conference Room</dd></div>
       <div><dt>Daily start</dt><dd>09:00 IST</dd></div>
     </dl>
   </div>
 </section>
+{{ else }}
+<header class="hero">
+  <div class="shell subpage-heading">
+    <p class="eyebrow">IndiCS Mysore · 30 November–4 December 2026</p>
+    <p class="event-name"><a href="{{ $base }}">Frontiers in Verification and Analysis for Concurrency</a></p>
+  </div>
+</header>
+{{ end }}
 <div class="seminar-navigation">
   <nav class="shell tabs" aria-label="Seminar pages">
-    <a href="{{ $base }}" {{ if not $participants }}aria-current="page"{{ end }}>Overview</a>
-    <a href="{{ $base }}participants/" {{ if $participants }}aria-current="page"{{ end }}>Participants</a>
-    <a href="{{ $base }}#programme">Programme</a>
-    <a href="{{ $base }}#organizers">Organizers</a>
+    {{ range $tabs }}
+    <a href="{{ $base }}{{ .path }}"{{ if eq $page .id }} aria-current="page"{{ end }}>{{ .label }}</a>
+    {{ end }}
   </nav>
 </div>
-<div class="shell main-grid {{ if $participants }}participants-grid{{ end }}">
-  <main id="main-content" class="seminar-content">
-    {{ if not $participants }}
-    <aside id="participant-form" class="form-callout" aria-labelledby="participant-links-title">
-      <div>
-        <h2 id="participant-links-title">Before you arrive</h2>
-        <p>Please <a href="https://www.explara.com/e/indics-seminar-4-frontiers-in-analysis-and-verification-for-concurrency/checkout">register and pay on Explara</a> and complete the <a href="https://forms.gle/nbPrWjMK5XJ1AfcB9">Infosys campus security form</a>. Infosys uses the form to arrange campus entry.</p>
-      </div>
-      <p><a href="{{ $base }}IndiCS_Essential_Information_Infosys_Mysore.pdf">Download the Infosys participant guide (PDF)</a></p>
-    </aside>
+<div class="shell main-grid {{ if or (eq $page "participants") (eq $page "programme") }}single-column{{ end }}">
+  <main id="main-content" class="seminar-content page-{{ $page }}">
+    {{ if ne $page "overview" }}<h1 class="page-title" id="{{ $page }}">{{ .Title }}</h1>{{ end }}
+    {{ if eq $page "programme" }}
+    <details class="programme-jump">
+      <summary>Jump to a day</summary>
+      {{ .TableOfContents }}
+    </details>
     {{ end }}
     <div class="prose">{{ .Content }}</div>
-    {{ if $participants }}
-    <div class="participant-table-wrap">
-      <table class="participant-table">
-        <caption>{{ len site.Data.seminar2026.participants }} participants · list subject to change</caption>
-        <thead><tr><th scope="col">Name</th><th scope="col">Affiliation</th></tr></thead>
-        <tbody>{{ range site.Data.seminar2026.participants }}<tr><th scope="row"><a href="{{ .website }}">{{ .name }}</a></th><td>{{ .affiliation }}</td></tr>{{ end }}</tbody>
-      </table>
-    </div>
-    <p class="participant-note">Please <a href="{{ $base }}#organizers">contact the organizers</a> with corrections or changes to your participation plans.</p>
+    {{ if eq $page "participants" }}
+    <table class="participant-table">
+      <caption>{{ len site.Data.seminar2026.participants }} participants</caption>
+      <thead><tr><th scope="col">Name</th><th scope="col">Affiliation</th></tr></thead>
+      <tbody>
+        {{ range site.Data.seminar2026.participants }}
+        <tr><th scope="row"><a href="{{ .website }}">{{ .name }}</a></th><td>{{ .affiliation }}</td></tr>
+        {{ end }}
+      </tbody>
+    </table>
     {{ end }}
   </main>
-  <aside class="sidebar" aria-label="Seminar quick reference">
+  {{ if eq $page "overview" }}
+  <aside class="sidebar overview-links" aria-labelledby="arrival-links-title">
     <div class="sidebar-inner">
-      <p class="eyebrow">Plan your visit</p>
-      <dl class="quick-facts">
-        <div><dt>Arrive</dt><dd>Sunday, 29 November<br>Afternoon</dd></div>
-        <div><dt>Depart</dt><dd>Friday, 4 December<br>Afternoon</dd></div>
-        <div><dt>Expected registration fee</dt><dd>INR 9,000 <small>approximately</small></dd></div>
-      </dl>
-      {{ if not $participants }}
-      <nav class="on-this-page" aria-label="On this page">
-        <p class="eyebrow">On this page</p>
-        <a href="#about">About the seminar</a>
-        <a href="#practical-information">Practical information</a>
-        <a href="#registration-and-accommodation">Registration & accommodation</a>
-        <a href="#travel-to-mysore">Travel to Mysore</a>
-        <a href="#visas-and-invitation-letters">Visas & invitation letters</a>
-        <a href="#campus-access">Campus access</a>
-        <a href="#dates">Key dates</a>
-        <a href="#programme">Programme</a>
-        <a href="#organizers">Organizers</a>
-      </nav>
-      {{ else }}
-      <a class="sidebar-return" href="{{ $base }}">Travel and practical information →</a>
-      {{ end }}
-      <p class="updated">Updated {{ .Lastmod.Format "2 January 2006" }}</p>
+      <h2 id="arrival-links-title">Before you arrive</h2>
+      <ul>
+        <li><a href="https://www.explara.com/e/indics-seminar-4-frontiers-in-analysis-and-verification-for-concurrency/checkout">Register on Explara</a></li>
+        <li><a href="https://forms.gle/nbPrWjMK5XJ1AfcB9">Complete the campus security form</a></li>
+        <li><a href="{{ $base }}IndiCS_Essential_Information_Infosys_Mysore.pdf">Infosys participant guide (PDF)</a></li>
+      </ul>
     </div>
   </aside>
+  {{ else if eq $page "practical-information" }}
+  <aside class="sidebar" aria-label="Page contents">
+    <div class="sidebar-inner section-index">
+      <h2>On this page</h2>
+      {{ .TableOfContents }}
+    </div>
+  </aside>
+  {{ end }}
 </div>
+{{ if eq $page "overview" }}
+<script>
+  // Earlier participant emails linked to sections on the overview.
+  function followSeminarBookmark() {
+    const id = window.location.hash.slice(1);
+    const practical = {
+      "participant-form": "registration-and-accommodation",
+      "practical-information": "",
+      "arrival-and-departure": "arrival-and-departure",
+      "registration-and-accommodation": "registration-and-accommodation",
+      "travel-to-mysore": "travel-to-mysore",
+      "visas-and-invitation-letters": "visas-and-invitation-letters",
+      "campus-access": "registration-and-accommodation",
+      "dates": "arrival-and-departure"
+    };
+    const days = ["monday-30-november", "tuesday-1-december", "wednesday-2-december", "thursday-3-december", "friday-4-december"];
+    if (id === "programme" || days.includes(id)) {
+      const url = new URL(document.getElementById("programme").href);
+      if (id !== "programme") url.hash = id;
+      window.location.replace(url.href);
+    } else if (Object.prototype.hasOwnProperty.call(practical, id)) {
+      const url = new URL("practical-information/", document.querySelector('link[rel="canonical"]').href);
+      url.hash = practical[id];
+      window.location.replace(url.href);
+    }
+  }
+  window.addEventListener("hashchange", followSeminarBookmark);
+  followSeminarBookmark();
+</script>
+{{ end }}

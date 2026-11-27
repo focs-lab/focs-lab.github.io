@@ -1,7 +1,12 @@
 [
   {
+    "name": "Abhijith R Nair",
+    "affiliation": "IMSc",
+    "website": "https://www.imsc.res.in/abhijith_r_nair"
+  },
+  {
     "name": "Anca Muscholl",
-    "affiliation": "LaBRI",
+    "affiliation": "LaBRI, University of Bordeaux",
     "website": "https://www.labri.fr/perso/anca/"
   },
   {
@@ -10,18 +15,23 @@
     "website": "https://ankushdas.github.io/"
   },
   {
-    "name": "Ankush Desai",
-    "affiliation": "Snowflake",
-    "website": "https://ankushdesai.github.io/"
-  },
-  {
     "name": "B. Srivathsan",
     "affiliation": "CMI",
     "website": "https://www.cmi.ac.in/~sri/"
   },
   {
+    "name": "Durgam Latha",
+    "affiliation": "IIT Bombay",
+    "website": "https://www.cse.iitb.ac.in/~krishnas/students.html"
+  },
+  {
+    "name": "Govind R",
+    "affiliation": "IMSc",
+    "website": "https://rdnivog.github.io/"
+  },
+  {
     "name": "Igor Walukiewicz",
-    "affiliation": "LaBRI",
+    "affiliation": "CNRS / LaBRI, University of Bordeaux",
     "website": "https://www.labri.fr/perso/igw/"
   },
   {
@@ -31,12 +41,12 @@
   },
   {
     "name": "KC Sivaramakrishnan",
-    "affiliation": "IIT Madras",
+    "affiliation": "IIT Madras / Tarides",
     "website": "https://kcsrk.info/"
   },
   {
-    "name": "Konstantinos Sagonas",
-    "affiliation": "Uppsala University",
+    "name": "Kostis Sagonas",
+    "affiliation": "Uppsala University / National Technical University of Athens",
     "website": "https://user.it.uu.se/~kostis/"
   },
   {
@@ -66,28 +76,13 @@
   },
   {
     "name": "Omkar Tuppe",
-    "affiliation": "IIT Bombay",
+    "affiliation": "AMD / IIT Bombay",
     "website": "https://homepages.iitb.ac.in/~194050003/"
-  },
-  {
-    "name": "P. Madhusudan",
-    "affiliation": "UIUC",
-    "website": "https://madhu.cs.illinois.edu/"
   },
   {
     "name": "Prakash Saivasan",
     "affiliation": "IMSc",
     "website": "https://www.imsc.res.in/prakash_saivasan"
-  },
-  {
-    "name": "R. Govind",
-    "affiliation": "IMSc",
-    "website": "https://rdnivog.github.io/"
-  },
-  {
-    "name": "Roland Meyer",
-    "affiliation": "TU Braunschweig",
-    "website": "https://www.tu-braunschweig.de/tcs/team/meyer"
   },
   {
     "name": "Rupak Majumdar",

@@ -1,11 +1,7 @@
 ---
-title: Tentative participants
-summary: Tentative participant list for Frontiers in Verification and Analysis for Concurrency, IndiCS 2026.
+title: Participants
+summary: Participants in the 2026 IndiCS seminar on concurrency at Infosys Mysore.
 type: seminar
 seminar_page: participants
 lastmod: 2026-11-27
 ---
-
-## Tentative participants
-
-The participant list below is tentative and subject to change.
