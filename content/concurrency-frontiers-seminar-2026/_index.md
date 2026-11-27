@@ -11,7 +11,7 @@ Concurrency is central to modern software, from shared-memory programs to distri
 
 This seminar brings together researchers to discuss recent advances, identify open problems, and explore new collaborations. The emphasis is on discussion and the exchange of ideas, with opportunities for early-career researchers to engage with the community.
 
-The seminar is part of the [ACM India IndiCS seminar series](https://india.acm.org/research/indics) and will take place at the **Infosys Mysore campus, India**. Participation is by invitation.
+The seminar is part of the [ACM India IndiCS seminar series](https://india.acm.org/research/indics) and will take place at the **Infosys Mysore campus, India**.
 
 ### Topics of interest
 
@@ -21,19 +21,9 @@ The seminar is part of the [ACM India IndiCS seminar series](https://india.acm.o
 - Weak memory, GPU concurrency, and persistent memory.
 - Shared benchmarks, tool infrastructure, and evaluation methods.
 
-## Participation and participant information {#participant-form}
-
-**Participation is by invitation only.** Invitees have been sent the participant-information form and should complete it by **Monday, 5 October 2026**.
-
-If you would like to participate, please email the organizers: [Krishna S.](mailto:krishnas@cse.iitb.ac.in) and [Umang Mathur](mailto:umathur@nus.edu.sg).
-
-The form collects attendance plans, invitation-letter requests, dietary restrictions, food allergies, and accessibility needs. **You do not need to have booked your travel.** If your plans are uncertain, or you can no longer attend the full seminar, please indicate this in the form.
-
-We will pass dietary and accessibility requests to the venue and confirm what can be accommodated. This form is separate from registration and the campus-security form that will follow.
-
 ## Practical information {#practical-information}
 
-The arrangements below reflect the information shared by ACM India. We will update this page as further details become available.
+We will meet in the **ILI Akbar Conference Room (ground floor)**. The [Infosys participant guide (PDF)](IndiCS_Essential_Information_Infosys_Mysore.pdf) covers arrival, campus entry, accommodation and meals.
 
 ### Arrival and departure {#arrival-and-departure}
 
@@ -45,7 +35,7 @@ Dinner will be provided on 29 November, and lunch will be provided on 4 December
 
 The registration fee is expected to be approximately **INR 9,000**, including taxes, single-room accommodation for the **five nights of 29 November through 3 December**, meals, and refreshments. Rooms will be arranged automatically for registered participants. No separate accommodation booking is needed.
 
-ACM India expects registration to open about **two weeks before the seminar**. We will share registration instructions and the confirmed fee when available. Payment will be made directly to ACM India through an online portal that accepts international credit cards and issues receipts. **Registration payments are non-refundable.**
+All participants should [register and pay on Explara](https://www.explara.com/e/indics-seminar-4-frontiers-in-analysis-and-verification-for-concurrency/checkout). The portal accepts international credit cards and issues receipts. **Registration payments are non-refundable.**
 
 If you need additional nights, please arrange accommodation separately in Mysore or Bengaluru. Accompanying family members cannot be accommodated on campus for this event.
 
@@ -55,7 +45,7 @@ For most international participants, the recommended option is to fly into **Ben
 
 Participants arrange and pay for their own transport. There are no organized airport transfers. We will circulate a separate travel-sharing sheet closer to the event to help interested participants coordinate rides. Contacts for return transport will also be available at the venue.
 
-Campus security check-in operates around the clock. Please let the organizers know in advance if you expect to arrive late at night. We will share the exact entry gate and arrival instructions closer to the event.
+Campus check-in is open around the clock. Please report to **Gate No. 2** with a government-issued photo ID to collect your badge. If you expect to arrive late at night, please let the organizers know.
 
 ### Visas and invitation letters {#visas-and-invitation-letters}
 
@@ -63,23 +53,19 @@ For participants who require a visa, ACM India has suggested combining the visit
 
 We will follow up separately with more detailed visa application guidance and contact details for use in the application. In the meantime, please allow sufficient time for your visa arrangements.
 
-If you need an invitation letter for university travel approval or reimbursement, please indicate this in the participant-information form sent to invitees.
+If you need an invitation letter for university travel approval or reimbursement, please [contact the organizers](#organizers).
 
 ### Campus access and individual requirements {#campus-access}
 
-Towards the **end of October**, we will circulate a separate form from ACM India requesting identification details, the devices you will bring, and your expected arrival and departure times. Please complete it **within a week of receiving it**, as this information is required for campus security clearance.
+Please complete the [Infosys campus security form](https://forms.gle/nbPrWjMK5XJ1AfcB9) before you arrive. Google requires you to sign in to open the form. Declare the devices you will bring, including personal laptops, phones and tablets. Guest Wi-Fi will be available at the venue.
 
-Laptops, phones, and tablets are permitted but must be declared in that form. Guest Wi-Fi will be available on campus.
-
-Please indicate any dietary restrictions, food allergies, or accessibility needs in the participant-information form by 5 October. We will pass these requests to the venue and confirm what can be accommodated.
+For dietary or accessibility requests, please [contact the organizers](#organizers).
 
 ## Dates to keep in mind {#dates}
 
 | When | What to expect or do |
 | --- | --- |
-| **5 October 2026** | Complete the participant-information form. Travel bookings are not required. |
-| **End of October** | Campus-security form to be circulated. Complete it within a week of receiving it. |
-| **About two weeks before the seminar** | Registration instructions and confirmed fee to be shared. |
+| **24 November 2026** | Registration opens on Explara. |
 | **29 November, afternoon** | Arrive at Infosys Mysore. Dinner is included. |
 | **30 November-4 December** | Seminar sessions. Friday's sessions conclude before lunch. |
 | **4 December, afternoon** | Depart after lunch. |
@@ -90,60 +76,60 @@ All times are local to Mysore (India Standard Time, UTC+5:30).
 
 ### Monday, 30 November
 
-| Time (IST) | Session |
+| Time (IST) | Speaker or activity |
 | --- | --- |
-| 09:00–10:30 | Anca Muscholl (keynote) |
+| 09:00–10:30 | Anca Muscholl |
 | 10:30–11:00 | Morning tea |
-| 11:00–11:45 | Ankush Das (invited talk) |
-| 11:45–12:30 | Kartik Nagar (invited talk) |
+| 11:00–11:45 | Ankush Das |
+| 11:45–12:30 | Kartik Nagar |
 | 12:30–14:00 | Lunch |
-| 14:00–15:30 | Kostis Sagonas (keynote) |
+| 14:00–15:30 | Kostis Sagonas |
 | 15:30–16:00 | Afternoon tea |
-| 16:00–16:45 | Manas Thakur (invited talk) |
+| 16:00–16:45 | Manas Thakur |
 
 ### Tuesday, 1 December
 
-| Time (IST) | Session |
+| Time (IST) | Speaker or activity |
 | --- | --- |
-| 09:00–10:30 | Mahesh Viswanathan (keynote) |
+| 09:00–10:30 | Mahesh Viswanathan |
 | 10:30–11:00 | Morning tea |
-| 11:00–11:45 | Prakash Saivasan (invited talk) |
-| 11:45–12:30 | KC Sivaramakrishnan (invited talk) |
+| 11:00–11:45 | Prakash Saivasan |
+| 11:45–12:30 | KC Sivaramakrishnan |
 | 12:30–14:00 | Lunch |
-| 14:00–15:30 | Igor Walukiewicz (talk) |
-| 15:30–16:00 | Afternoon tea |
-| 16:00–16:45 | Sanchari Sil (talk) |
-
-### Wednesday, 2 December
-
-| Time (IST) | Session |
-| --- | --- |
-| 09:00–10:30 | Rupak Majumdar (keynote) |
-| 10:30–11:00 | Morning tea |
-| 11:00–11:45 | Michael Schwarz (invited talk) |
-| 11:45–12:30 | B. Srivathsan (talk) |
-| 12:30–14:00 | Lunch |
-| 14:00–15:30 | Thomas Wies (keynote) |
+| 14:00–15:30 | Igor Walukiewicz |
 | 15:30–16:00 | Afternoon tea |
 | 16:00–16:45 | Open-problem session |
 
+### Wednesday, 2 December
+
+| Time (IST) | Speaker or activity |
+| --- | --- |
+| 09:00–10:30 | Rupak Majumdar |
+| 10:30–11:00 | Morning tea |
+| 11:00–11:45 | Michael Schwarz |
+| 11:45–12:30 | B. Srivathsan |
+| 12:30–14:00 | Lunch |
+| 14:00–15:30 | Thomas Wies |
+| 15:30–16:00 | Afternoon tea |
+| 16:00–17:00 | Session with the Infosys organizers |
+
 ### Thursday, 3 December
 
-| Time (IST) | Session |
+| Time (IST) | Speaker or activity |
 | --- | --- |
-| 09:00–10:30 | Suresh Jagannathan (keynote) |
+| 09:00–10:30 | Suresh Jagannathan |
 | 10:30–11:00 | Morning tea |
-| 11:00–11:45 | Govind R (invited talk) |
-| 11:45–12:30 | To be confirmed |
+| 11:00–11:45 | Govind R |
+| 11:45–12:30 | Sanchari Sil |
 | 12:30–14:00 | Lunch |
-| 14:00–19:00 | Seminar outing |
+| 14:00–19:00 | Free afternoon. Participants can make their own plans to explore Mysore. |
 
 ### Friday, 4 December
 
-| Time (IST) | Session |
+| Time (IST) | Speaker or activity |
 | --- | --- |
-| 09:00–09:45 | Abhijith (invited talk) |
-| 09:45–10:30 | Omkar Tuppe (invited talk) |
+| 09:00–09:45 | Omkar Tuppe |
+| 09:45–10:30 | Abhijith |
 | 10:30–11:00 | Morning tea |
 | 11:00 | Seminar ends |
 

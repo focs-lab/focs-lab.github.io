@@ -10,7 +10,7 @@
     <dl class="event-facts">
       <div><dt>Seminar</dt><dd>30 November-4 December 2026</dd></div>
       <div><dt>Venue</dt><dd>Infosys Mysore campus, India</dd></div>
-      <div><dt>Participation</dt><dd>By invitation</dd></div>
+      <div><dt>Daily start</dt><dd>09:00 IST</dd></div>
     </dl>
   </div>
 </section>
@@ -25,9 +25,12 @@
 <div class="shell main-grid {{ if $participants }}participants-grid{{ end }}">
   <main id="main-content" class="seminar-content">
     {{ if not $participants }}
-    <aside class="form-callout" aria-labelledby="form-callout-title">
-      <div><p class="eyebrow">Participation by invitation only</p><h2 id="form-callout-title">Invitees: please respond by 5 October</h2><p>Invitees have been sent the participant-information form. Please complete it by Monday, 5 October 2026. Travel bookings are not required.</p></div>
-      <p>If you would like to participate, please email the organizers: <a href="mailto:krishnas@cse.iitb.ac.in">Krishna S.</a> and <a href="mailto:umathur@nus.edu.sg">Umang Mathur</a>.</p>
+    <aside id="participant-form" class="form-callout" aria-labelledby="participant-links-title">
+      <div>
+        <h2 id="participant-links-title">Before you arrive</h2>
+        <p>Please <a href="https://www.explara.com/e/indics-seminar-4-frontiers-in-analysis-and-verification-for-concurrency/checkout">register and pay on Explara</a> and complete the <a href="https://forms.gle/nbPrWjMK5XJ1AfcB9">Infosys campus security form</a>. Infosys uses the form to arrange campus entry.</p>
+      </div>
+      <p><a href="{{ $base }}IndiCS_Essential_Information_Infosys_Mysore.pdf">Download the Infosys participant guide (PDF)</a></p>
     </aside>
     {{ end }}
     <div class="prose">{{ .Content }}</div>
