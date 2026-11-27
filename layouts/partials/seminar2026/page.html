@@ -41,21 +41,45 @@
     <p class="section-imprint"><span>Infosys Mysore, India</span><span>30 Nov – 4 Dec 2026</span></p>
   </div>
   {{ if eq $page "programme" }}
+    <style>
+      .day-nav a[data-seminar-date] { position: relative; padding-inline-start: .85rem; }
+      .day-nav a[aria-current="date"], .day-nav a[aria-current="date"] small { color: #2059a4; font-weight: 600; }
+      .day-nav a[aria-current="date"]::before {
+        content: ""; position: absolute; inset-inline-start: 1px; top: 50%;
+        width: 6px; height: 6px; border: 1px solid currentColor; transform: translateY(-50%) rotate(45deg);
+      }
+    </style>
   <div class="inside-grid">
     <nav class="margin-nav day-nav" aria-label="Programme days">
       <p class="margin-label">Jump to a day</p>
       <ol>
         {{ range slice
-          (dict "id" "monday-30-november" "day" "Monday" "date" "30 Nov")
-          (dict "id" "tuesday-1-december" "day" "Tuesday" "date" "1 Dec")
-          (dict "id" "wednesday-2-december" "day" "Wednesday" "date" "2 Dec")
-          (dict "id" "thursday-3-december" "day" "Thursday" "date" "3 Dec")
-          (dict "id" "friday-4-december" "day" "Friday" "date" "4 Dec")
+          (dict "id" "monday-30-november" "iso" "2026-11-30" "day" "Monday" "date" "30 Nov")
+          (dict "id" "tuesday-1-december" "iso" "2026-12-01" "day" "Tuesday" "date" "1 Dec")
+          (dict "id" "wednesday-2-december" "iso" "2026-12-02" "day" "Wednesday" "date" "2 Dec")
+          (dict "id" "thursday-3-december" "iso" "2026-12-03" "day" "Thursday" "date" "3 Dec")
+          (dict "id" "friday-4-december" "iso" "2026-12-04" "day" "Friday" "date" "4 Dec")
         }}
-        <li><a href="#{{ .id }}"><span class="day-full">{{ .day }}</span><abbr class="day-short" title="{{ .day }}">{{ substr .day 0 3 }}</abbr> <small>{{ .date }}</small></a></li>
+        <li><a href="#{{ .id }}" data-seminar-date="{{ .iso }}"><span class="day-full">{{ .day }}</span><abbr class="day-short" title="{{ .day }}">{{ substr .day 0 3 }}</abbr> <small>{{ .date }}</small></a></li>
         {{ end }}
       </ol>
     </nav>
+    <script>
+      (() => {
+        const days = document.querySelectorAll(".day-nav [data-seminar-date]");
+        const localDate = new Intl.DateTimeFormat("sv-SE", {timeZone: "Asia/Kolkata", year: "numeric", month: "2-digit", day: "2-digit"});
+        function markToday() {
+          const today = localDate.format(new Date());
+          for (const link of days) {
+            if (link.dataset.seminarDate === today) link.setAttribute("aria-current", "date");
+            else link.removeAttribute("aria-current");
+          }
+        }
+        markToday();
+        setInterval(markToday, 60000);
+        document.addEventListener("visibilitychange", markToday);
+      })();
+    </script>
     <div class="prose schedule">{{ .Content }}</div>
   </div>
   {{ else if eq $page "participants" }}
