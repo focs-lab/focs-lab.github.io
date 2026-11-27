@@ -2,7 +2,7 @@
 title: Frontiers in Verification and Analysis for Concurrency
 summary: An IndiCS seminar at Infosys Mysore, India, 30 November to 4 December 2026. Programme, practical information, and tentative participants.
 type: seminar
-lastmod: 2026-09-28
+lastmod: 2026-11-27
 ---
 
 ## About the seminar {#about}
@@ -37,7 +37,7 @@ The arrangements below reflect the information shared by ACM India. We will upda
 
 ### Arrival and departure {#arrival-and-departure}
 
-Please plan to arrive on **Sunday, 29 November, in the afternoon**, and depart on **Friday, 4 December, in the afternoon**. Sessions will begin around **9-9:30 am on Monday, 30 November**, and conclude **before lunch on Friday, 4 December**. We encourage everyone to attend the full seminar. All times are local to India (IST).
+Please plan to arrive on **Sunday, 29 November, in the afternoon**, and depart on **Friday, 4 December, in the afternoon**. Sessions begin at **9:30 am on Monday, 30 November**, and finish at **12:15 pm on Friday, 4 December**. We encourage everyone to attend the full seminar. All times are local to India (IST).
 
 Dinner will be provided on 29 November, and lunch will be provided on 4 December.
 
@@ -79,16 +79,74 @@ Please indicate any dietary restrictions, food allergies, or accessibility needs
 | --- | --- |
 | **5 October 2026** | Complete the participant-information form. Travel bookings are not required. |
 | **End of October** | Campus-security form to be circulated. Complete it within a week of receiving it. |
-| **About two weeks before the seminar** | Registration instructions, confirmed fee, and programme to be shared. |
+| **About two weeks before the seminar** | Registration instructions and confirmed fee to be shared. |
 | **29 November, afternoon** | Arrive at Infosys Mysore. Dinner is included. |
 | **30 November-4 December** | Seminar sessions. Friday's sessions conclude before lunch. |
 | **4 December, afternoon** | Depart after lunch. |
 
 ## Programme {#programme}
 
-The seminar will include overview talks, short research presentations, open-problem sessions, and ample time for discussion and collaboration. We will follow up with participants about talk contributions and circulate the programme **around two weeks before the seminar**.
+All times are local to Mysore (India Standard Time, UTC+5:30).
 
-The detailed timetable will be added here when available.
+### Monday, 30 November
+
+| Time (IST) | Session |
+| --- | --- |
+| 09:30–11:00 | Anca Muscholl (keynote) |
+| 11:00–11:45 | Ankush (invited talk) |
+| 11:45–12:30 | Kartik Nagar (invited talk) |
+| 12:30–14:00 | Lunch |
+| 14:00–15:30 | Kostis Sagonas (keynote) |
+| 15:30–16:00 | Tea |
+| 16:00–16:45 | Manas Thakur (invited talk) |
+
+### Tuesday, 1 December
+
+| Time (IST) | Session |
+| --- | --- |
+| 09:30–11:00 | Mahesh Viswanathan (keynote) |
+| 11:00–11:45 | Prakash Saivasan (invited talk) |
+| 11:45–12:30 | KC Sivaramakrishnan (invited talk) |
+| 12:30–14:00 | Lunch |
+| 14:00–14:30 | Omkar Tuppe (talk) |
+| 14:30–15:00 | Tea (provisional) |
+| 15:00–17:00 | Open slot |
+
+Sanchari Sil’s slot is still to be confirmed.
+
+### Wednesday, 2 December
+
+| Time (IST) | Session |
+| --- | --- |
+| 09:30–11:00 | Rupak Majumdar (keynote) |
+| 11:00–11:45 | Michael Schwarz (invited talk) |
+| 11:45–12:30 | B. Srivathsan (talk) |
+| 12:30–14:00 | Lunch |
+| 14:00–15:30 | Thomas Wies (keynote) and open-problem session |
+| 15:30–16:00 | Tea |
+| 16:00–16:45 | Panel discussion |
+
+Thomas Wies is scheduled to speak from 14:00 to 15:00. The start time for the open-problem session will be confirmed.
+
+### Thursday, 3 December
+
+| Time (IST) | Session |
+| --- | --- |
+| 09:30–11:00 | Suresh Jagannathan (keynote) |
+| 11:00–11:45 | Govind R (invited talk) |
+| 11:45–12:30 | To be confirmed |
+| 12:30–14:00 | Lunch |
+| 14:00–19:00 | Seminar outing |
+
+### Friday, 4 December
+
+| Time (IST) | Session |
+| --- | --- |
+| 09:30–11:00 | Igor Walukiewicz (keynote) |
+| 11:00–11:30 | Abhijith (invited talk) |
+| 11:30–12:00 | Invited talk (speaker to be confirmed) |
+| 12:00–12:15 | To be confirmed |
+| 12:15 | Seminar ends |
 
 ## Organizers and contact {#organizers}
 
