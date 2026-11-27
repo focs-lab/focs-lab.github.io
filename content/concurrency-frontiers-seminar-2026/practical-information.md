@@ -12,6 +12,8 @@ The registration fee is **₹10,030 per participant** (₹8,500 plus ₹1,530 GS
 
 Please [register and pay on Explara](https://www.explara.com/e/indics-seminar-4-frontiers-in-analysis-and-verification-for-concurrency/checkout) and complete the [Infosys campus security form](https://forms.gle/nbPrWjMK5XJ1AfcB9) before you arrive. The security form requires a Google sign-in. Declare the devices you will bring, including laptops, phones and tablets.
 
+[Open Infosys Mysore campus in Google Maps](https://maps.app.goo.gl/fhg8zHaizNMRqrEj9).
+
 On arrival, report to **Gate 2** with a government-issued photo ID to collect your campus badge. Check-in is open around the clock. If you expect to arrive late at night, please [let the organizers know](../#organizers). The [Infosys participant guide (PDF)](../IndiCS_Essential_Information_Infosys_Mysore.pdf) includes directions, check-in instructions, campus rules and meal arrangements.
 
 ## When and where to meet {#arrival-and-departure}
