@@ -37,7 +37,7 @@ The arrangements below reflect the information shared by ACM India. We will upda
 
 ### Arrival and departure {#arrival-and-departure}
 
-Please plan to arrive on **Sunday, 29 November, in the afternoon**, and depart on **Friday, 4 December, in the afternoon**. Sessions begin at **9:30 am on Monday, 30 November**, and finish at **12:30 pm on Friday, 4 December**. We encourage everyone to attend the full seminar. All times are local to India (IST).
+Please plan to arrive on **Sunday, 29 November, in the afternoon**, and depart on **Friday, 4 December, in the afternoon**. Sessions begin at **9:00 am on Monday, 30 November**, and finish at **11:00 am on Friday, 4 December**. We encourage everyone to attend the full seminar. All times are local to India (IST).
 
 Dinner will be provided on 29 November, and lunch will be provided on 4 December.
 
@@ -92,43 +92,47 @@ All times are local to Mysore (India Standard Time, UTC+5:30).
 
 | Time (IST) | Session |
 | --- | --- |
-| 09:30–11:00 | Anca Muscholl (keynote) |
+| 09:00–10:30 | Anca Muscholl (keynote) |
+| 10:30–11:00 | Morning tea |
 | 11:00–11:45 | Ankush Das (invited talk) |
 | 11:45–12:30 | Kartik Nagar (invited talk) |
 | 12:30–14:00 | Lunch |
 | 14:00–15:30 | Kostis Sagonas (keynote) |
-| 15:30–16:00 | Tea |
+| 15:30–16:00 | Afternoon tea |
 | 16:00–16:45 | Manas Thakur (invited talk) |
 
 ### Tuesday, 1 December
 
 | Time (IST) | Session |
 | --- | --- |
-| 09:30–11:00 | Mahesh Viswanathan (keynote) |
+| 09:00–10:30 | Mahesh Viswanathan (keynote) |
+| 10:30–11:00 | Morning tea |
 | 11:00–11:45 | Prakash Saivasan (invited talk) |
 | 11:45–12:30 | KC Sivaramakrishnan (invited talk) |
 | 12:30–14:00 | Lunch |
 | 14:00–15:30 | Igor Walukiewicz (talk) |
-| 15:30–16:00 | Tea |
+| 15:30–16:00 | Afternoon tea |
 | 16:00–16:45 | Sanchari Sil (talk) |
 
 ### Wednesday, 2 December
 
 | Time (IST) | Session |
 | --- | --- |
-| 09:30–11:00 | Rupak Majumdar (keynote) |
+| 09:00–10:30 | Rupak Majumdar (keynote) |
+| 10:30–11:00 | Morning tea |
 | 11:00–11:45 | Michael Schwarz (invited talk) |
 | 11:45–12:30 | B. Srivathsan (talk) |
 | 12:30–14:00 | Lunch |
 | 14:00–15:30 | Thomas Wies (keynote) |
-| 15:30–16:00 | Tea |
+| 15:30–16:00 | Afternoon tea |
 | 16:00–16:45 | Open-problem session |
 
 ### Thursday, 3 December
 
 | Time (IST) | Session |
 | --- | --- |
-| 09:30–11:00 | Suresh Jagannathan (keynote) |
+| 09:00–10:30 | Suresh Jagannathan (keynote) |
+| 10:30–11:00 | Morning tea |
 | 11:00–11:45 | Govind R (invited talk) |
 | 11:45–12:30 | To be confirmed |
 | 12:30–14:00 | Lunch |
@@ -138,10 +142,10 @@ All times are local to Mysore (India Standard Time, UTC+5:30).
 
 | Time (IST) | Session |
 | --- | --- |
-| 09:30–11:00 | Igor Walukiewicz (keynote) |
-| 11:00–11:45 | Abhijith (invited talk) |
-| 11:45–12:30 | Omkar Tuppe (invited talk) |
-| 12:30 | Seminar ends |
+| 09:00–09:45 | Abhijith (invited talk) |
+| 09:45–10:30 | Omkar Tuppe (invited talk) |
+| 10:30–11:00 | Morning tea |
+| 11:00 | Seminar ends |
 
 ## Organizers and contact {#organizers}
 
