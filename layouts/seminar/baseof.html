@@ -1,8 +1,17 @@
+{{ $base := "/concurrency-frontiers-seminar-2026/" | relURL }}
+{{ $page := .Params.seminar_page | default "overview" }}
+{{ $tabs := slice
+  (dict "id" "overview" "label" "Overview" "path" "")
+  (dict "id" "programme" "label" "Programme" "path" "programme/")
+  (dict "id" "participants" "label" "Participants" "path" "participants/")
+  (dict "id" "practical-information" "label" "Practical information" "path" "practical-information/")
+}}
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
   <title>{{ .Title }} | IndiCS 2026</title>
   <meta name="description" content="{{ .Params.summary }}">
   <link rel="canonical" href="{{ .Permalink }}">
@@ -10,22 +19,30 @@
   <meta property="og:description" content="{{ .Params.summary }}">
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="{{ "concurrency-frontiers-seminar-2026/infosys-mysore.webp" | absURL }}">
+  <meta property="og:image:alt" content="The domed Global Education Centre at Infosys Mysore">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="{{ $base }}type/source-sans-3.woff2">
   {{ $style := resources.Get "css/seminar2026.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="lab-link" href="{{ "/" | relURL }}"><strong>FOCS<span>lab</span></strong><span class="lab-caption">National University of Singapore</span></a>
-      <a class="series-link" href="https://india.acm.org/research/indics">ACM India · IndiCS</a>
-    </div>
+  <header class="masthead shell">
+    <a class="signature" href="{{ $base }}" aria-label="IndiCS 2026 seminar home">
+      <span class="trace-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="wordmark">IndiCS</span><span class="wordmark-year">2026</span>
+    </a>
+    <nav class="tabs" aria-label="Seminar pages">
+      {{ range $tabs }}
+      <a href="{{ $base }}{{ .path }}"{{ if eq $page .id }} aria-current="page"{{ end }}>{{ .label }}</a>
+      {{ end }}
+    </nav>
   </header>
   {{ block "main" . }}{{ end }}
   <footer class="site-footer">
     <div class="shell footer-inner">
-      <div><strong>IndiCS 2026</strong><p>Frontiers in Verification and Analysis for Concurrency</p></div>
-      <div><a href="{{ "/concurrency-frontiers-seminar-2026/#organizers" | relURL }}">Contact the organizers</a><p>Last updated {{ .Lastmod.Format "2 January 2006" }}</p></div>
+      <p><a href="https://india.acm.org/research/indics">ACM India · IndiCS</a><span class="footer-separator" aria-hidden="true">/</span><a href="{{ "/" | relURL }}">FOCS Lab, NUS</a></p>
+      <a href="{{ $base }}#organizers">Contact the organizers</a>
     </div>
   </footer>
 </body>

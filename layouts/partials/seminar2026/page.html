@@ -1,83 +1,89 @@
 {{ $base := "/concurrency-frontiers-seminar-2026/" | relURL }}
 {{ $page := .Params.seminar_page | default "overview" }}
-{{ $tabs := slice
-  (dict "id" "overview" "label" "Overview" "path" "")
-  (dict "id" "programme" "label" "Programme" "path" "programme/")
-  (dict "id" "participants" "label" "Participants" "path" "participants/")
-  (dict "id" "practical-information" "label" "Practical information" "path" "practical-information/")
-}}
+<main id="main-content" class="shell page-{{ $page }}">
 {{ if eq $page "overview" }}
-<section class="hero" aria-labelledby="seminar-title">
-  <div class="shell hero-grid">
-    <div>
-      <p class="eyebrow">ACM India · IndiCS seminar</p>
-      <h1 id="seminar-title">{{ .Title }}</h1>
-      <a class="programme-button" id="programme" href="{{ $base }}programme/">View the programme</a>
+  <section class="cover" aria-labelledby="seminar-title">
+    <div class="cover-copy">
+      <p class="kicker">ACM India · IndiCS seminar</p>
+      <h1 id="seminar-title"><span>Frontiers in</span> <span>Verification and</span> <span>Analysis for</span> <span>Concurrency</span></h1>
+      <a class="programme-link" id="programme" href="{{ $base }}programme/">View the programme <span aria-hidden="true">→</span></a>
     </div>
-    <dl class="event-facts">
-      <div><dt>Dates</dt><dd>30 November–4 December 2026</dd></div>
-      <div><dt>Venue</dt><dd>Infosys Mysore campus<br>ILI Akbar Conference Room</dd></div>
-      <div><dt>Daily start</dt><dd>09:00 IST</dd></div>
-    </dl>
-  </div>
-</section>
-{{ else }}
-<header class="hero">
-  <div class="shell subpage-heading">
-    <p class="eyebrow">IndiCS Mysore · 30 November–4 December 2026</p>
-    <p class="event-name"><a href="{{ $base }}">Frontiers in Verification and Analysis for Concurrency</a></p>
-  </div>
-</header>
-{{ end }}
-<div class="seminar-navigation">
-  <nav class="shell tabs" aria-label="Seminar pages">
-    {{ range $tabs }}
-    <a href="{{ $base }}{{ .path }}"{{ if eq $page .id }} aria-current="page"{{ end }}>{{ .label }}</a>
-    {{ end }}
-  </nav>
-</div>
-<div class="shell main-grid {{ if or (eq $page "participants") (eq $page "programme") }}single-column{{ end }}">
-  <main id="main-content" class="seminar-content page-{{ $page }}">
-    {{ if ne $page "overview" }}<h1 class="page-title" id="{{ $page }}">{{ .Title }}</h1>{{ end }}
-    {{ if eq $page "programme" }}
-    <details class="programme-jump">
-      <summary>Jump to a day</summary>
-      {{ .TableOfContents }}
-    </details>
-    {{ end }}
-    <div class="prose">{{ .Content }}</div>
-    {{ if eq $page "participants" }}
-    <table class="participant-table">
-      <caption>{{ len site.Data.seminar2026.participants }} participants</caption>
-      <thead><tr><th scope="col">Name</th><th scope="col">Affiliation</th></tr></thead>
-      <tbody>
-        {{ range site.Data.seminar2026.participants }}
-        <tr><th scope="row"><a href="{{ .website }}">{{ .name }}</a></th><td>{{ .affiliation }}</td></tr>
-        {{ end }}
-      </tbody>
-    </table>
-    {{ end }}
-  </main>
-  {{ if eq $page "overview" }}
-  <aside class="sidebar overview-links" aria-labelledby="arrival-links-title">
-    <div class="sidebar-inner">
+    <figure class="venue-plate">
+      <div class="plate-print">
+        <div class="plate-image"><img src="{{ $base }}infosys-mysore.webp" width="1440" height="1080" alt="The central dome and curved colonnades of the Global Education Centre at Infosys Mysore" fetchpriority="high"></div>
+        <div class="plate-imprint"><span>Infosys Mysore, India</span><span class="plate-traces" aria-hidden="true"><i></i><i></i><i></i></span></div>
+      </div>
+      <figcaption>Global Education Centre · <a href="https://commons.wikimedia.org/wiki/File:Global_Education_Centre_front,_Infosys_Mysore.JPG">Prateek Karandikar</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> (cropped)</figcaption>
+    </figure>
+  </section>
+  <dl class="meeting-strip">
+    <div><dt>Dates</dt><dd><time datetime="2026-11-30">30 November</time> – <time datetime="2026-12-04">4 December 2026</time></dd></div>
+    <div><dt>Meeting room</dt><dd>ILI Akbar Conference Room</dd></div>
+    <div><dt>Daily start</dt><dd>09:00 IST</dd></div>
+  </dl>
+  <div class="overview-lower">
+    <div class="prose overview-copy">{{ .Content }}</div>
+    <aside class="arrival-links" aria-labelledby="arrival-links-title">
       <h2 id="arrival-links-title">Before you arrive</h2>
       <ul>
-        <li><a href="https://www.explara.com/e/indics-seminar-4-frontiers-in-analysis-and-verification-for-concurrency/checkout">Register on Explara</a></li>
-        <li><a href="https://forms.gle/nbPrWjMK5XJ1AfcB9">Complete the campus security form</a></li>
-        <li><a href="{{ $base }}IndiCS_Essential_Information_Infosys_Mysore.pdf">Infosys participant guide (PDF)</a></li>
+        <li><a href="https://www.explara.com/e/indics-seminar-4-frontiers-in-analysis-and-verification-for-concurrency/checkout">Register on Explara <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://forms.gle/nbPrWjMK5XJ1AfcB9">Complete the campus security form <span aria-hidden="true">↗</span></a></li>
+        <li><a href="{{ $base }}IndiCS_Essential_Information_Infosys_Mysore.pdf">Infosys participant guide (PDF) <span aria-hidden="true">↓</span></a></li>
       </ul>
+    </aside>
+  </div>
+{{ else }}
+  <div class="section-mast">
+    <div>
+      <p class="kicker"><a href="{{ $base }}">IndiCS seminar on concurrency</a></p>
+      <h1 id="{{ $page }}">{{ .Title }}</h1>
     </div>
-  </aside>
-  {{ else if eq $page "practical-information" }}
-  <aside class="sidebar" aria-label="Page contents">
-    <div class="sidebar-inner section-index">
-      <h2>On this page</h2>
+    <p class="section-imprint"><span>Infosys Mysore, India</span><span>30 Nov – 4 Dec 2026</span></p>
+  </div>
+  {{ if eq $page "programme" }}
+  <div class="inside-grid">
+    <nav class="margin-nav day-nav" aria-label="Programme days">
+      <p class="margin-label">Jump to a day</p>
+      <ol>
+        {{ range slice
+          (dict "id" "monday-30-november" "day" "Monday" "date" "30 Nov")
+          (dict "id" "tuesday-1-december" "day" "Tuesday" "date" "1 Dec")
+          (dict "id" "wednesday-2-december" "day" "Wednesday" "date" "2 Dec")
+          (dict "id" "thursday-3-december" "day" "Thursday" "date" "3 Dec")
+          (dict "id" "friday-4-december" "day" "Friday" "date" "4 Dec")
+        }}
+        <li><a href="#{{ .id }}"><span class="day-full">{{ .day }}</span><abbr class="day-short" title="{{ .day }}">{{ substr .day 0 3 }}</abbr> <small>{{ .date }}</small></a></li>
+        {{ end }}
+      </ol>
+    </nav>
+    <div class="prose schedule">{{ .Content }}</div>
+  </div>
+  {{ else if eq $page "participants" }}
+  <div class="inside-grid">
+    <p class="margin-label directory-count">{{ len site.Data.seminar2026.participants }} participants</p>
+    <div class="directory">
+      <table class="participant-table">
+        <caption class="visually-hidden">Seminar participants and affiliations</caption>
+        <thead><tr><th scope="col">Name</th><th scope="col">Affiliation</th></tr></thead>
+        <tbody>
+          {{ range site.Data.seminar2026.participants }}
+          <tr><th scope="row"><a href="{{ .website }}">{{ .name }}</a></th><td>{{ .affiliation }}</td></tr>
+          {{ end }}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  {{ else }}
+  <div class="inside-grid">
+    <aside class="margin-nav contents-nav" aria-labelledby="contents-heading">
+      <h2 class="margin-label" id="contents-heading">On this page</h2>
       {{ .TableOfContents }}
-    </div>
-  </aside>
+    </aside>
+    <div class="prose practical">{{ .Content }}</div>
+  </div>
   {{ end }}
-</div>
+{{ end }}
+</main>
 {{ if eq $page "overview" }}
 <script>
   // Earlier participant emails linked to sections on the overview.
