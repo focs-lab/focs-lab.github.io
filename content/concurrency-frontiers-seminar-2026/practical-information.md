@@ -8,6 +8,8 @@ lastmod: 2026-11-27
 
 ## Registration and campus entry {#registration-and-accommodation}
 
+The registration fee is **₹10,030 per participant** (₹8,500 plus ₹1,530 GST). The registration portal accepts international credit cards and issues receipts. Registration payments are non-refundable.
+
 Please [register and pay on Explara](https://www.explara.com/e/indics-seminar-4-frontiers-in-analysis-and-verification-for-concurrency/checkout) and complete the [Infosys campus security form](https://forms.gle/nbPrWjMK5XJ1AfcB9) before you arrive. The security form requires a Google sign-in. Declare the devices you will bring, including laptops, phones and tablets.
 
 On arrival, report to **Gate 2** with a government-issued photo ID to collect your campus badge. Check-in is open around the clock. If you expect to arrive late at night, please [let the organizers know](../#organizers). The [Infosys participant guide (PDF)](../IndiCS_Essential_Information_Infosys_Mysore.pdf) includes directions, check-in instructions, campus rules and meal arrangements.
@@ -18,7 +20,7 @@ Please plan to arrive on Sunday, 29 November, in the afternoon. We meet in the *
 
 ## Accommodation and meals {#accommodation}
 
-Registration includes a single room for five nights, 29 November through 3 December, meals and refreshments. Rooms are arranged for registered participants. The estimated fee is INR 9,000 including taxes. The registration portal accepts international credit cards and issues receipts. Registration payments are non-refundable.
+Registration includes a single room for five nights, 29 November through 3 December, meals and refreshments. Rooms are arranged for registered participants.
 
 Dinner is provided on Sunday, 29 November, and lunch on Friday, 4 December. For dietary or accessibility requests, please [contact the organizers](../#organizers). Guest Wi-Fi is available at the venue.
 
