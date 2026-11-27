@@ -12,8 +12,9 @@ All times are local to Mysore (India Standard Time, UTC+5:30).
 
 | Time (IST) | Speaker or activity |
 | --- | --- |
-| 09:00–10:00 | Anca Muscholl |
-| 10:30–11:00 | *Morning tea* |
+| 09:00–09:30 | Opening remarks |
+| 09:30–10:45 | Anca Muscholl |
+| 10:45–11:00 | *Morning tea* |
 | 11:00–11:45 | Ankush Das |
 | 11:45–12:30 | Kartik Nagar |
 | 12:30–14:00 | *Lunch* |
