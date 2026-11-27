@@ -99,6 +99,7 @@ All times are local to Mysore (India Standard Time, UTC+5:30).
 | 14:00–15:30 | Igor Walukiewicz |
 | 15:30–16:00 | Afternoon tea |
 | 16:00–16:45 | Open-problem session |
+| 17:00 onwards | Infosys campus tour |
 
 ### Wednesday, 2 December
 
