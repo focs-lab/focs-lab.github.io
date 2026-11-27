@@ -88,6 +88,20 @@ h1, h2 { color: var(--ink); font-weight: 650; }
 .cover { display: grid; grid-template-columns: 1fr 1.02fr; gap: clamp(28px, 5.4vw, 88px); align-items: center; padding-block: clamp(40px, 4.6vw, 68px); }
 .cover h1 { font-size: clamp(2.6rem, 5.35vw, 4.9rem); line-height: .99; letter-spacing: -.032em; margin: 24px 0 36px; }
 .cover h1 span { display: block; }
+
+/* One continuous band across the four lines, sized with the headline type. */
+@media screen and (forced-colors: none) {
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    #seminar-title {
+      background: var(--ink) linear-gradient(138deg, var(--ink) 38%, #2059a4 38%, #2059a4 47%, var(--ink) 47%) left top / 7em 4em no-repeat;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    #seminar-title ::selection { background: #2059a4; color: white; }
+  }
+}
+
 /* Anchor the stitch to the final letter, including when a heading wraps. */
 .title-stitch {
   display: inline-block;
