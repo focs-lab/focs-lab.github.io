@@ -37,7 +37,7 @@ The arrangements below reflect the information shared by ACM India. We will upda
 
 ### Arrival and departure {#arrival-and-departure}
 
-Please plan to arrive on **Sunday, 29 November, in the afternoon**, and depart on **Friday, 4 December, in the afternoon**. Sessions begin at **9:30 am on Monday, 30 November**, and finish at **12:15 pm on Friday, 4 December**. We encourage everyone to attend the full seminar. All times are local to India (IST).
+Please plan to arrive on **Sunday, 29 November, in the afternoon**, and depart on **Friday, 4 December, in the afternoon**. Sessions begin at **9:30 am on Monday, 30 November**, and finish at **12:30 pm on Friday, 4 December**. We encourage everyone to attend the full seminar. All times are local to India (IST).
 
 Dinner will be provided on 29 November, and lunch will be provided on 4 December.
 
@@ -93,7 +93,7 @@ All times are local to Mysore (India Standard Time, UTC+5:30).
 | Time (IST) | Session |
 | --- | --- |
 | 09:30–11:00 | Anca Muscholl (keynote) |
-| 11:00–11:45 | Ankush (invited talk) |
+| 11:00–11:45 | Ankush Das (invited talk) |
 | 11:45–12:30 | Kartik Nagar (invited talk) |
 | 12:30–14:00 | Lunch |
 | 14:00–15:30 | Kostis Sagonas (keynote) |
@@ -108,11 +108,9 @@ All times are local to Mysore (India Standard Time, UTC+5:30).
 | 11:00–11:45 | Prakash Saivasan (invited talk) |
 | 11:45–12:30 | KC Sivaramakrishnan (invited talk) |
 | 12:30–14:00 | Lunch |
-| 14:00–14:30 | Omkar Tuppe (talk) |
-| 14:30–15:00 | Tea (provisional) |
-| 15:00–17:00 | Open slot |
-
-Sanchari Sil’s slot is still to be confirmed.
+| 14:00–15:30 | Igor Walukiewicz (talk) |
+| 15:30–16:00 | Tea |
+| 16:00–16:45 | Sanchari Sil (talk) |
 
 ### Wednesday, 2 December
 
@@ -122,11 +120,9 @@ Sanchari Sil’s slot is still to be confirmed.
 | 11:00–11:45 | Michael Schwarz (invited talk) |
 | 11:45–12:30 | B. Srivathsan (talk) |
 | 12:30–14:00 | Lunch |
-| 14:00–15:30 | Thomas Wies (keynote) and open-problem session |
+| 14:00–15:30 | Thomas Wies (keynote) |
 | 15:30–16:00 | Tea |
-| 16:00–16:45 | Panel discussion |
-
-Thomas Wies is scheduled to speak from 14:00 to 15:00. The start time for the open-problem session will be confirmed.
+| 16:00–16:45 | Open-problem session |
 
 ### Thursday, 3 December
 
@@ -143,10 +139,9 @@ Thomas Wies is scheduled to speak from 14:00 to 15:00. The start time for the op
 | Time (IST) | Session |
 | --- | --- |
 | 09:30–11:00 | Igor Walukiewicz (keynote) |
-| 11:00–11:30 | Abhijith (invited talk) |
-| 11:30–12:00 | Invited talk (speaker to be confirmed) |
-| 12:00–12:15 | To be confirmed |
-| 12:15 | Seminar ends |
+| 11:00–11:45 | Abhijith (invited talk) |
+| 11:45–12:30 | Omkar Tuppe (invited talk) |
+| 12:30 | Seminar ends |
 
 ## Organizers and contact {#organizers}
 
