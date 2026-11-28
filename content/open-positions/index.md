@@ -6,7 +6,7 @@ share: false
 profile: false
 ---
 
-The Foundations of Computer Systems (FOCS) Lab at the National University of Singapore is hiring two postdoctoral researchers (Research Fellows) and two Research Assistants. Each project has one opening at each level. You will work with Temasek Presidential Young Professor Umang Mathur and the lab's researchers and students at the NUS School of Computing.
+The Foundations of Computer Systems (FOCS) Lab at the National University of Singapore is hiring postdoctoral researchers (Research Fellows) and research assistants to work on concurrency in Go and on safe and secure hardware. You will work with Temasek Presidential Young Professor Umang Mathur and the lab's researchers and students at the NUS School of Computing.
 
 - **Concurrent Go programs** · [Research Fellow](#go-fellow) or [Research Assistant](#go-assistant). Expected start in January 2027.
 - **Safe and secure hardware** · [Research Fellow](#hardware-fellow) or [Research Assistant](#hardware-assistant). Flexible start from November 2026.
