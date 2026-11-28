@@ -14,9 +14,7 @@ The Foundations of Computer Systems (FOCS) Lab at the National University of Sin
 
 **Expected start:** 17 February 2027 or later
 
-A Go test can pass under one ordering of goroutines and fail under another. We study which executions Go permits, which bugs we can infer from observed executions, and how we can exercise schedules that ordinary tests miss.
-
-The project spans the formalization of Go’s memory model and concurrency semantics, data race detection, predictive testing, and model checking. You will help formulate research questions, develop techniques and tools, and evaluate them on real Go programs. We also investigate how agentic workflows can assist with program analysis, testing, and verification. We collaborate with international researchers and Go developers.
+This project aims to strengthen the foundations of Go and other message-passing languages. We will formalize Go’s memory model and concurrency semantics and design algorithms and tools for data race detection, predictive testing, and model checking. We will evaluate them on real Go programs and study how AI agents can assist with program analysis, testing, and verification. We work with Go developers and researchers at other institutions.
 
 Related work: [concurrency research](https://focs-lab.comp.nus.edu.sg/projects/concurrency/), [GCT, our concurrency testing tool for Go](https://github.com/focs-lab/gct), and [The Complexity of Testing Message-Passing Concurrency (POPL 2026)](https://doi.org/10.1145/3776643).
 
@@ -26,17 +24,16 @@ Related work: [concurrency research](https://focs-lab.comp.nus.edu.sg/projects/c
 
 **Expected start:** 15 December 2026 or later
 
-When hardware components exchange data, both sides must agree on when the data is valid and how long it stays stable. We design languages and verification tools that let designers express these assumptions and check them.
-
-We build on [AnvilHDL](https://github.com/AnvilHDL), our timing-safe hardware description language. You will help explore questions in hardware language design, type systems, compiler correctness, or automated verification. The work includes developing and evaluating techniques on realistic hardware designs and investigating where agentic workflows can help with design and verification. We collaborate with international researchers and hardware designers. We welcome applicants with a background in programming languages or formal methods who are new to hardware.
+This project develops languages and verification tools for designing safe and secure hardware. We build on [AnvilHDL](https://github.com/AnvilHDL), our timing-safe hardware description language. We will design type systems to check the timing and communication behavior of hardware components, develop compiler and verification techniques, and evaluate them on real hardware designs. We will also study how AI agents can assist with hardware design and verification. We welcome applicants with a background in programming languages or formal methods who are new to hardware.
 
 Related work: [hardware research](https://focs-lab.comp.nus.edu.sg/projects/secure-hardware-design/), [Anvil: A General-Purpose Timing-Safe Hardware Description Language (ASPLOS 2026)](https://doi.org/10.1145/3779212.3790125), and [A Type System for Communication-Safe Hardware Design (POPL 2027, to appear)](https://arxiv.org/abs/2610.26599).
 
 ## Qualifications
 
-Research Fellow applicants should have completed a PhD in a relevant discipline by the start date. Research Assistant applicants should have a bachelor’s or master’s degree in a relevant discipline. Relevant areas include computer science and computer engineering, as well as mathematics and electrical engineering for the hardware project.
+- **Postdoc (Research Fellow):** A PhD in an appropriate field by the start date.
+- **Research Assistant:** A bachelor’s or master’s degree in an appropriate field.
 
-We look for strong programming and communication skills. Depending on the project, useful experience includes Go and concurrency, digital design, proof assistants such as Lean, Rocq, or Isabelle/HOL, compilers, SMT solvers, LLVM, and sanitizers such as ThreadSanitizer.
+For all openings, we look for strong programming and communication skills. Experience with a theorem prover such as Lean or Rocq is desirable. Depending on the project, experience with Go, concurrency, digital design, compilers, SMT solvers, LLVM, or sanitizers such as ThreadSanitizer is also useful.
 
 ## How to apply
 
