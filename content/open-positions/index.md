@@ -10,9 +10,9 @@ The Foundations of Computer Systems (FOCS) Lab at the National University of Sin
 
 ## Concurrent Go programs
 
-**Openings:** Research Assistant and postdoc (Research Fellow)
+**Openings:** Postdoc (Research Fellow) and Research Assistant
 
-**Expected start:** January 2027
+**Expected start:** 17 February 2027 or later
 
 A Go test can pass under one ordering of goroutines and fail under another. We study which executions Go permits, which bugs we can infer from observed executions, and how we can exercise schedules that ordinary tests miss.
 
@@ -22,9 +22,9 @@ Related work: [concurrency research](https://focs-lab.comp.nus.edu.sg/projects/c
 
 ## Formal methods for safe and secure hardware
 
-**Openings:** Research Assistant and postdoc (Research Fellow)
+**Openings:** Postdoc (Research Fellow) and Research Assistant
 
-**Start:** Flexible, from November 2026
+**Expected start:** 15 December 2026 or later
 
 When hardware components exchange data, both sides must agree on when the data is valid and how long it stays stable. We design languages and verification tools that let designers express these assumptions and check them.
 
@@ -34,7 +34,7 @@ Related work: [hardware research](https://focs-lab.comp.nus.edu.sg/projects/secu
 
 ## Qualifications
 
-Research Assistant applicants should have a bachelor’s or master’s degree in a relevant discipline. Research Fellow applicants should have completed a PhD in a relevant discipline by the start date. Relevant areas include computer science and computer engineering, as well as mathematics and electrical engineering for the hardware project.
+Research Fellow applicants should have completed a PhD in a relevant discipline by the start date. Research Assistant applicants should have a bachelor’s or master’s degree in a relevant discipline. Relevant areas include computer science and computer engineering, as well as mathematics and electrical engineering for the hardware project.
 
 We look for strong programming and communication skills. Depending on the project, useful experience includes Go and concurrency, digital design, proof assistants such as Lean, Rocq, or Isabelle/HOL, compilers, SMT solvers, LLVM, and sanitizers such as ThreadSanitizer.
 
