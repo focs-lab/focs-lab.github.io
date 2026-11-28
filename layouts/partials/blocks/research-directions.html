@@ -14,6 +14,12 @@
       </div>
       <h1>{{ .wcBlock.content.title }}</h1>
       <div class="focs-home-intro">{{ .wcPage.RenderString .wcBlock.content.text }}</div>
+      {{ with site.GetPage "/open-positions" }}
+        <aside class="focs-openings-note" aria-label="Open positions">
+          <a href="{{ .RelPermalink }}">Postdoc and Research Assistant openings</a>
+          <p>Join us to study concurrency in Go or to design safer hardware.</p>
+        </aside>
+      {{ end }}
     </div>
     <div class="focs-hero-art" aria-hidden="true">
       {{ partial "focs/logo" (dict "class" "focs-hero-logo" "decorative" true) }}
