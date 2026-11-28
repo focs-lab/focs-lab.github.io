@@ -30,8 +30,10 @@ Related work: [hardware research](https://focs-lab.comp.nus.edu.sg/projects/secu
 
 ## Qualifications
 
-- **Postdoc (Research Fellow):** A PhD in an appropriate field by the start date.
-- **Research Assistant:** A bachelor’s or master’s degree in an appropriate field.
+- **Postdoc (Research Fellow):** A PhD in computer science, computer engineering, electrical engineering, mathematics, or a closely related discipline, completed by the start date.
+- **Research Assistant:** A bachelor’s or master’s degree in computer science, computer engineering, electrical engineering, mathematics, or a closely related discipline.
+
+For the **Go project**, relevant backgrounds include formal methods, programming languages, software engineering, and computer systems. For the **hardware project**, relevant backgrounds include formal methods, programming languages, digital hardware design, computer architecture, and hardware or systems security.
 
 For all openings, we look for strong programming and communication skills. Experience with a theorem prover such as Lean or Rocq is desirable. Depending on the project, experience with Go, concurrency, digital design, compilers, SMT solvers, LLVM, or sanitizers such as ThreadSanitizer is also useful.
 
