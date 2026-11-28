@@ -14,7 +14,7 @@ The Foundations of Computer Systems (FOCS) Lab at the National University of Sin
 
 **Expected start:** 17 February 2027 or later
 
-This project aims to strengthen the foundations of Go and other message-passing languages. We will formalize Go’s memory model and concurrency semantics and design algorithms and tools for data race detection, predictive testing, and model checking. We will evaluate them on real Go programs and study how AI agents can assist with program analysis, testing, and verification. We work with Go developers and researchers at other institutions.
+This project aims to strengthen the foundations of Go and other message-passing languages. We will formalize Go’s memory model and concurrency semantics and design algorithms and tools for data race detection, predictive testing, and model checking. We will evaluate these tools on real Go programs. We will study how AI agents can speed up the formalization of language semantics by drafting definitions in theorem provers such as Lean or Rocq and helping develop the proofs needed to check their properties. We work with Go developers and researchers at other institutions.
 
 Related work: [concurrency research](https://focs-lab.comp.nus.edu.sg/projects/concurrency/), [GCT, our concurrency testing tool for Go](https://github.com/focs-lab/gct), and [The Complexity of Testing Message-Passing Concurrency (POPL 2026)](https://doi.org/10.1145/3776643).
 
