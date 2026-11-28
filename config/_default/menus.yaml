@@ -25,6 +25,9 @@ main:
   - name: Research Support
     url: support
     weight: 60
+  - name: Open Positions
+    url: open-positions/
+    weight: 65
   - name: IndiCS 2026
     url: concurrency-frontiers-seminar-2026
     weight: 70
